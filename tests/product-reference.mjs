@@ -21,8 +21,7 @@ try {
   await page.route(base+'/product-award-demo',r=>r.fulfill({body:html,contentType:'text/html'}));
   await page.route('**/fixture-product-photo',r=>r.fulfill({body:fs.readFileSync(root+'docs/images/product-2.img'),contentType:'image/jpeg'}));
   await page.goto(base+'/product-award-demo');await page.evaluate(()=>document.fonts.ready);
-  const gallery=await page.locator('.pd-gallery').boundingBox(),award=await page.locator('.pd-gallery>.vm-awards').boundingBox();
-  assert.ok(award.x>=gallery.x && award.y>=gallery.y && award.y+award.height<gallery.y+gallery.height,'award belongs to photo');
+  assert.equal(await page.locator('.vm-awards').count(),0);
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
   assert.equal(await page.locator('[data-product-price]').count(),1);
   assert.equal(await page.locator('[data-product-submit]').count(),1);
@@ -33,7 +32,7 @@ try {
   await page.locator('.pd-quantity [data-quantity-step="1"]').click();assert.equal(await page.locator('#product-quantity').inputValue(),'2');
   await page.locator('.pd-quantity [data-quantity-step="-1"]').click();assert.equal(await page.locator('#product-quantity').inputValue(),'1');
   if(width<761)assert.equal(await page.locator('.pd-purchase-dock').evaluate(e=>getComputedStyle(e).position),'fixed');
-  console.log('PASS product reference '+width+': optional award position, fonts, single purchase form, quantity and no overflow');
+  console.log('PASS product reference '+width+': removed score badges, fonts, single purchase form, quantity and no overflow');
   await page.close();
  }
 } finally {await browser.close();}

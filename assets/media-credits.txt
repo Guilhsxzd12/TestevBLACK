@@ -7,6 +7,5 @@ Crate photo: edited from novidades.jpg to remove the Mistral emblem; optimized t
 Lexend and Playfair Display: source font resources from Mistral public CSS; SIL OFL licenses included. Poppins retained from original Videira, SIL OFL license included.
 Mobile Black Friday banner: adapted from the reference desktop banner to a shorter mobile composition, with the Videira campaign dates 27–30 November; optimized as WebP. Original generated artifact retained outside the theme.
 Pairing photographs: user-provided Cia do Vinho ZIP, images/carnes-vermelhas.png, pizzas.png, queijos.png, orientais.png, massas.png, frutos-do-mar.png, carnes-brancas.png, risotos.png, peixes.png, legumes.png, saladas.png and sobremesas.png. Original labels are clipped by the website layout and replaced with live text labels.
-Critic wordmarks: reference directory https://www.mistral.com.br/pontuados and https://cdn.mistral.com.br/v4/images/categories/critics-images/; identify the respective wine reviewers and publications. Their display does not imply any product rating.
 Selection Malbec: Becas Reserva Malbec photograph from the live Videira product catalog, replacing Catena.
 Arrival banners: generated edits correcting the Videira engraving alignment to the crate lid; source artifacts retained in /workspace/generated_images.

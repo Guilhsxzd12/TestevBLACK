@@ -23,7 +23,7 @@
       });
     });
     let statusTimer;
-    const report = message => { clearTimeout(statusTimer); status.textContent = message; statusTimer = setTimeout(() => { status.textContent = ''; }, 5000); };
+    const report = (message,cartLink=false) => { clearTimeout(statusTimer);status.replaceChildren(document.createTextNode(message));if(cartLink){const link=document.createElement('a');link.href=config.cart;link.textContent='Ver carrinho';status.append(link);}statusTimer=setTimeout(()=>status.replaceChildren(),5000); };
     const initializeCarousels = (scope = document) => {
       scope.querySelectorAll('.wc-section').forEach(section => {
         const row = section.querySelector('.wc-viewport');
@@ -75,6 +75,7 @@
       if (localStatus) localStatus.textContent = '';
       button.disabled = true;
       button.setAttribute('aria-busy', 'true');
+      const stay=form.hasAttribute('data-cart-stay');
       let added = false;
       try {
         const response = await fetch(root + 'cart/add.js', { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } });
@@ -83,12 +84,16 @@
         added = true;
         report(config.added);
         if (localStatus) localStatus.textContent = config.added;
-        window.location.assign(config.cart);
+        if(stay){
+          try{const response=await fetch(root+'cart.js',{headers:{Accept:'application/json'}});if(response.ok){const cart=await response.json();document.querySelectorAll('[data-cart-count]').forEach(el=>{el.textContent=String(cart.item_count);el.hidden=cart.item_count===0;});document.dispatchEvent(new CustomEvent('videira:cart-updated',{detail:{count:cart.item_count}}));}}catch{}
+          report(config.added,true);
+          const label=button.querySelector('[data-card-add-label]');if(label){label.textContent='Pronto';setTimeout(()=>{if(label.isConnected)label.textContent='Adicionar';},1600);}
+        }else window.location.assign(config.cart);
       } catch (error) {
         const message = added ? config.added + ' ' + config.cartError : error.message || config.error;
         report(message);
         if (localStatus) localStatus.textContent = message;
-        if (added) window.location.assign(config.cart);
+        if (added&&!stay) window.location.assign(config.cart);
       } finally { button.disabled = false; button.removeAttribute('aria-busy'); }
     });
     let menu, mobile;

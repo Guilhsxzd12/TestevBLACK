@@ -96,24 +96,10 @@ const newsletterError=await renderSection('videira-newsletter',{...globals('inde
 assert.ok(newsletterError.includes('data-newsletter-error'));
 assert.equal(newsletterError.includes('data-newsletter-success'),false);
 console.log('PASS native newsletter success, idle and error states');
-// Awards are optional merchant data, never generated from product names.
-const awardProduct=structuredClone(globals('product').product);
-awardProduct.metafields.custom.premiacao={type:'multi_line_text_field',value:'91 | James Suckling\nMedalha de Ouro'};
-const awarded=await renderSection('main-product',{...globals('product'),product:awardProduct});
-assert.match(awarded,/class="vm-award"><strong>91<\/strong><span>James Suckling<\/span>/);
-assert.match(awarded,/Medalha de Ouro/);
-assert.equal((awarded.match(/data-product-price/g)||[]).length,1,'one price, no duplicate mobile purchase');
-assert.equal((awarded.match(/id="product-quantity"/g)||[]).length,1);
-const noAward=await renderSection('main-product',globals('product'));
-assert.equal(noAward.includes('aria-label="Premiações"'),false);
-awardProduct.metafields.custom.premiacao={type:'list.single_line_text_field',value:['92 | Decanter','90 | Wine Enthusiast']};
-const awardList=await renderSection('main-product',{...globals('product'),product:awardProduct});
-assert.match(awardList,/<strong>92<\/strong><span>Decanter<\/span>/);
-assert.match(awardList,/<strong>90<\/strong><span>Wine Enthusiast<\/span>/);
-awardProduct.metafields.custom.premiacao={type:'single_line_text_field',value:'<script>unsafe</script>'};
-const escapedAward=await renderSection('main-product',{...globals('product'),product:awardProduct});
-assert.equal(escapedAward.includes('<script>unsafe</script>'),false);
-console.log('PASS optional text/list awards, escaped content and single native purchase form');
+// Awards remain merchant data but no longer appear in the storefront.
+const awardedProduct=structuredClone(globals('product').product);awardedProduct.metafields.custom.premiacao={type:'multi_line_text_field',value:'91 | James Suckling'};
+const noScores=await renderSection('main-product',{...globals('product'),product:awardedProduct});assert.equal(noScores.includes('vm-award'),false);assert.equal(noScores.includes('James Suckling'),false);assert.equal((noScores.match(/data-product-price/g)||[]).length,1);assert.equal(cleanHeader.includes('Pontuados'),false);assert.equal(cleanHeader.includes('Onde estamos'),false);
+console.log('PASS scores and location removed from public product/menu');
 const volumeProduct=structuredClone(globals('product').product);
 for(const [value,expected] of [['750','750 ml'],['1500 ml','1500 ml'],['1,5 L','1,5 L']]){
  volumeProduct.metafields.custom.volume={value};
@@ -132,3 +118,6 @@ const caseCart=await renderPage('cart',{cart:{items:[caseLine],item_count:6,tota
 assert.match(caseCart,/min="6" step="6" name="updates\[\]" value="6"/);
 assert.ok(!caseCart.includes('_case_size:'));
 console.log('PASS native case cart quantity step and private property handling');
+
+for(const key of ['quantidade_por_caixa','unidades_caixa','qtd_de_garrafas_por_caixa']){const p=structuredClone(globals('product').product);p.metafields.custom[key]={type:'number_integer',value:6};const html=await renderSection('videira-discovery',{...globals('collection'),collection:{...globals('collection').collection,products:[p]}});assert.ok(html.includes('data-kit-card'),key);assert.ok(html.includes('data-native-count="6"'),key);}
+const discountedCart=await renderPage('cart',{cart:{items:[{...caseLine,original_line_price:29400,line_level_discount_allocations:[{discount_application:{title:'Caixa'},amount:1470}]}],item_count:6,original_total_price:29400,total_price:27930,total_discount:1470}});assert.ok(discountedCart.includes('Subtotal sem desconto'));assert.ok(discountedCart.includes('Descontos aplicados'));assert.ok(discountedCart.includes('14,70'));assert.ok(discountedCart.includes('279,30'));assert.ok(discountedCart.includes('Você economizou'));console.log('PASS case-field aliases/fallback and authoritative cart savings summary');
