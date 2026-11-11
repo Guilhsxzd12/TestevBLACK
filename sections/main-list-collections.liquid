@@ -1,0 +1,5 @@
+<section class="sf-catalog"><div class="sf-catalog-heading"><h1>{{ 'general.collections' | t }}</h1></div><div class="sf-catalog-grid">{% for collection in collections %}{% unless collection.handle == 'frontpage' %}<article class="sf-wine-card"><a href="{{ collection.url }}" class="sf-wine-visual">{% if collection.image %}{{ collection.image | image_url: width: 600 | image_tag: loading: 'lazy', alt: collection.title }}{% endif %}</a><div class="sf-wine-info"><h2><a href="{{ collection.url }}">{{ collection.title | escape }}</a></h2></div></article>{% endunless %}{% endfor %}</div></section>
+{% schema %}
+{"name": "Coleções Videira", "settings": []}
+{% endschema %}
+

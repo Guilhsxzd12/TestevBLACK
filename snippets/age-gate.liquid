@@ -1,0 +1,3 @@
+{% doc %}Age confirmation, keeping the original Videira presentation.{% enddoc %}
+{% if settings.age_gate_enabled %}<dialog class="age-gate" data-age-gate aria-labelledby="age-title"><div class="age-card">{% render 'logo' %}<p class="age-kicker">{{ 'age.welcome' | t }}</p><h2 id="age-title">{{ 'age.question' | t }}</h2><p>{{ 'age.intro' | t }}</p><div class="age-actions"><button type="button" data-age-confirm>{{ 'age.accept' | t }}</button><button type="button" data-age-deny>{{ 'age.deny' | t }}</button></div><p data-age-denied hidden role="alert">{{ 'age.denied' | t }}</p></div></dialog>{% endif %}
+

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="{{ request.locale.iso_code }}"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#1c1c1c">
+<title>{{ page_title | escape }}{% unless page_title contains shop.name %} — {{ shop.name | escape }}{% endunless %}</title>
+{% if page_description %}<meta name="description" content="{{ page_description | escape }}">{% endif %}
+<link rel="canonical" href="{{ canonical_url }}">
+
+
+
+<style>@font-face{font-family:Poppins;font-style:normal;font-weight:300;font-display:swap;src:url('{{ 'poppins-300.ttf' | asset_url }}') format('truetype')}@font-face{font-family:Poppins;font-style:normal;font-weight:400;font-display:swap;src:url('{{ 'poppins-400.ttf' | asset_url }}') format('truetype')}@font-face{font-family:Poppins;font-style:normal;font-weight:600;font-display:swap;src:url('{{ 'poppins-600.ttf' | asset_url }}') format('truetype')}@font-face{font-family:Poppins;font-style:normal;font-weight:700;font-display:swap;src:url('{{ 'poppins-700.ttf' | asset_url }}') format('truetype')}</style>
+{{ 'videira.css' | asset_url | stylesheet_tag }}
+{{ 'shopify-integration.css' | asset_url | stylesheet_tag }}
+{% if request.page_type == 'product' %}{{ 'videira-original-product.css' | asset_url | stylesheet_tag }}{% endif %}
+{{ 'videira-storefront.css' | asset_url | stylesheet_tag }}
+{{ 'videira-mistral.css' | asset_url | stylesheet_tag }}
+<style>}') format('truetype')}:root{--vm-wine:{{ settings.wine_color | default: '#651242' }};--vm-gold:{{ settings.gold_color | default: '#b59758' }};--nv-wine:{{ settings.wine_color | default: '#651242' }};--nv-gold:{{ settings.gold_color | default: '#b59758' }};--nv-paper:{{ settings.paper_color | default: '#fcfaf6' }}}</style>
+<script src="{{ 'videira.js' | asset_url }}" defer></script>
+<script src="{{ 'videira-store.js' | asset_url }}" defer></script>
+<script type="application/json" id="videira-config">{"root":{{ routes.root_url | json }},"cart":{{ routes.cart_url | json }},"add":{{ 'product.add' | t | json }},"soldOut":{{ 'product.sold_out' | t | json }},"added":{{ 'product.added' | t | json }},"error":{{ 'product.error' | t | json }},"cartError":{{ 'product.cart_error' | t | json }}}</script>
+{{ content_for_header }}
+</head><body class="storefront vm-store template-{{ request.page_type }}">
+<a class="sf-skip" href="#conteudo">{{ 'general.skip' | t }}</a>
+{% sections 'header-group' %}
+<main id="conteudo" class="{% if request.page_type == 'index' %}nv-home{% elsif request.page_type == 'product' %}pd-main{% endif %}">{{ content_for_layout }}</main>
+{% sections 'footer-group' %}
+{% render 'cart-drawer' %}{% render 'age-gate' %}
+<div class="sf-toast" role="status" aria-live="polite" data-cart-status></div>
+<button class="mi-theme-toggle" type="button" data-theme-toggle aria-pressed="true" aria-label="Ativar tema claro">☾</button></body></html>
+

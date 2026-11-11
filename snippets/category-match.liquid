@@ -1,0 +1,25 @@
+{%- liquid
+  assign title = product.title | downcase
+  assign kind = product.type | downcase
+  assign match = false
+  case category
+    when 'all', 'new', 'kits'
+      assign match = true
+    when 'espumante'
+      if kind contains 'espum' or title contains 'espumante' or title contains 'brut' or title contains 'celebration'
+        assign match = true
+      endif
+    when 'rose'
+      if kind contains 'ros' or title contains 'rosé' or title contains 'rose' or title contains 'rosado'
+        assign match = true
+      endif
+    when 'branco'
+      if kind contains 'branco' or title contains 'chardonnay' or title contains 'sauvignon blanc' or title contains 'torront' or title contains 'pinot grigio'
+        assign match = true
+      endif
+    when 'tinto'
+      if kind contains 'tinto' or title contains 'malbec' or title contains 'cabernet' or title contains 'merlot' or title contains 'carménère' or title contains 'syrah' or title contains 'pinot noir'
+        assign match = true
+      endif
+  endcase
+-%}{{- match -}}

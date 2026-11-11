@@ -1,0 +1,4 @@
+<div class="nv-promo-slide nv-promo-slide--{{ theme }}" data-banner-slide {% unless first %}hidden{% endunless %} aria-label="{{ title | escape }}">
+<div class="nv-promo-copy"><span>{{ eyebrow | escape }}</span>{% if first %}<h1>{{ title | escape }}<strong>{{ accent | escape }}</strong></h1>{% else %}<h2>{{ title | escape }}<strong>{{ accent | escape }}</strong></h2>{% endif %}<p>{{ text | escape }}</p></div>
+<div class="nv-promo-condition"><span>{{ small | escape }}</span><strong>{{ large | escape }}</strong><p>{{ note | escape }}</p><a class="nv-button" href="{{ link | default: routes.all_products_collection_url }}">{{ cta | default: 'Ver vinhos' }} {% render 'icon', name: 'arrow' %}</a></div>
+</div>

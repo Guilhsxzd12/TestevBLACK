@@ -1,0 +1,14 @@
+{% liquid
+  case category
+    when 'tinto'
+      assign query = 'title:Tinto OR title:Malbec OR title:Cabernet OR title:Merlot OR title:Carménère OR title:Syrah OR title:"Pinot Noir"'
+    when 'branco'
+      assign query = 'title:Branco OR title:Chardonnay OR title:"Sauvignon Blanc" OR title:Torrontés OR title:"Pinot Grigio"'
+    when 'rose'
+      assign query = 'title:Rosé OR title:Rose OR title:Rosado'
+    when 'espumante'
+      assign query = 'title:Espumante OR title:Brut OR title:Moscatel OR title:Celebration'
+    else
+      assign query = ''
+  endcase
+%}{% if category == 'kits' %}{{ routes.root_url }}#caixas{% elsif category == 'new' %}{{ routes.all_products_collection_url }}?sort_by=created-descending{% elsif query != blank %}{{ routes.search_url }}?type=product&amp;q={{ query | url_encode }}{% else %}{{ routes.all_products_collection_url }}{% endif %}

@@ -1,0 +1,5 @@
+{% doc %}
+@param {string} name - Icon name
+{% enddoc %}
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{% case name %}{% when 'truck' %}<path d="M2 5h12v12H2zM14 10h4l4 4v3h-8"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/>{% when 'account' %}<circle cx="12" cy="8" r="4"/><path d="M4 22v-2a8 8 0 0 1 16 0v2"/>{% when 'heart' %}<path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/>{% when 'search' %}<circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/>{% when 'bag' %}<path d="M5 7h14l1 14H4L5 7Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/>{% when 'menu' %}<path d="M4 6h16M4 12h16M4 18h16"/>{% when 'arrow' %}<path d="M4 12h16m-6-6 6 6-6 6"/>{% when 'close' %}<path d="m6 6 12 12M6 18 18 6"/>{% when 'glass' %}<path d="M7 3h10l1 7a6 6 0 0 1-12 0l1-7ZM12 16v6m-4 0h8M6 9h12"/>{% when 'chat' %}<path d="M20 11a8 8 0 0 1-8 8H6l-4 3 1-7a8 8 0 1 1 17-4Z"/><path d="M8 10h8M8 14h5"/>{% endcase %}</svg>
+

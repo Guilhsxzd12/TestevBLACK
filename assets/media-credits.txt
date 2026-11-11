@@ -1,0 +1,7 @@
+Original Videira logo: preserved unchanged from the original Videira theme.
+Product photographs: Videira public catalog; the installed theme uses current Shopify images.
+Reference presentation inspected at https://www.mistral.com.br/ in November 2026.
+Reference banner: https://cdn.mistral.com.br/destaques/img_1314.jpg and icon_1314.jpg.
+Reference category photos: https://cdn.mistral.com.br/v4/images/categories/home/ (selecao-malbec.png, novidades.jpg, vinhos-100-pontos.jpg, vinho-e-pizza.png, kits-exclusivos.jpg, vineyardBackground.jpeg).
+Crate photo: edited from novidades.jpg to remove the Mistral emblem; optimized to WebP. The original generated artifact remains outside the theme.
+Lexend and Playfair Display: source font resources from Mistral public CSS; SIL OFL licenses included. Poppins retained from original Videira, SIL OFL license included.
