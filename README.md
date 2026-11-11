@@ -95,3 +95,15 @@ Menu móvel com a composição de referência: barra superior com fechar, conta 
 O segundo slide agora usa arte gerada para a Videira, em duas composições: `videira-arrivals-mobile.webp` (compacta para não aumentar o carrossel) e `videira-arrivals-desktop.webp`. A imagem usa a identidade visual verde/dourada solicitada, nome Videira e marca na caixa. `object-fit: contain` preserva texto e marca completos. A logo original do cabeçalho e rodapé continua inalterada.
 
 Volume numérico usa ml (ex.: 750 → 750 ml); valores com unidade explícita mantêm ml/L. O selo se ajusta ao conteúdo sem corte. Ícones do resumo do produto usam desenho e dimensões próprios; a ficha técnica preserva seus ícones dourados.
+
+### Harmonizações e pontuações
+
+O cabeçalho usa logo e ícones pretos sobre branco e faixa preta com letras douradas. A busca recebe o cursor de texto sem moldura dourada. As bandeiras ficam nos cards de países. O atalho Seleção Malbec usa a fotografia de Becas Reserva Malbec, do catálogo Videira.
+
+A seção Harmonizações oferece pratos em carrossel. Vinho e Pizza abre `/collections/all?view=descobrir&harmonizacao=pizzas`; os resultados vêm dos metacampos de harmonização lidos por `product-fact`, sem associar automaticamente todos os tintos a pizza. Os demais pratos usam termos correspondentes (peixes, massas, queijos etc.). A fotografia é acompanhada por texto HTML acessível.
+
+Pontuados abre `/collections/all?view=descobrir&modo=pontuacoes`, com diretório de críticos/revistas e faixas de pontuação. A seleção de crítico e faixa usa **a mesma premiação**, evitando misturar nota de outro avaliador. Cadastre uma premiação por linha em `custom.premiacao`: `91 | James Suckling`, `96 | Decanter`. Listas de textos também são aceitas. Medalhas sem nota continuam nos selos, mas não entram como pontuação numérica. Nomes de avaliadores adicionais cadastrados aparecem como novas opções. Não são atribuídas notas automaticamente aos vinhos.
+
+A descoberta usa um template alternativo de coleção, portanto não exige criar páginas no admin. `videira-discovery.js` carrega os metacampos renderizados em todas as páginas Shopify da coleção, filtra no navegador e mantém os filtros na URL. Resultados são apresentados em grupos de 24. Se uma página falhar, a interface informa que a consulta está incompleta e oferece tentar novamente. A compra continua nos formulários nativos. Sem JavaScript, há um link para o catálogo normal.
+
+Validação: `tests/discovery.mjs` usa produtos de exemplo locais para testar paginação, crítico + nota, ausência de notas e repetição após falha; `tests/store-exploration.mjs` verifica bandeiras, pratos, cabeçalho, foco da busca e os vinhos reais com pizza no snapshot público. Capturas `scores-filter` e `pairing-filter` usam dados de exemplo; `live-data-pizza-390.png` usa o snapshot público da Videira. Nenhum dado do admin da loja foi alterado.

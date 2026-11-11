@@ -12,7 +12,8 @@
     "facts": {
       "country": "Brasil",
       "grape": "15% Moscato de Hamburgo,  85% Moscato Branco",
-      "region": "Vale dos Vinhedos"
+      "region": "Vale dos Vinhedos",
+      "pairing": "Filé de anjo com molho de maracujá, Frutas tropicais, Risoto de frutos do mar"
     }
   },
   {
@@ -28,7 +29,8 @@
     "facts": {
       "country": "Brasil",
       "grape": "Moscatel",
-      "region": "Vale dos Vinhedos"
+      "region": "Vale dos Vinhedos",
+      "pairing": "Mousse de limão, Pavê de tangerina e Salada de frutas com sorvete"
     }
   },
   {
@@ -48,7 +50,8 @@
     "facts": {
       "country": "Argentina",
       "grape": "Syrah/Shiraz",
-      "region": "Luján de Cuyo"
+      "region": "Luján de Cuyo",
+      "pairing": "Ideal com massas recheadas, carnes grelhadas e queijos duros."
     }
   },
   {
@@ -69,7 +72,8 @@
     "facts": {
       "country": "Argentina",
       "grape": "Malbec",
-      "region": "Mendoza"
+      "region": "Mendoza",
+      "pairing": "Combina bem com carnes grelhadas, hambúrgueres e cordeiro. Também funciona com massas com molhos de carne e queijos de maturação média. Sirva levemente fresco, entre 16 °C e 17 °C, para realçar a fruta e a maciez."
     }
   },
   {
@@ -89,7 +93,8 @@
     "facts": {
       "country": "Chile",
       "grape": "Sauvignon blanc",
-      "region": "Vale Central"
+      "region": "Vale Central",
+      "pairing": "Mariscos, Salada Poke, Vegetais Grelhados."
     }
   },
   {
@@ -109,7 +114,8 @@
     "facts": {
       "country": "Argentina",
       "grape": "Malbec",
-      "region": "Luján de Cuyo e parcelas especiais do Vale de Uco."
+      "region": "Luján de Cuyo e parcelas especiais do Vale de Uco.",
+      "pairing": "Carré de Cordeiro. Massa ao Funghi. Paella. Queijo Parmesão."
     }
   },
   {
@@ -129,7 +135,8 @@
     "facts": {
       "country": "Chile",
       "grape": "Chardonnay",
-      "region": "Vale Central"
+      "region": "Vale Central",
+      "pairing": "Sushis"
     }
   },
   {
@@ -149,7 +156,8 @@
     "facts": {
       "country": "Chile",
       "grape": "Cabernet Sauvignon",
-      "region": "Vale Central"
+      "region": "Vale Central",
+      "pairing": "Queijos de média intensidade, Filé ao molho de ervas finas e Risoto de parmesão"
     }
   },
   {
@@ -169,7 +177,8 @@
     "facts": {
       "country": "Chile",
       "grape": "carménére",
-      "region": "Vale Central"
+      "region": "Vale Central",
+      "pairing": "Lombo suíno caramelizado."
     }
   },
   {
@@ -185,7 +194,8 @@
     "facts": {
       "country": "Brasil",
       "grape": "60% Chardonnay, 40% Pinot Noir",
-      "region": "Vale dos Vinhedos"
+      "region": "Vale dos Vinhedos",
+      "pairing": "Peixes, frutos do mar, molhos leves e queijos cremosos."
     }
   },
   {
@@ -201,7 +211,8 @@
     "facts": {
       "country": "Brasil",
       "grape": "60% Chardonnay , 40% Pinot Noir",
-      "region": "Vale dos Vinhedos"
+      "region": "Vale dos Vinhedos",
+      "pairing": "Peixes, frutos do mar, molhos leves e queijos cremosos."
     }
   },
   {
@@ -233,7 +244,8 @@
     "facts": {
       "country": "Brasil",
       "grape": "Moscato, ,",
-      "region": "Serra Gaúcha"
+      "region": "Serra Gaúcha",
+      "pairing": "Sobremesas à base de frutas, aperitivos e bruschettas"
     }
   },
   {
@@ -248,7 +260,8 @@
     "description": " Naturelle Branco Suave: Representa a história da Famiglia Valduga e o legado de gerações passadas. É um resgate do belo e simples. São as raízes mais profundas, o alicerce mais resistente, a inspiração mais doce. ",
     "facts": {
       "country": "Brasil",
-      "region": "Vale dos Vinhedos"
+      "region": "Vale dos Vinhedos",
+      "pairing": "Queijos azuis, doces, frutas, sobremesas e pratos leves."
     }
   },
   {
@@ -263,7 +276,8 @@
     "description": " Naturelle representa a história da Famiglia Valduga e o legado de gerações passadas. É um resgate do belo e simples. São as raízes mais profundas, o alicerce mais resistente, a inspiração mais doce. ",
     "facts": {
       "country": "Brasil",
-      "region": "Vale dos Vinhedos"
+      "region": "Vale dos Vinhedos",
+      "pairing": "Queijos azuis, doces, frutas, sobremesas, pratos leves."
     }
   },
   {
@@ -283,7 +297,8 @@
     "facts": {
       "country": "Argentina",
       "grape": "Syrah/Shiraz",
-      "region": "Mendoza"
+      "region": "Mendoza",
+      "pairing": "Carne de vaca, Carne de cordeiro e Aves"
     }
   },
   {
@@ -303,7 +318,8 @@
     "facts": {
       "country": "Argentina",
       "grape": "Chenin Blanc",
-      "region": "Mendoza"
+      "region": "Mendoza",
+      "pairing": "Saladas, queijos e massas"
     }
   },
   {
@@ -321,7 +337,8 @@
     "facts": {
       "country": "Brasil",
       "grape": "Malvasia ,  Moscato, ,",
-      "region": "Vale dos Vinhedos"
+      "region": "Vale dos Vinhedos",
+      "pairing": "Queijos azuis, doces, frutas, sobremesas e pratos leves."
     }
   },
   {
@@ -337,7 +354,8 @@
     "facts": {
       "country": "Brasil",
       "grape": "Moscato Hamburgo, Malvasia , Moscato Branco",
-      "region": "Vale dos Vinhedos"
+      "region": "Vale dos Vinhedos",
+      "pairing": "Queijos azuis, doces, frutas, sobremesas e pratos leves."
     }
   },
   {
@@ -352,7 +370,8 @@
     "description": " Naturelle Tinto Suave: Representa a história da Famiglia Valduga e o legado de gerações passadas. É um resgate do belo e simples. São as raízes mais profundas, o alicerce mais resistente, a inspiração mais doce. ",
     "facts": {
       "country": "Brasil",
-      "region": "Vale dos Vinhedos"
+      "region": "Vale dos Vinhedos",
+      "pairing": "Queijos azuis, doces, frutas, sobremesas, pratos leves."
     }
   },
   {
@@ -372,7 +391,8 @@
     "facts": {
       "country": "Brasil",
       "grape": "Chardonnay",
-      "region": "Vale dos Vinhedos"
+      "region": "Vale dos Vinhedos",
+      "pairing": "Queijos cremosos, peixes, molhos leves e frutos do mar"
     }
   },
   {
@@ -393,7 +413,8 @@
     "facts": {
       "country": "Brasil",
       "grape": "Chardonnay",
-      "region": "Vale dos Vinhedos"
+      "region": "Vale dos Vinhedos",
+      "pairing": "Queijos cremosos, peixes, molhos leves e frutos do mar."
     }
   },
   {
@@ -409,7 +430,8 @@
     "facts": {
       "country": "Argentina",
       "grape": "Malbec",
-      "region": "Mendoza"
+      "region": "Mendoza",
+      "pairing": "Carnes vermelhas, carne de porco e cordeiro"
     }
   },
   {
@@ -424,7 +446,8 @@
     "description": "",
     "facts": {
       "country": "Argentina",
-      "grape": "Cabernet Sauvignon"
+      "grape": "Cabernet Sauvignon",
+      "pairing": "ideal com massas com molho vermelho estruturado e bem temperado, carnes vermelhas como picanha ou entrecot (bisteca) e caças em geral. Acompanha também queijos como o Roquefort ou Gorgonzola"
     }
   },
   {
@@ -444,7 +467,8 @@
     "facts": {
       "country": "Argentina",
       "grape": "Malbec",
-      "region": "Salta"
+      "region": "Salta",
+      "pairing": "Carnes vermelhas, massas e risotos, charcutaria e queijos"
     }
   },
   {
@@ -464,7 +488,8 @@
     "facts": {
       "country": "Argentina",
       "grape": "Chenin",
-      "region": "Mendoza"
+      "region": "Mendoza",
+      "pairing": "Especialistas recomendam vinho de bebida emparelhado com lanches, sobremesas de frutas e saladas de frutas."
     }
   },
   {
@@ -485,7 +510,8 @@
     "facts": {
       "country": "Brasil",
       "grape": "Cabernet Sauvignon",
-      "region": "Campanha Gaúcha"
+      "region": "Campanha Gaúcha",
+      "pairing": "Queijos maduros, massas e carnes com molhos condimentados."
     }
   },
   {
@@ -506,7 +532,8 @@
     "facts": {
       "country": "Brasil",
       "grape": "Pinot Noir",
-      "region": "Serra do Sudeste"
+      "region": "Serra do Sudeste",
+      "pairing": "Acompanha carnes brancas, carnes grelhadas, peixes e queijos leves, não muito curados e embutidos."
     }
   },
   {
@@ -527,7 +554,8 @@
     "facts": {
       "country": "Brasil",
       "grape": "Cabernet Sauvignon",
-      "region": "Campanha Gaúcha"
+      "region": "Campanha Gaúcha",
+      "pairing": "Queijos maduros, massas e carnes com molhos condimentados."
     }
   },
   {
@@ -548,7 +576,8 @@
     "facts": {
       "country": "Brasil",
       "grape": "Merlot",
-      "region": "Vale dos Vinhedos"
+      "region": "Vale dos Vinhedos",
+      "pairing": "Queijos maduros, carnes vermelhas, massas com molhos condimentados."
     }
   },
   {
@@ -564,7 +593,8 @@
     "facts": {
       "country": "Brasil",
       "grape": "30% Chardonnay, 20% Pinot Noir,  30% Riesling, 20% Glera",
-      "region": "Vale dos Vinhedos - RS"
+      "region": "Vale dos Vinhedos - RS",
+      "pairing": "Mix de folhas verdes, Pescados e Petiscos"
     }
   },
   {
@@ -584,7 +614,8 @@
     "description": " Tudo na natureza tem a sua origem. A jovialidade e a criatividade resultam em um vinho leve e equilibrado. Este vinho representa a evolução, o movimento e a originalidade do mundo vinícola. Inovação sempre foi considerada a palavra que melhor define o jeito Casa Valduga de elaborar seus vinhos. Pensando nisso, a Famiglia Valduga resolveu explorar outros terroirs. De produção própria, porém proveniente de vinhedos do outro lado da Cordilheira dos Andes, surge o Origem Sauvignon Blanc Chile. ",
     "facts": {
       "country": "Chile",
-      "grape": "Sauvignon blanc"
+      "grape": "Sauvignon blanc",
+      "pairing": "Saladas, canapés e outras entradas, pratos leves, frutos do mar e sushi."
     }
   },
   {
@@ -604,7 +635,8 @@
     "facts": {
       "country": "Chile",
       "grape": "Cabernet Sauvignon",
-      "region": "Vale Central"
+      "region": "Vale Central",
+      "pairing": "Carnes e massas com molhos agridoces, risotos e queijos suaves."
     }
   },
   {
@@ -624,7 +656,8 @@
     "facts": {
       "country": "Chile",
       "grape": "Merlot",
-      "region": "Vale Central"
+      "region": "Vale Central",
+      "pairing": "Carnes vermelhas grelhadas, pizzas, massas e aperitivos."
     }
   },
   {
@@ -645,7 +678,8 @@
     "facts": {
       "country": "Chile",
       "grape": "Chardonnay",
-      "region": "Leyda"
+      "region": "Leyda",
+      "pairing": "Pratos leves. Sugestões: Salada Ceasar, brusquetas, risotos, peixes e frutos do mar."
     }
   },
   {
@@ -665,7 +699,8 @@
     "facts": {
       "country": "Chile",
       "grape": "carménére",
-      "region": "Vale Central"
+      "region": "Vale Central",
+      "pairing": "Carnes vermelhas grelhadas, pizzas, massas e aperitivos."
     }
   },
   {
@@ -705,7 +740,8 @@
     "facts": {
       "country": "Chile",
       "grape": "Cabernet Sauvignon",
-      "region": "Vale do Curicó"
+      "region": "Vale do Curicó",
+      "pairing": "Carnes vermelhas grelhadas, massas, risotos e queijos suaves."
     }
   }
 ]

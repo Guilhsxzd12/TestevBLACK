@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import {readFile, mkdir, writeFile} from 'node:fs/promises';
 process.env.RENDER_ONLY = '1';
 const {renderPage, renderSection, globals} = await import('./fixture-server.mjs');
-const pages = ['index','collection','product','cart','search','404','page','list-collections'];
+const pages = ['index','collection','product','cart','search','404','page','list-collections','collection.descobrir'];
 const count = Number(process.env.PRODUCT_COUNT ?? 6);
 const metadata = process.env.PRODUCT_METADATA !== 'false';
 await mkdir(new URL('./artifacts/', import.meta.url), {recursive:true});

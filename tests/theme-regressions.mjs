@@ -23,7 +23,7 @@ try {
   assert.equal(await page.locator('[data-cart-dialog]').count(),0);
   assert.equal(await page.locator('h1').count(),1);assert.equal(await page.locator('.vm-whatsapp-buy').count(),0);assert.equal((await page.locator('body').innerText()).includes('Comprar no WhatsApp'),false);const frisante=page.locator('#vn-mobile').getByRole('link',{name:/Frisante/,includeHidden:true});assert.equal(await frisante.count(),1);assert.equal((await frisante.getAttribute('href')).includes('title:'),false);assert.ok((await frisante.getAttribute('href')).includes('wine-variety'));
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
-  assert.equal(await page.locator('.vm-header-main>.vm-logo').evaluate(e=>getComputedStyle(e).backgroundColor),'rgba(0, 0, 0, 0)');assert.ok((await page.locator('.vm-logo img').first().evaluate(e=>getComputedStyle(e).filter)).includes('videira-bordo'));
+  assert.equal(await page.locator('.vm-header-main>.vm-logo').evaluate(e=>getComputedStyle(e).backgroundColor),'rgba(0, 0, 0, 0)');assert.equal(await page.locator('.vm-logo img').first().evaluate(e=>getComputedStyle(e).filter),'brightness(0)');
   assert.equal(await page.locator('[data-store-message]:visible').count(),1);assert.equal(await page.locator('[data-store-message]:visible').innerText(),'ENVIO PARA TODO O BRASIL');await page.waitForFunction(()=>document.querySelectorAll('[data-store-message]')[1].hidden===false,null,{timeout:6500});assert.equal(await page.locator('[data-store-message]:visible').count(),1);
   const height=await page.locator('.mi-hero-stage').evaluate(e=>e.getBoundingClientRect().height);
   assert.ok(height<=(width===390?330:480));
