@@ -9,7 +9,7 @@ const base=process.env.TEST_BASE_URL || 'http://127.0.0.1:8179';
 const data=globals('product');
 data.product=structuredClone(data.product);
 data.product.metafields.custom.premiacao={type:'multi_line_text_field',value:'91 | Avaliador de exemplo'};
-data.product.metafields.custom.volume={value:'750 ml'};
+data.product.metafields.custom.volume={value:'750'};
 data.product.featured_image={src:'/fixture-product-photo'};
 data.product.images=[data.product.featured_image];
 const html=await renderPage('product',data);
@@ -28,6 +28,7 @@ try {
   assert.equal(await page.locator('[data-product-submit]').count(),1);
   assert.match(await page.locator('.pd-summary h1').evaluate(e=>getComputedStyle(e).fontFamily),/Playfair Display/);
   assert.match(await page.locator('.pd-identity-row p').first().evaluate(e=>getComputedStyle(e).fontFamily),/Lexend/);
+  assert.equal((await page.locator('.pd-volume span').innerText()).trim(),'750 ml');assert.equal(await page.locator('.pd-volume').evaluate(e=>e.scrollWidth<=e.clientWidth),true);for(const icon of await page.locator('.pd-identity-icon').all()){assert.equal(await icon.evaluate(e=>getComputedStyle(e).color),'rgb(56, 52, 56)');}
   await page.screenshot({path:root+'docs/product-reference-'+width+'.png',fullPage:true});
   await page.locator('.pd-quantity [data-quantity-step="1"]').click();assert.equal(await page.locator('#product-quantity').inputValue(),'2');
   await page.locator('.pd-quantity [data-quantity-step="-1"]').click();assert.equal(await page.locator('#product-quantity').inputValue(),'1');

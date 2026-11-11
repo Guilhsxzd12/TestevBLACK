@@ -114,3 +114,10 @@ awardProduct.metafields.custom.premiacao={type:'single_line_text_field',value:'<
 const escapedAward=await renderSection('main-product',{...globals('product'),product:awardProduct});
 assert.equal(escapedAward.includes('<script>unsafe</script>'),false);
 console.log('PASS optional text/list awards, escaped content and single native purchase form');
+const volumeProduct=structuredClone(globals('product').product);
+for(const [value,expected] of [['750','750 ml'],['1500 ml','1500 ml'],['1,5 L','1,5 L']]){
+ volumeProduct.metafields.custom.volume={value};
+ const rendered=await renderSection('main-product',{...globals('product'),product:volumeProduct});
+ assert.ok(rendered.includes('<span>'+expected+'</span>'));
+}
+console.log('PASS wine volume includes unit without doubling an existing ml/L suffix');

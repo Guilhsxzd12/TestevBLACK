@@ -102,7 +102,9 @@
 {%- endcapture -%}
 {%- assign fact_text = fact_text | strip -%}
 {%- if field == 'grape' and fact_text == 'Outro' -%}{%- assign fact_text = '' -%}{%- endif -%}
-{%- if field == 'alcohol' -%}
+{%- if field == 'volume' -%}
+ {%- if fact_text != blank -%}{{- fact_text -}}{%- assign remainder = fact_text | remove: '0' | remove: '1' | remove: '2' | remove: '3' | remove: '4' | remove: '5' | remove: '6' | remove: '7' | remove: '8' | remove: '9' | remove: ',' | remove: '.' | strip -%}{%- if remainder == '' -%}{{- ' ml' -}}{%- endif -%}{%- endif -%}
+{%- elsif field == 'alcohol' -%}
  {%- assign sem_alcool = product.metafields.custom.sem_alcool.value | default: product.metafields.custom.sem_alco_ol.value -%}
  {%- assign normalized_alcohol = fact_text | downcase | remove: '%' | strip -%}
  {%- if sem_alcool == true or normalized_alcohol == '0' or normalized_alcohol == '0.0' or normalized_alcohol == '0,0' or normalized_alcohol contains 'sem álcool' -%}Sem álcool

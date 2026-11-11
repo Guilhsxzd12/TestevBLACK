@@ -87,3 +87,11 @@ Conferido em mistral.com.br: Lexend nos textos e Playfair Display 600 no título
 Para o selo opcional, use um metacampo de **produto** chamado **Premiação**, namespace/chave **`custom.premiacao`**, tipo **Texto de várias linhas** (também aceita lista de textos). Uma premiação por linha: `91 | Nome do avaliador` ou `Medalha de Ouro`. O primeiro formato destaca a nota acima do nome; o segundo exibe o texto informado. Até três selos aparecem na foto e nos cards. Campo vazio não gera selo. Não há notas ou avaliadores inventados. O tema lê o campo; a definição e os valores são gerenciados no admin da Shopify.
 
 `tests/product-reference.mjs` valida celular, tablet e desktop; as capturas `docs/product-reference-*.png` usam premiação fictícia explicitamente identificada para demonstrar o layout, sem alterar produtos da loja.
+
+### Menu e banners da Videira
+
+Menu móvel com a composição de referência: barra superior com fechar, conta e sacola; quatro destaques com ícones lineares; acordeão Vinhos (inclui Frisante); links separados por linhas; atendimento/localização no final. O menu ocupa toda a largura no celular e 460 px no tablet. Os destinos Pontuados e Caixas e kits podem ser configurados no editor do cabeçalho; por padrão levam ao catálogo, sem criar coleções fictícias. Categorias continuam usando filtros nativos Shopify. Links para Clube e acessórios não são inventados; podem ser incluídos pelo menu adicional quando existirem.
+
+O segundo slide agora usa arte gerada para a Videira, em duas composições: `videira-arrivals-mobile.webp` (compacta para não aumentar o carrossel) e `videira-arrivals-desktop.webp`. A imagem usa a identidade visual verde/dourada solicitada, nome Videira e marca na caixa. `object-fit: contain` preserva texto e marca completos. A logo original do cabeçalho e rodapé continua inalterada.
+
+Volume numérico usa ml (ex.: 750 → 750 ml); valores com unidade explícita mantêm ml/L. O selo se ajusta ao conteúdo sem corte. Ícones do resumo do produto usam desenho e dimensões próprios; a ficha técnica preserva seus ícones dourados.
