@@ -87,3 +87,12 @@ assert.equal(cleanHeader.includes('title:Espumante'),false);
 console.log('PASS Portuguese technical fields, multi-grape blend, zero alcohol and native category links');
 
 const actualBlendContext=globals('product');actualBlendContext.product={...actualBlendContext.product,metafields:{custom:{blends:{type:'multi_line_text_field',value:'Chardonnay\nPinot Noir'},grape:{value:'Chardonnay'}}}};const actualBlendHTML=await renderSection('main-product',actualBlendContext);assert.ok(actualBlendHTML.includes('Chardonnay, Pinot Noir'));console.log('PASS actual custom.blends multiline field takes priority over single grape');
+const newsletterSuccess=await renderSection('videira-newsletter',{...globals('index'),form:{'posted_successfully?':true}});
+assert.ok(newsletterSuccess.includes('data-newsletter-success'));
+assert.equal(newsletterSuccess.includes('type="email"'),false);
+const newsletterIdle=await renderSection('videira-newsletter',globals('index'));
+assert.equal(newsletterIdle.includes('data-newsletter-success'),false);
+const newsletterError=await renderSection('videira-newsletter',{...globals('index'),form:{errors:{email:'error'}}});
+assert.ok(newsletterError.includes('data-newsletter-error'));
+assert.equal(newsletterError.includes('data-newsletter-success'),false);
+console.log('PASS native newsletter success, idle and error states');

@@ -69,3 +69,13 @@ No celular, Filtrar abre um painel compacto dentro da página, com grupos recolh
 - Ficha técnica: **Grau alcoólico**, **Amadurecimento** (quando preenchido), **Uvas**, **Harmonização**, **Aromas**, **Paladar** e **Visual**. Valor zero ou indicação explícita exibe **Sem álcool**.
 - A leitura aceita nomes de metacampos em português e inglês. As listas de uvas têm prioridade sobre um campo antigo de uva única, exibindo o blend completo. Exemplos aceitos: `custom.blends` (campo de várias linhas conferido na loja), `custom.uvas`, `custom.uvas_do_blend`, `custom.grau_alcoolico`, `custom.amadurecimento`, `custom.harmonizacao`, `custom.paladar`. Campos técnicos com outras variações de nome no namespace `custom` também são reconhecidos por suas chaves.
 - País e região aparecem na página do vinho, junto da identificação da bodega. Campos ausentes não geram informações inventadas.
+
+## Alinhamento e comunicação
+
+Os cards mantêm suas dimensões externas. O conteúdo fica em uma área própria, enquanto preço e compra ficam ancorados em posições iguais; nomes e regiões longos não deslocam os botões. Lexend padroniza textos, campos e controles; Playfair Display identifica os títulos editoriais.
+
+A faixa acima do cabeçalho alterna uma mensagem completa por vez: **ENVIO PARA TODO O BRASIL** e **BLACK VIDEIRA · 27 A 30 DE NOVEMBRO**. Os textos podem ser editados em **Videira · Cabeçalho → Mensagem de envio / Mensagem de campanha**.
+
+A newsletter continua usando o formulário nativo Shopify. Após `form.posted_successfully?`, mostra **Inscrição recebida com sucesso!** e leva o foco para essa confirmação. Erros retornados pela Shopify têm um bloco separado; o tema não informa sucesso somente por clicar. O aplicativo futuro de e-mails poderá cuidar dos envios, conforme sua integração e configuração.
+
+O rodapé mantém a estrutura aprovada, com o texto **Uma seleção de vinhos. Um mundo para descobrir.** e apresentação tipográfica revisada.

@@ -15,3 +15,9 @@ O símbolo de troca de tema foi removido. O emblema flutuante do reCAPTCHA é oc
 Os filtros móveis usam um painel inline com categorias recolhíveis. Os cards apresentam uva e região, e a faixa de origem troca Seleção Videira pelo país cadastrado. Argentina usa azul, Chile vermelho, Brasil verde e as demais origens seguem tons discretos de identificação. Os controles de quantidade têm dimensões fixas e os cards não se movem ao passar o ponteiro ou tocar nos botões.
 
 Banners agora têm somente indicadores, troca automática em cinco segundos e gesto horizontal; os controles laterais e de pausa foram removidos. As faixas de país usam cores mais vivas, e o ritmo dos cards foi reduzido para eliminar reservas vazias. As categorias usam os filtros de tipos de vinho cadastrados na própria Shopify, incluindo Frisante. A ficha técnica mostra sete grupos de informação, com listas completas de uvas e tratamento explícito de vinho sem álcool.
+
+Nesta revisão, as dimensões externas dos cards foram preservadas (incluindo as proporções existentes nas três larguras testadas). A área interna separa identificação/metadados de preço/compra, com altura comum e posições fixas para o rodapé de compra. A tipografia foi consolidada em Lexend para leitura/controles e Playfair Display para títulos editoriais; os textos dos cards ficaram maiores e alinhados à esquerda.
+
+A faixa superior segue o formato estreito de informações comerciais observado na Cia do Vinho, com alternância de mensagens completas. Só foram usados os dois textos solicitados para a Videira. O rodapé recebeu uma apresentação de marca mais editorial, sem usar a localização como slogan.
+
+A confirmação de newsletter depende do retorno real do formulário nativo da Shopify. O estado de sucesso tem destaque visual e foco automático; não existe sucesso simulado antes da resposta. Nenhum aplicativo de envio foi instalado ou configurado nesta revisão.

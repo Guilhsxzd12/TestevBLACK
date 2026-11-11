@@ -40,16 +40,21 @@
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',update);else update();
   document.addEventListener('shopify:section:load',update);
 })();
+// Announcement messages rotate one at a time, never as a continuous marquee.
 (() => {
- const initialize = (scope=document) => scope.querySelectorAll('[data-announcements]').forEach(el => {
-  if(el.dataset.ready)return;el.dataset.ready='true';
-  const items=[...el.querySelectorAll('.zip-announcement')], button=el.querySelector('[data-announcement-pause]');
-  const media=matchMedia('(prefers-reduced-motion: reduce)');let index=0,paused=false,timer;
-  const start=()=>{clearInterval(timer);if(paused||media.matches||document.hidden)return;timer=setInterval(()=>{if(!el.isConnected){clearInterval(timer);return;}items[index].hidden=true;index=(index+1)%items.length;items[index].hidden=false;},4200);};
-  button.addEventListener('click',()=>{paused=!paused;button.setAttribute('aria-pressed',String(paused));button.setAttribute('aria-label',paused?'Retomar mensagens':'Pausar mensagens');button.textContent=paused?'▶':'Ⅱ';start();});
-  el.addEventListener('mouseenter',()=>clearInterval(timer));el.addEventListener('mouseleave',start);el.addEventListener('focusin',()=>clearInterval(timer));el.addEventListener('focusout',start);document.addEventListener('visibilitychange',start);media.addEventListener('change',start);start();
+ const setup=(scope=document)=>scope.querySelectorAll('[data-store-announcements]').forEach(bar=>{
+  if(bar.dataset.ready)return;bar.dataset.ready='true';const messages=[...bar.querySelectorAll('[data-store-message]')];if(messages.length<2)return;let index=0,timer;
+  const stop=()=>clearInterval(timer),start=()=>{stop();if(document.hidden)return;timer=setInterval(()=>{if(!bar.isConnected){stop();return;}messages[index].hidden=true;index=(index+1)%messages.length;messages[index].hidden=false;},4500);};
+  bar.addEventListener('mouseenter',stop);bar.addEventListener('mouseleave',start);document.addEventListener('visibilitychange',()=>document.hidden?stop():start());start();
  });
- if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',()=>initialize());else initialize();document.addEventListener('shopify:section:load',e=>initialize(e.target));
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',()=>setup());else setup();document.addEventListener('shopify:section:load',e=>setup(e.target));
+})();
+// Native Shopify confirmation is authoritative; no simulated subscription success.
+(() => {
+ const feedback=scope=>{const message=scope.querySelector('[data-newsletter-success],[data-newsletter-error]');if(message){message.scrollIntoView({block:'center',behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'instant':'smooth'});message.focus({preventScroll:true});}};
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',()=>feedback(document));else feedback(document);document.addEventListener('shopify:section:load',e=>feedback(e.target));
+ document.addEventListener('submit',event=>{if(event.defaultPrevented||!event.target.matches('.vm-newsletter-form'))return;const button=event.target.querySelector('button[type="submit"]');if(button){button.disabled=true;button.textContent='ENVIANDO…';event.target.setAttribute('aria-busy','true');}});
+ window.addEventListener('pageshow',event=>{if(!event.persisted)return;document.querySelectorAll('.vm-newsletter-form[aria-busy]').forEach(form=>{form.removeAttribute('aria-busy');const button=form.querySelector('button[type="submit"]');if(button){button.disabled=false;button.textContent='INSCREVER';}});});
 })();
 // Storefront reference: quantities, accessible drawer, origin/brand rows and footer.
 (() => {
