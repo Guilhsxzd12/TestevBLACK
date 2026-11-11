@@ -121,3 +121,14 @@ for(const [value,expected] of [['750','750 ml'],['1500 ml','1500 ml'],['1,5 L','
  assert.ok(rendered.includes('<span>'+expected+'</span>'));
 }
 console.log('PASS wine volume includes unit without doubling an existing ml/L suffix');
+// Case purchases preserve actual bottle quantities and cart steps.
+const caseProduct=structuredClone(globals('product').product);
+caseProduct.selected_or_first_available_variant.price=4900;caseProduct.price=4900;caseProduct.has_only_default_variant=true;
+caseProduct.metafields.custom.quantidade_caixa={type:'number_integer',value:6};
+const caseMarkup=await renderSection('main-collection',{...globals('collection'),collection:{...globals('collection').collection,products:[caseProduct]}});
+assert.ok(caseMarkup.includes('vm-product-card'));
+const caseLine={product:caseProduct,variant:caseProduct.selected_or_first_available_variant,quantity:6,final_line_price:27930,properties:{_case_size:'6',Apresentacao:'Caixa com 6 garrafas'},line_level_discount_allocations:[],url:'/products/origem',url_to_remove:'/cart/change?quantity=0'};
+const caseCart=await renderPage('cart',{cart:{items:[caseLine],item_count:6,total_price:27930}});
+assert.match(caseCart,/min="6" step="6" name="updates\[\]" value="6"/);
+assert.ok(!caseCart.includes('_case_size:'));
+console.log('PASS native case cart quantity step and private property handling');

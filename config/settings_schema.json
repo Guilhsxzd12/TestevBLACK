@@ -3,7 +3,7 @@
     "name": "theme_info",
     "theme_name": "Teste Videira",
     "theme_author": "Videira Vinhoteca",
-    "theme_version": "1.6.0",
+    "theme_version": "1.7.0",
     "theme_documentation_url": "https://github.com/Guilhsxzd12/TestevBLACK",
     "theme_support_url": "https://github.com/Guilhsxzd12/TestevBLACK/issues"
   },
@@ -44,6 +44,36 @@
         "id": "age_gate_enabled",
         "label": "Aviso 18+",
         "default": true
+      }
+    ]
+  },
+  {
+    "name": "Caixas e kits",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "box_discount_enabled",
+        "label": "Exibir desconto automático já ativo na Shopify",
+        "default": true
+      },
+      {
+        "type": "range",
+        "id": "box_discount_percent",
+        "label": "Desconto da regra automática (%)",
+        "min": 0,
+        "max": 30,
+        "step": 1,
+        "default": 5
+      },
+      {
+        "type": "number",
+        "id": "box_discount_min",
+        "label": "Mínimo de itens da regra automática",
+        "default": 6
+      },
+      {
+        "type": "paragraph",
+        "content": "Os valores devem corresponder à regra automática criada em Descontos na Shopify. O tema não cria descontos no checkout."
       }
     ]
   }

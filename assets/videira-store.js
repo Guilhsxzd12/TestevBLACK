@@ -19,26 +19,16 @@
  });
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',()=>initialize());else initialize();document.addEventListener('shopify:section:load',e=>initialize(e.target));
 })();
-// Favoritos locais: sem depender dos serviços da loja de referência.
-(() => {
-  const key = 'videira-favorites-v1';
-  let favorites = [];
-  try { const saved = JSON.parse(localStorage.getItem(key) || '[]'); if(Array.isArray(saved)) favorites=saved.filter(p=>p&&typeof p.id==='string'&&typeof p.title==='string'&&typeof p.url==='string'&&p.url.startsWith('/products/')).slice(0,100); } catch {}
-  const update = () => document.querySelectorAll('[data-favorite]').forEach(button => button.setAttribute('aria-pressed',String(favorites.some(p=>p.id===button.dataset.productKey))));
-  const persist = () => { try { localStorage.setItem(key,JSON.stringify(favorites)); } catch {} update(); };
-  const render = () => {
-    const target=document.querySelector('[data-wishlist-items]');if(!target)return;
-    target.replaceChildren();
-    if(!favorites.length){const p=document.createElement('p');p.textContent='Toque no coração dos produtos para salvar seus vinhos favoritos.';target.append(p);return;}
-    favorites.forEach(item=>{const row=document.createElement('div'),a=document.createElement('a'),remove=document.createElement('button');a.href=item.url;a.textContent=item.title;remove.type='button';remove.textContent='Remover';remove.setAttribute('aria-label','Remover '+item.title);remove.addEventListener('click',()=>{favorites=favorites.filter(p=>p.id!==item.id);persist();render();});row.append(a,remove);target.append(row);});
-  };
-  document.addEventListener('click',event=>{
-    const button=event.target.closest('[data-favorite]');
-    if(button){const id=button.dataset.productKey;favorites=favorites.some(p=>p.id===id)?favorites.filter(p=>p.id!==id):[...favorites,{id,title:button.dataset.favoriteTitle,url:button.dataset.favoriteUrl}].slice(-100);persist();}
-    if(event.target.closest('[data-wishlist-open]')){const dialog=document.querySelector('[data-wishlist-dialog]');if(dialog&&!dialog.open){render();dialog.showModal();}}
-  });
-  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',update);else update();
-  document.addEventListener('shopify:section:load',update);
+// Favorites persist on this browser and use a complete catalog page.
+(()=>{
+ const key='videira-favorites-v1';let favorites=[];
+ const read=()=>{try{const data=JSON.parse(localStorage.getItem(key)||'[]');favorites=Array.isArray(data)?data.filter(p=>p&&typeof p.id==='string'&&typeof p.title==='string'&&typeof p.url==='string'&&p.url.startsWith('/products/')).slice(0,100):[];}catch{favorites=[];}};
+ const update=()=>{document.querySelectorAll('[data-favorite]').forEach(b=>{const active=favorites.some(p=>p.id===b.dataset.productKey);b.setAttribute('aria-pressed',String(active));b.setAttribute('aria-label',(active?'Remover dos favoritos: ':'Favoritar ')+b.dataset.favoriteTitle);});document.querySelectorAll('[data-favorites-count]').forEach(el=>{el.textContent=String(favorites.length);el.hidden=!favorites.length;});};
+ const publish=()=>{update();document.dispatchEvent(new CustomEvent('videira:favorites-change'));};
+ window.VideiraFavorites={get:()=>favorites.map(p=>({...p})),refresh:update,clear:()=>{favorites=[];try{localStorage.setItem(key,'[]');}catch{}publish();}};read();
+ document.addEventListener('click',e=>{if(e.target.closest('[data-favorites-clear]')){window.VideiraFavorites.clear();return;}const b=e.target.closest('[data-favorite]');if(!b)return;const id=b.dataset.productKey;if(!id)return;favorites=favorites.some(p=>p.id===id)?favorites.filter(p=>p.id!==id):[...favorites,{id,title:b.dataset.favoriteTitle,url:b.dataset.favoriteUrl}].slice(-100);try{localStorage.setItem(key,JSON.stringify(favorites));}catch{}publish();});
+ window.addEventListener('storage',e=>{if(e.key===key||e.key===null){read();publish();}});window.addEventListener('pageshow',()=>{read();publish();});document.addEventListener('shopify:section:load',update);
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',update);else update();
 })();
 // Announcement messages rotate one at a time, never as a continuous marquee.
 (() => {
@@ -61,9 +51,9 @@
  const setup=(scope=document)=>{
   scope.querySelectorAll('[data-horizontal-carousel]').forEach(el=>{
    if(el.dataset.rowReady)return;el.dataset.rowReady='true';const row=el.querySelector('[data-row-track]'),prev=el.querySelector('[data-row-prev]'),next=el.querySelector('[data-row-next]');
-   const update=()=>{prev.disabled=row.scrollLeft<2;next.disabled=row.scrollLeft+row.clientWidth>=row.scrollWidth-2;};
+   const update=()=>{if(!prev||!next||!row)return;prev.disabled=row.scrollLeft<2;next.disabled=row.scrollLeft+row.clientWidth>=row.scrollWidth-2;};
    const move=n=>row.scrollBy({left:n*row.clientWidth*.8,behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'instant':'smooth'});
-   prev.addEventListener('click',()=>move(-1));next.addEventListener('click',()=>move(1));row.addEventListener('scroll',update,{passive:true});new ResizeObserver(update).observe(row);new MutationObserver(update).observe(row,{childList:true});update();
+   if(!row)return;if(!prev||!next)return;prev.addEventListener('click',()=>move(-1));next.addEventListener('click',()=>move(1));row.addEventListener('scroll',update,{passive:true});new ResizeObserver(update).observe(row);new MutationObserver(update).observe(row,{childList:true});update();
   });
   const media=matchMedia('(max-width:760px)');scope.querySelectorAll('[data-footer-group]').forEach(el=>{el.open=!media.matches;});
  };

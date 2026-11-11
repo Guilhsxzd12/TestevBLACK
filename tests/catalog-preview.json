@@ -13,7 +13,8 @@
       "country": "Brasil",
       "grape": "15% Moscato de Hamburgo,  85% Moscato Branco",
       "region": "Vale dos Vinhedos",
-      "pairing": "Filé de anjo com molho de maracujá, Frutas tropicais, Risoto de frutos do mar"
+      "pairing": "Filé de anjo com molho de maracujá, Frutas tropicais, Risoto de frutos do mar",
+      "volume": "750 ml"
     }
   },
   {
@@ -30,7 +31,8 @@
       "country": "Brasil",
       "grape": "Moscatel",
       "region": "Vale dos Vinhedos",
-      "pairing": "Mousse de limão, Pavê de tangerina e Salada de frutas com sorvete"
+      "pairing": "Mousse de limão, Pavê de tangerina e Salada de frutas com sorvete",
+      "volume": "750 ml"
     }
   },
   {
@@ -51,7 +53,8 @@
       "country": "Argentina",
       "grape": "Syrah/Shiraz",
       "region": "Luján de Cuyo",
-      "pairing": "Ideal com massas recheadas, carnes grelhadas e queijos duros."
+      "pairing": "Ideal com massas recheadas, carnes grelhadas e queijos duros.",
+      "volume": "750 ml"
     }
   },
   {
@@ -73,7 +76,8 @@
       "country": "Argentina",
       "grape": "Malbec",
       "region": "Mendoza",
-      "pairing": "Combina bem com carnes grelhadas, hambúrgueres e cordeiro. Também funciona com massas com molhos de carne e queijos de maturação média. Sirva levemente fresco, entre 16 °C e 17 °C, para realçar a fruta e a maciez."
+      "pairing": "Combina bem com carnes grelhadas, hambúrgueres e cordeiro. Também funciona com massas com molhos de carne e queijos de maturação média. Sirva levemente fresco, entre 16 °C e 17 °C, para realçar a fruta e a maciez.",
+      "volume": "750 ml"
     }
   },
   {
@@ -94,7 +98,8 @@
       "country": "Chile",
       "grape": "Sauvignon blanc",
       "region": "Vale Central",
-      "pairing": "Mariscos, Salada Poke, Vegetais Grelhados."
+      "pairing": "Mariscos, Salada Poke, Vegetais Grelhados.",
+      "volume": "750 ml"
     }
   },
   {
@@ -115,7 +120,8 @@
       "country": "Argentina",
       "grape": "Malbec",
       "region": "Luján de Cuyo e parcelas especiais do Vale de Uco.",
-      "pairing": "Carré de Cordeiro. Massa ao Funghi. Paella. Queijo Parmesão."
+      "pairing": "Carré de Cordeiro. Massa ao Funghi. Paella. Queijo Parmesão.",
+      "volume": "750 ml"
     }
   },
   {
@@ -136,7 +142,8 @@
       "country": "Chile",
       "grape": "Chardonnay",
       "region": "Vale Central",
-      "pairing": "Sushis"
+      "pairing": "Sushis",
+      "volume": "750 ml"
     }
   },
   {
@@ -157,7 +164,8 @@
       "country": "Chile",
       "grape": "Cabernet Sauvignon",
       "region": "Vale Central",
-      "pairing": "Queijos de média intensidade, Filé ao molho de ervas finas e Risoto de parmesão"
+      "pairing": "Queijos de média intensidade, Filé ao molho de ervas finas e Risoto de parmesão",
+      "volume": "750 ml"
     }
   },
   {
@@ -178,7 +186,8 @@
       "country": "Chile",
       "grape": "carménére",
       "region": "Vale Central",
-      "pairing": "Lombo suíno caramelizado."
+      "pairing": "Lombo suíno caramelizado.",
+      "volume": "750 ml"
     }
   },
   {
@@ -195,7 +204,8 @@
       "country": "Brasil",
       "grape": "60% Chardonnay, 40% Pinot Noir",
       "region": "Vale dos Vinhedos",
-      "pairing": "Peixes, frutos do mar, molhos leves e queijos cremosos."
+      "pairing": "Peixes, frutos do mar, molhos leves e queijos cremosos.",
+      "volume": "375 ml"
     }
   },
   {
@@ -212,7 +222,8 @@
       "country": "Brasil",
       "grape": "60% Chardonnay , 40% Pinot Noir",
       "region": "Vale dos Vinhedos",
-      "pairing": "Peixes, frutos do mar, molhos leves e queijos cremosos."
+      "pairing": "Peixes, frutos do mar, molhos leves e queijos cremosos.",
+      "volume": "750 ml"
     }
   },
   {
@@ -228,7 +239,8 @@
     "facts": {
       "country": "Brasil",
       "grape": "97% Prosecco,  3% Merlot, ,",
-      "region": "Serra Gaúcha"
+      "region": "Serra Gaúcha",
+      "volume": "750 ml"
     }
   },
   {
@@ -245,7 +257,8 @@
       "country": "Brasil",
       "grape": "Moscato, ,",
       "region": "Serra Gaúcha",
-      "pairing": "Sobremesas à base de frutas, aperitivos e bruschettas"
+      "pairing": "Sobremesas à base de frutas, aperitivos e bruschettas",
+      "volume": "750 ml"
     }
   },
   {
@@ -261,7 +274,8 @@
     "facts": {
       "country": "Brasil",
       "region": "Vale dos Vinhedos",
-      "pairing": "Queijos azuis, doces, frutas, sobremesas e pratos leves."
+      "pairing": "Queijos azuis, doces, frutas, sobremesas e pratos leves.",
+      "volume": "750 ml"
     }
   },
   {
@@ -277,7 +291,8 @@
     "facts": {
       "country": "Brasil",
       "region": "Vale dos Vinhedos",
-      "pairing": "Queijos azuis, doces, frutas, sobremesas, pratos leves."
+      "pairing": "Queijos azuis, doces, frutas, sobremesas, pratos leves.",
+      "volume": "750 ml"
     }
   },
   {
@@ -298,7 +313,8 @@
       "country": "Argentina",
       "grape": "Syrah/Shiraz",
       "region": "Mendoza",
-      "pairing": "Carne de vaca, Carne de cordeiro e Aves"
+      "pairing": "Carne de vaca, Carne de cordeiro e Aves",
+      "volume": "750 ml"
     }
   },
   {
@@ -319,7 +335,8 @@
       "country": "Argentina",
       "grape": "Chenin Blanc",
       "region": "Mendoza",
-      "pairing": "Saladas, queijos e massas"
+      "pairing": "Saladas, queijos e massas",
+      "volume": "750 ml"
     }
   },
   {
@@ -338,7 +355,8 @@
       "country": "Brasil",
       "grape": "Malvasia ,  Moscato, ,",
       "region": "Vale dos Vinhedos",
-      "pairing": "Queijos azuis, doces, frutas, sobremesas e pratos leves."
+      "pairing": "Queijos azuis, doces, frutas, sobremesas e pratos leves.",
+      "volume": "750 ml"
     }
   },
   {
@@ -355,7 +373,8 @@
       "country": "Brasil",
       "grape": "Moscato Hamburgo, Malvasia , Moscato Branco",
       "region": "Vale dos Vinhedos",
-      "pairing": "Queijos azuis, doces, frutas, sobremesas e pratos leves."
+      "pairing": "Queijos azuis, doces, frutas, sobremesas e pratos leves.",
+      "volume": "750 ml"
     }
   },
   {
@@ -371,7 +390,8 @@
     "facts": {
       "country": "Brasil",
       "region": "Vale dos Vinhedos",
-      "pairing": "Queijos azuis, doces, frutas, sobremesas, pratos leves."
+      "pairing": "Queijos azuis, doces, frutas, sobremesas, pratos leves.",
+      "volume": "750 ml"
     }
   },
   {
@@ -392,7 +412,8 @@
       "country": "Brasil",
       "grape": "Chardonnay",
       "region": "Vale dos Vinhedos",
-      "pairing": "Queijos cremosos, peixes, molhos leves e frutos do mar"
+      "pairing": "Queijos cremosos, peixes, molhos leves e frutos do mar",
+      "volume": "375 ml"
     }
   },
   {
@@ -414,7 +435,8 @@
       "country": "Brasil",
       "grape": "Chardonnay",
       "region": "Vale dos Vinhedos",
-      "pairing": "Queijos cremosos, peixes, molhos leves e frutos do mar."
+      "pairing": "Queijos cremosos, peixes, molhos leves e frutos do mar.",
+      "volume": "750 ml"
     }
   },
   {
@@ -431,7 +453,8 @@
       "country": "Argentina",
       "grape": "Malbec",
       "region": "Mendoza",
-      "pairing": "Carnes vermelhas, carne de porco e cordeiro"
+      "pairing": "Carnes vermelhas, carne de porco e cordeiro",
+      "volume": "750 ml"
     }
   },
   {
@@ -468,7 +491,8 @@
       "country": "Argentina",
       "grape": "Malbec",
       "region": "Salta",
-      "pairing": "Carnes vermelhas, massas e risotos, charcutaria e queijos"
+      "pairing": "Carnes vermelhas, massas e risotos, charcutaria e queijos",
+      "volume": "750 ml"
     }
   },
   {
@@ -489,7 +513,8 @@
       "country": "Argentina",
       "grape": "Chenin",
       "region": "Mendoza",
-      "pairing": "Especialistas recomendam vinho de bebida emparelhado com lanches, sobremesas de frutas e saladas de frutas."
+      "pairing": "Especialistas recomendam vinho de bebida emparelhado com lanches, sobremesas de frutas e saladas de frutas.",
+      "volume": "750 ml"
     }
   },
   {
@@ -511,7 +536,8 @@
       "country": "Brasil",
       "grape": "Cabernet Sauvignon",
       "region": "Campanha Gaúcha",
-      "pairing": "Queijos maduros, massas e carnes com molhos condimentados."
+      "pairing": "Queijos maduros, massas e carnes com molhos condimentados.",
+      "volume": "375 ml"
     }
   },
   {
@@ -533,7 +559,8 @@
       "country": "Brasil",
       "grape": "Pinot Noir",
       "region": "Serra do Sudeste",
-      "pairing": "Acompanha carnes brancas, carnes grelhadas, peixes e queijos leves, não muito curados e embutidos."
+      "pairing": "Acompanha carnes brancas, carnes grelhadas, peixes e queijos leves, não muito curados e embutidos.",
+      "volume": "750 ml"
     }
   },
   {
@@ -555,7 +582,8 @@
       "country": "Brasil",
       "grape": "Cabernet Sauvignon",
       "region": "Campanha Gaúcha",
-      "pairing": "Queijos maduros, massas e carnes com molhos condimentados."
+      "pairing": "Queijos maduros, massas e carnes com molhos condimentados.",
+      "volume": "750 ml"
     }
   },
   {
@@ -577,7 +605,8 @@
       "country": "Brasil",
       "grape": "Merlot",
       "region": "Vale dos Vinhedos",
-      "pairing": "Queijos maduros, carnes vermelhas, massas com molhos condimentados."
+      "pairing": "Queijos maduros, carnes vermelhas, massas com molhos condimentados.",
+      "volume": "750 ml"
     }
   },
   {
@@ -594,7 +623,8 @@
       "country": "Brasil",
       "grape": "30% Chardonnay, 20% Pinot Noir,  30% Riesling, 20% Glera",
       "region": "Vale dos Vinhedos - RS",
-      "pairing": "Mix de folhas verdes, Pescados e Petiscos"
+      "pairing": "Mix de folhas verdes, Pescados e Petiscos",
+      "volume": "750 ml"
     }
   },
   {
@@ -615,7 +645,8 @@
     "facts": {
       "country": "Chile",
       "grape": "Sauvignon blanc",
-      "pairing": "Saladas, canapés e outras entradas, pratos leves, frutos do mar e sushi."
+      "pairing": "Saladas, canapés e outras entradas, pratos leves, frutos do mar e sushi.",
+      "volume": "750 ml"
     }
   },
   {
@@ -636,7 +667,8 @@
       "country": "Chile",
       "grape": "Cabernet Sauvignon",
       "region": "Vale Central",
-      "pairing": "Carnes e massas com molhos agridoces, risotos e queijos suaves."
+      "pairing": "Carnes e massas com molhos agridoces, risotos e queijos suaves.",
+      "volume": "750 ml"
     }
   },
   {
@@ -657,7 +689,8 @@
       "country": "Chile",
       "grape": "Merlot",
       "region": "Vale Central",
-      "pairing": "Carnes vermelhas grelhadas, pizzas, massas e aperitivos."
+      "pairing": "Carnes vermelhas grelhadas, pizzas, massas e aperitivos.",
+      "volume": "750 ml"
     }
   },
   {
@@ -679,7 +712,8 @@
       "country": "Chile",
       "grape": "Chardonnay",
       "region": "Leyda",
-      "pairing": "Pratos leves. Sugestões: Salada Ceasar, brusquetas, risotos, peixes e frutos do mar."
+      "pairing": "Pratos leves. Sugestões: Salada Ceasar, brusquetas, risotos, peixes e frutos do mar.",
+      "volume": "750 ml"
     }
   },
   {
@@ -700,7 +734,8 @@
       "country": "Chile",
       "grape": "carménére",
       "region": "Vale Central",
-      "pairing": "Carnes vermelhas grelhadas, pizzas, massas e aperitivos."
+      "pairing": "Carnes vermelhas grelhadas, pizzas, massas e aperitivos.",
+      "volume": "750 ml"
     }
   },
   {
@@ -720,7 +755,8 @@
     "facts": {
       "country": "Argentina",
       "grape": "Malbec",
-      "region": "Salta"
+      "region": "Salta",
+      "volume": "750 ml"
     }
   },
   {

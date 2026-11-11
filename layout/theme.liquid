@@ -17,7 +17,7 @@
 {{ 'videira-white.css' | asset_url | stylesheet_tag }}
 <style>:root{--vm-wine:{{ settings.wine_color | default: '#651242' }};--vm-gold:{{ settings.gold_color | default: '#b59758' }};--nv-wine:{{ settings.wine_color | default: '#651242' }};--nv-gold:{{ settings.gold_color | default: '#b59758' }};--nv-paper:{{ settings.paper_color | default: '#fcfaf6' }}}</style>
 <script src="{{ 'videira.js' | asset_url }}" defer></script>
-<script src="{{ 'videira-store.js' | asset_url }}" defer></script><script src="{{ 'videira-discovery.js' | asset_url }}" defer></script>
+<script src="{{ 'videira-store.js' | asset_url }}" defer></script><script src="{{ 'videira-kits.js' | asset_url }}" defer></script><script src="{{ 'videira-discovery.js' | asset_url }}" defer></script>
 <script type="application/json" id="videira-config">{"root":{{ routes.root_url | json }},"cart":{{ routes.cart_url | json }},"add":{{ 'product.add' | t | json }},"soldOut":{{ 'product.sold_out' | t | json }},"added":{{ 'product.added' | t | json }},"error":{{ 'product.error' | t | json }},"cartError":{{ 'product.cart_error' | t | json }}}</script>
 {{ content_for_header }}
 </head><body class="storefront vm-store template-{{ request.page_type }}">
