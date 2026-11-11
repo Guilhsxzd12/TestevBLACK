@@ -6,7 +6,7 @@
    assign keys = 'country,pais,pa_s,pais_de_origem,origem_pais'
    assign standard_key = 'country'
   when 'grape'
-   assign keys = 'uvas_do_blend,uvas_blend,blend_de_uvas,uvas,castas,composicao_de_uvas,uvas_do_vinho,grape,uva,uva_s,variedade_de_uvas,blend'
+   assign keys = 'blends,uvas_do_blend,uvas_blend,blend_de_uvas,uvas,castas,composicao_de_uvas,uvas_do_vinho,grape,uva,uva_s,variedade_de_uvas,blend'
    assign standard_key = 'grape-variety'
   when 'region'
    assign keys = 'region,regiao,regi_o,regiao_do_vinho,regiao_de_origem,regiao_produtora'
@@ -40,7 +40,7 @@
    assign matches = false
    case field
     when 'grape'
-     if key contains 'uva' or key contains 'casta'
+     if key contains 'uva' or key contains 'casta' or key contains 'blend'
       unless key contains 'chuva'
        assign matches = true
       endunless
@@ -90,6 +90,8 @@
     {%- assign label = entry.label.value | default: entry.label | default: entry.name.value | default: entry.name | default: entry -%}
     {%- unless label contains 'gid://' -%}{%- if label != blank -%}{{- separator -}}{{- label | escape -}}{%- assign separator = ', ' -%}{%- endif -%}{%- endunless -%}
    {%- endfor -%}
+  {%- elsif field == 'grape' and fact.type == 'multi_line_text_field' -%}
+   {{- fact | metafield_text | newline_to_br | replace: '<br />', ', ' | strip_newlines | strip_html | escape -}}
   {%- elsif fact.type == 'metaobject_reference' -%}
    {%- assign label = fact.value.label.value | default: fact.value.label | default: fact.value.name.value | default: fact.value.name -%}{{- label | escape -}}
   {%- else -%}{{- fact | metafield_text | strip_html | escape -}}{%- endif -%}
@@ -101,7 +103,7 @@
  {%- assign sem_alcool = product.metafields.custom.sem_alcool.value | default: product.metafields.custom.sem_alco_ol.value -%}
  {%- assign normalized_alcohol = fact_text | downcase | remove: '%' | strip -%}
  {%- if sem_alcool == true or normalized_alcohol == '0' or normalized_alcohol == '0.0' or normalized_alcohol == '0,0' or normalized_alcohol contains 'sem álcool' -%}Sem álcool
- {%- elsif fact_text != blank -%}{{- fact_text -}}{%- if fact.type == 'number_decimal' or fact.type == 'number_integer' -%}%{%- endif -%}{%- endif -%}
+ {%- elsif fact_text != blank -%}{%- assign numeric_remainder = fact_text | remove: '0' | remove: '1' | remove: '2' | remove: '3' | remove: '4' | remove: '5' | remove: '6' | remove: '7' | remove: '8' | remove: '9' | remove: ',' | remove: '.' | strip -%}{{- fact_text -}}{%- if numeric_remainder == '' -%}%{%- endif -%}{%- endif -%}
 {%- elsif fact_text != blank -%}{{- fact_text -}}
 {%- elsif field == 'grape' -%}
  {%- assign wine_title = product.title | downcase -%}{%- assign grape_names = 'Cabernet Sauvignon,Sauvignon Blanc,Chardonnay,Chenin Blanc,Pinot Noir,Malbec,Merlot,Syrah,Shiraz,Tannat,Tempranillo' | split: ',' -%}{%- assign separator = '' -%}

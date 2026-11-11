@@ -85,3 +85,5 @@ assert.ok(cleanHeader.includes('Frisante'));
 assert.ok(cleanHeader.includes('filter.v.t.shopify.wine-variety='));
 assert.equal(cleanHeader.includes('title:Espumante'),false);
 console.log('PASS Portuguese technical fields, multi-grape blend, zero alcohol and native category links');
+
+const actualBlendContext=globals('product');actualBlendContext.product={...actualBlendContext.product,metafields:{custom:{blends:{type:'multi_line_text_field',value:'Chardonnay\nPinot Noir'},grape:{value:'Chardonnay'}}}};const actualBlendHTML=await renderSection('main-product',actualBlendContext);assert.ok(actualBlendHTML.includes('Chardonnay, Pinot Noir'));console.log('PASS actual custom.blends multiline field takes priority over single grape');
