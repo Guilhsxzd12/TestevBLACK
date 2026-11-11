@@ -10,7 +10,7 @@
  const addBatch=doc=>{const batch=doc.querySelector('[data-discovery-batch]');if(!batch)throw Error('Resposta de catálogo inválida');for(const template of batch.querySelectorAll('[data-discovery-card]')){if(records.has(template.dataset.id))continue;records.set(template.dataset.id,{id:template.dataset.id,country:norm(template.dataset.country),kitTemplate:batch.querySelector('[data-discovery-kit][data-id="'+template.dataset.id+'"]'),pairing:norm(template.dataset.pairing),available:template.dataset.available==='true',template});}return batch.dataset.next||'';};
  next=addBatch(root);
  const render=()=>{
-  const params=new URLSearchParams(location.search),dishKey=params.get('harmonizacao'),dish=dishes[dishKey],country=params.get('pais')||'',mode=params.get('modo');
+  const params=new URLSearchParams(location.search),dishKey=params.get('harmonizacao'),dish=dishes[dishKey]||(dishKey?{name:dishKey.replace(/-/g,' '),tokens:[dishKey]}:null),country=params.get('pais')||'',mode=params.get('modo');
   const isPairing=!!dishKey,isCountry=!!country,isFavorites=mode==='favoritos',isKits=mode==='caixas';
   const saved=window.VideiraFavorites?.get()||[],savedIds=new Set(saved.map(p=>p.id));root.querySelector('[data-favorites-clear]').hidden=!isFavorites||!saved.length;
   root.dataset.mode=isPairing?'pairing':isCountry?'country':isFavorites?'favorites':isKits?'kits':'all';root.querySelector('[data-pairing-links]').hidden=!isPairing;

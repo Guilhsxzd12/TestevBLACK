@@ -1,1 +1,343 @@
-{"sections":{"store":{"type":"videira-storefront","settings":{"autoplay":true}}},"order":["store"]}
+{
+  "sections": {
+    "banners": {
+      "type": "videira-home-hero",
+      "settings": {
+        "autoplay": true
+      },
+      "blocks": {
+        "black": {
+          "type": "banner",
+          "settings": {
+            "title": "Esquenta Black Friday Videira",
+            "style": "black"
+          }
+        },
+        "arrivals": {
+          "type": "banner",
+          "settings": {
+            "title": "Acabou de chegar — Novidades no catálogo Videira",
+            "style": "arrivals"
+          }
+        }
+      },
+      "block_order": [
+        "black",
+        "arrivals"
+      ]
+    },
+    "categories": {
+      "type": "videira-home-categories",
+      "settings": {},
+      "blocks": {
+        "category0": {
+          "type": "category",
+          "settings": {
+            "title": "SELEÇÃO MALBEC",
+            "style": "malbec"
+          }
+        },
+        "category1": {
+          "type": "category",
+          "settings": {
+            "title": "NOVIDADES",
+            "style": "new"
+          }
+        },
+        "category2": {
+          "type": "category",
+          "settings": {
+            "title": "SELEÇÃO VIDEIRA",
+            "style": "selection"
+          }
+        },
+        "category3": {
+          "type": "category",
+          "settings": {
+            "title": "VINHO E PIZZA",
+            "style": "pizza"
+          }
+        },
+        "category4": {
+          "type": "category",
+          "settings": {
+            "title": "PARA COMPARTILHAR",
+            "style": "sharing"
+          }
+        }
+      },
+      "block_order": [
+        "category0",
+        "category1",
+        "category2",
+        "category3",
+        "category4"
+      ]
+    },
+    "pairings": {
+      "type": "videira-home-pairings",
+      "settings": {},
+      "blocks": {
+        "food0": {
+          "type": "food",
+          "settings": {
+            "term": "carnes-vermelhas",
+            "default_image": "carnes-vermelhas",
+            "title": "Carnes vermelhas"
+          }
+        },
+        "food1": {
+          "type": "food",
+          "settings": {
+            "term": "pizzas",
+            "default_image": "pizzas",
+            "title": "Pizzas"
+          }
+        },
+        "food2": {
+          "type": "food",
+          "settings": {
+            "term": "queijos",
+            "default_image": "queijos",
+            "title": "Queijos"
+          }
+        },
+        "food3": {
+          "type": "food",
+          "settings": {
+            "term": "orientais",
+            "default_image": "orientais",
+            "title": "Cozinha oriental"
+          }
+        },
+        "food4": {
+          "type": "food",
+          "settings": {
+            "term": "massas",
+            "default_image": "massas",
+            "title": "Massas"
+          }
+        },
+        "food5": {
+          "type": "food",
+          "settings": {
+            "term": "frutos-do-mar",
+            "default_image": "frutos-do-mar",
+            "title": "Frutos do mar"
+          }
+        },
+        "food6": {
+          "type": "food",
+          "settings": {
+            "term": "carnes-brancas",
+            "default_image": "carnes-brancas",
+            "title": "Carnes brancas"
+          }
+        },
+        "food7": {
+          "type": "food",
+          "settings": {
+            "term": "risotos",
+            "default_image": "risotos",
+            "title": "Risotos"
+          }
+        },
+        "food8": {
+          "type": "food",
+          "settings": {
+            "term": "peixes",
+            "default_image": "peixes",
+            "title": "Peixes"
+          }
+        },
+        "food9": {
+          "type": "food",
+          "settings": {
+            "term": "legumes",
+            "default_image": "legumes",
+            "title": "Legumes"
+          }
+        },
+        "food10": {
+          "type": "food",
+          "settings": {
+            "term": "saladas",
+            "default_image": "saladas",
+            "title": "Saladas"
+          }
+        },
+        "food11": {
+          "type": "food",
+          "settings": {
+            "term": "sobremesas",
+            "default_image": "sobremesas",
+            "title": "Sobremesas"
+          }
+        }
+      },
+      "block_order": [
+        "food0",
+        "food1",
+        "food2",
+        "food3",
+        "food4",
+        "food5",
+        "food6",
+        "food7",
+        "food8",
+        "food9",
+        "food10",
+        "food11"
+      ]
+    },
+    "selection": {
+      "type": "videira-home-shelf",
+      "settings": {
+        "title": "Seleção da Videira",
+        "subtitle": "Vinhos para descobrir e compartilhar",
+        "anchor": "selecao"
+      }
+    },
+    "good_buys": {
+      "type": "videira-home-good-buys",
+      "settings": {}
+    },
+    "origins_story": {
+      "type": "videira-home-editorial",
+      "settings": {}
+    },
+    "newest": {
+      "type": "videira-home-shelf",
+      "settings": {
+        "title": "Novidades",
+        "subtitle": "Encontre seu próximo favorito",
+        "anchor": "novidades",
+        "newest_first": true
+      }
+    },
+    "countries": {
+      "type": "videira-home-countries",
+      "settings": {},
+      "blocks": {
+        "country0": {
+          "type": "country",
+          "settings": {
+            "title": "Argentina"
+          }
+        },
+        "country1": {
+          "type": "country",
+          "settings": {
+            "title": "Chile"
+          }
+        },
+        "country2": {
+          "type": "country",
+          "settings": {
+            "title": "Brasil"
+          }
+        }
+      },
+      "block_order": [
+        "country0",
+        "country1",
+        "country2"
+      ]
+    },
+    "producers": {
+      "type": "videira-home-producers",
+      "settings": {},
+      "blocks": {
+        "producer0": {
+          "type": "producer",
+          "settings": {
+            "title": "Becas"
+          }
+        },
+        "producer1": {
+          "type": "producer",
+          "settings": {
+            "title": "Casa Valduga"
+          }
+        },
+        "producer2": {
+          "type": "producer",
+          "settings": {
+            "title": "Gascón"
+          }
+        },
+        "producer3": {
+          "type": "producer",
+          "settings": {
+            "title": "Martino"
+          }
+        },
+        "producer4": {
+          "type": "producer",
+          "settings": {
+            "title": "Mosquita Muerta"
+          }
+        },
+        "producer5": {
+          "type": "producer",
+          "settings": {
+            "title": "Ponto Nero"
+          }
+        },
+        "producer6": {
+          "type": "producer",
+          "settings": {
+            "title": "Puna"
+          }
+        },
+        "producer7": {
+          "type": "producer",
+          "settings": {
+            "title": "Susana Balbo"
+          }
+        },
+        "producer8": {
+          "type": "producer",
+          "settings": {
+            "title": "Zuccardi"
+          }
+        }
+      },
+      "block_order": [
+        "producer0",
+        "producer1",
+        "producer2",
+        "producer3",
+        "producer4",
+        "producer5",
+        "producer6",
+        "producer7",
+        "producer8"
+      ]
+    },
+    "brand_story": {
+      "type": "videira-home-editorial",
+      "settings": {
+        "style": "story",
+        "eyebrow": "VIDEIRA VINHOTECA",
+        "heading": "Vinhos com identidade.",
+        "heading_second": "Momentos que ficam.",
+        "text": "O seu próximo vinho está aqui.",
+        "button_label": "Conheça",
+        "image_alt": "Vinhedos e suas origens"
+      }
+    }
+  },
+  "order": [
+    "banners",
+    "categories",
+    "pairings",
+    "selection",
+    "good_buys",
+    "origins_story",
+    "newest",
+    "countries",
+    "producers",
+    "brand_story"
+  ]
+}

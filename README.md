@@ -42,3 +42,17 @@ Testes com LiquidJS/Chromium:
 - theme-regressions.mjs: vitrines, carrinho, filtros, navegação, newsletter e ficha técnica.
 
 Capturas boxes/favorites usam catálogo sintético local e não alteram produtos da loja. Capturas add-to-cart-card e a prévia usam snapshot do catálogo público. Recursos visuais e fontes estão documentados em assets/media-credits.txt.
+
+## Navegação no computador
+
+Os grupos com submenu abrem ao passar o mouse (a partir de 1024 px, com ponteiro de precisão). O painel permanece aberto durante a passagem do cursor e fecha com uma pequena tolerância ao sair. Só um grupo fica aberto de cada vez. Clique, seta para baixo, Tab e Escape continuam disponíveis; o celular mantém o menu por toque. O grupo aberto, o item sob o cursor e a rota atual ficam dourados. Os links atuais usam aria-current e os grupos refletem aria-expanded. `tests/desktop-dropdown.mjs` valida notebook/PC, percurso até o painel, clique, teclado e celular.
+
+## Editor da Shopify e carrosséis
+
+A página inicial agora usa dez seções independentes, na mesma ordem visual: banners, atalhos, harmonizações, seleção de vinhos, boas compras, editorial de origens, novidades, países, produtores e editorial da marca. Cada uma pode ser selecionada, movida, ocultada ou removida no editor. Títulos, textos, imagens e links têm campos próprios; as vitrines permitem escolher coleção, logo, quantidade e ordem dos produtos. Os dados e preços de cada vinho continuam no cadastro de produtos da Shopify.
+
+Em **Videira · Produtores**, cada marca aparece como um bloco identificado pelo nome. Abra o produtor e selecione **Logo do produtor**; também é possível mudar nome, link, altura das logos e exibição do nome. As marcas existentes foram mantidas. Banners, atalhos, países e pratos também têm blocos próprios com atributos nativos do editor. Selecionar um bloco fora da área visível o traz para a tela; o banner selecionado fica pausado durante a edição.
+
+A configuração anterior foi preservada em docs/home-layout-before-index.json e a seção antiga permanece como legado, sem opção de adicioná-la novamente como uma página inteira. Coleções, imagens e blocos existentes são transferidos para as respectivas seções. Nenhum dado de produto é migrado ou alterado.
+
+Carrosséis podem ser arrastados com mouse, sem arraste nativo das imagens nem navegação acidental após o gesto. Clique normal, botões de compra, campos e seleção por teclado continuam disponíveis. O toque usa a rolagem nativa. A barra dos produtores fica oculta, e os controles existentes têm contraste maior e estado desabilitado distinguível. `tests/editor-drag.mjs` cobre a estrutura editável, campos de logo/nome/link, pratos personalizados, arraste e ausência de overflow em notebook/PC e celular.

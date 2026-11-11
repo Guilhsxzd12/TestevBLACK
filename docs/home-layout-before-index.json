@@ -1,0 +1,13 @@
+{
+  "sections": {
+    "store": {
+      "type": "videira-storefront",
+      "settings": {
+        "autoplay": true
+      }
+    }
+  },
+  "order": [
+    "store"
+  ]
+}

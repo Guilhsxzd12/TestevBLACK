@@ -18,3 +18,9 @@ Os templates são renderizados com LiquidJS e testados com Chromium em 320/390/8
 - Newsletter confirma somente o estado de sucesso retornado pela Shopify; erros não geram confirmação falsa.
 
 As fotos e as informações de produto dos snapshots são públicas. Os exemplos de caixas, limites e variantes dos testes são locais. Nenhum produto, metacampo, desconto, pedido ou contato foi alterado no admin da Shopify.
+
+## Inicial modular e desktop
+
+Dez seções nativas substituem o antigo bloco único, preservando âncoras, ordem e conteúdo. Presets, schemas e blocos permitem editar logos, imagens, títulos, textos, links e coleções. Produtores e pratos usam o campo title para identificação de cada bloco no editor. A configuração antiga fica guardada como referência. O logo original continua com a mesma assinatura SHA-256.
+
+editor-drag.mjs valida 1280/1440 px, estrutura/quantidades preservadas, scroll por arraste sem navegar, imagem com draggable=false, setas com opacidade/contraste corretos, scrollbar dos produtores oculta, campos de logo/altura/link e prato personalizado; também cobre 390 px. desktop-dropdown.mjs verifica hover, passagem ao painel, exclusividade de abertura, clique, seta para baixo, Escape e destaque dourado da rota atual. A regressão completa de compra, carrinho, favoritos, newsletter e ficha técnica passou em 390/820/1440 px.
