@@ -1,48 +1,23 @@
 (() => {
-  const initialize = (scope = document) => {
-    scope.querySelectorAll('[data-banner-slider]').forEach(slider => {
-      if (slider.dataset.ready) return;
-      slider.dataset.ready = 'true';
-      const slides = [...slider.querySelectorAll('[data-banner-slide]')];
-      const dots = [...slider.querySelectorAll('[data-banner-dot]')];
-      const pause = slider.querySelector('[data-banner-pause]');
-      if (slides.length < 2) return;
-      let index = 0, timer, paused = false;
-      const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
-      if (pause && (reduced || slider.dataset.autoplay !== 'true')) pause.hidden = true;
-      const show = number => {
-        index = (number + slides.length) % slides.length;
-        slides.forEach((slide, i) => { slide.hidden = i !== index; });
-        dots.forEach((dot, i) => dot.setAttribute('aria-pressed', String(i === index)));
-      };
-      const stop = () => clearInterval(timer);
-      const start = () => {
-        stop();
-        if (slider.dataset.autoplay === 'true' && !paused && !reduced && !document.hidden) timer = setInterval(() => {
-          if (!slider.isConnected) { stop(); return; }
-          show(index + 1);
-        }, 6000);
-      };
-      slider.querySelector('[data-banner-next]')?.addEventListener('click', () => { show(index + 1); start(); });
-      slider.querySelector('[data-banner-previous]')?.addEventListener('click', () => { show(index - 1); start(); });
-      dots.forEach(dot => dot.addEventListener('click', () => { show(Number(dot.dataset.bannerDot)); start(); }));
-      pause?.addEventListener('click', () => {
-        paused = !paused;
-        pause.setAttribute('aria-pressed', String(paused));
-        pause.setAttribute('aria-label', paused ? 'Retomar banners' : 'Pausar banners');
-        pause.textContent = paused ? '▶' : '||';
-        start();
-      });
-      slider.addEventListener('mouseenter', stop);
-      slider.addEventListener('mouseleave', start);
-      slider.addEventListener('focusin', stop);
-      slider.addEventListener('focusout', event => { if (!slider.contains(event.relatedTarget)) start(); });
-      document.addEventListener('visibilitychange', () => document.hidden ? stop() : start());
-      show(0); start();
-    });
-  };
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', () => initialize()); else initialize();
-  document.addEventListener('shopify:section:load', event => initialize(event.target));
+ const initialize=(scope=document)=>scope.querySelectorAll('[data-banner-slider]').forEach(slider=>{
+  if(slider.dataset.ready)return;slider.dataset.ready='true';
+  const slides=[...slider.querySelectorAll('[data-banner-slide]')],dots=[...slider.querySelectorAll('[data-banner-dot]')];
+  if(slides.length<2)return;
+  const media=matchMedia('(prefers-reduced-motion: reduce)');let index=0,timer,startX=0,startY=0,dragging=false,suppressClick=false;
+  const show=number=>{index=(number+slides.length)%slides.length;slides.forEach((slide,i)=>slide.hidden=i!==index);dots.forEach((dot,i)=>dot.setAttribute('aria-pressed',String(i===index)));};
+  const stop=()=>clearInterval(timer);
+  const start=()=>{stop();if(slider.dataset.autoplay!=='false'&&!media.matches&&!document.hidden)timer=setInterval(()=>{if(!slider.isConnected){stop();return;}show(index+1);},5000);};
+  dots.forEach(dot=>dot.addEventListener('click',()=>{show(Number(dot.dataset.bannerDot));start();}));
+  slider.querySelectorAll('img,a').forEach(el=>el.draggable=false);
+  slider.addEventListener('pointerdown',event=>{if(!event.isPrimary||event.button>0)return;startX=event.clientX;startY=event.clientY;dragging=true;suppressClick=false;stop();});
+  slider.addEventListener('pointerup',event=>{if(!dragging)return;dragging=false;const dx=event.clientX-startX,dy=event.clientY-startY;if(Math.abs(dx)>40&&Math.abs(dx)>Math.abs(dy)*1.25){show(index+(dx<0?1:-1));suppressClick=true;}start();});
+  slider.addEventListener('pointercancel',()=>{dragging=false;start();});
+  slider.addEventListener('pointerleave',()=>{if(dragging){dragging=false;start();}});
+  slider.addEventListener('click',event=>{if(suppressClick){event.preventDefault();event.stopPropagation();suppressClick=false;}},true);
+  slider.addEventListener('mouseenter',stop);slider.addEventListener('mouseleave',start);slider.addEventListener('focusin',stop);slider.addEventListener('focusout',event=>{if(!slider.contains(event.relatedTarget))start();});
+  document.addEventListener('visibilitychange',()=>document.hidden?stop():start());media.addEventListener('change',start);show(0);start();
+ });
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',()=>initialize());else initialize();document.addEventListener('shopify:section:load',e=>initialize(e.target));
 })();
 // Favoritos locais: sem depender dos serviços da loja de referência.
 (() => {
@@ -111,3 +86,4 @@
  const run=()=>{setup();drawerSetup();};if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',run);else run();document.addEventListener('shopify:section:load',e=>{setup(e.target);drawerSetup();});
  matchMedia('(max-width:760px)').addEventListener('change',()=>{document.querySelectorAll('[data-footer-group]').forEach(el=>el.open=!matchMedia('(max-width:760px)').matches);const shell=document.getElementById('vn-mobile');if(shell&&!matchMedia('(max-width:760px)').matches){shell.hidden=true;document.querySelector('[data-menu-toggle]')?.setAttribute('aria-expanded','false');}});
 })();
+matchMedia('(min-width:1024px)').addEventListener('change',event=>{if(!event.matches)return;const panel=document.getElementById('vn-mobile');if(panel)panel.hidden=true;document.querySelector('[data-menu-toggle]')?.setAttribute('aria-expanded','false');document.body.classList.remove('vm-menu-is-open');});

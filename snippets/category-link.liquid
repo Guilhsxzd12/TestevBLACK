@@ -1,14 +1,62 @@
-{% liquid
+{%- liquid
+ assign target = ''
+ assign desired = category | downcase
+ for filter in collections.all.filters
+  for value in filter.values
+   if value.param_name contains 'wine-variety'
+    assign label = value.label | downcase
+    assign matches = false
+    case desired
+     when 'tinto'
+      if label contains 'tinto'
+       assign matches = true
+      endif
+     when 'branco'
+      if label contains 'branco'
+       assign matches = true
+      endif
+     when 'rose'
+      if label contains 'rosé' or label contains 'rosado' or label == 'rose'
+       assign matches = true
+      endif
+     when 'espumante'
+      if label contains 'espumante'
+       assign matches = true
+      endif
+     when 'frisante'
+      if label contains 'frisante'
+       assign matches = true
+      endif
+    endcase
+    if matches
+     assign parameter = value.param_name
+     assign target = value.value | url_encode
+     break
+    endif
+   endif
+  endfor
+  if target != blank
+   break
+  endif
+ endfor
+ if target == blank
   case category
-    when 'tinto'
-      assign query = 'title:Tinto OR title:Malbec OR title:Cabernet OR title:Merlot OR title:Carménère OR title:Syrah OR title:"Pinot Noir"'
-    when 'branco'
-      assign query = 'title:Branco OR title:Chardonnay OR title:"Sauvignon Blanc" OR title:Torrontés OR title:"Pinot Grigio"'
-    when 'rose'
-      assign query = 'title:Rosé OR title:Rose OR title:Rosado'
-    when 'espumante'
-      assign query = 'title:Espumante OR title:Brut OR title:Moscatel OR title:Celebration'
-    else
-      assign query = ''
+   when 'tinto'
+    assign target = 'gid://shopify/Metaobject/658099437728' | url_encode
+   when 'branco'
+    assign target = 'gid://shopify/Metaobject/661726101664' | url_encode
+   when 'rose'
+    assign target = 'gid://shopify/Metaobject/661727019168' | url_encode
+   when 'espumante'
+    assign target = 'gid://shopify/Metaobject/661728329888' | url_encode
+   when 'frisante'
+    assign target = 'gid://shopify/Metaobject/661729247392' | url_encode
   endcase
-%}{% if category == 'kits' %}{{ routes.root_url }}#caixas{% elsif category == 'new' %}{{ routes.all_products_collection_url }}?sort_by=created-descending{% elsif query != blank %}{{ routes.search_url }}?type=product&amp;q={{ query | url_encode }}{% else %}{{ routes.all_products_collection_url }}{% endif %}
+  assign parameter = 'filter.v.t.shopify.wine-variety'
+ endif
+-%}
+{%- if category == 'new' -%}{{- routes.all_products_collection_url -}}?sort_by=created-descending
+{%- elsif target != blank -%}{{- routes.all_products_collection_url -}}?{{- parameter -}}={{- target -}}
+{%- elsif category == 'all' or category == 'kits' -%}{{- routes.all_products_collection_url -}}
+{%- else -%}{{- routes.all_products_collection_url -}}?filter.p.product_type={%- case category -%}{%- when 'tinto' -%}Tinto{%- when 'branco' -%}Branco{%- when 'rose' -%}Ros%C3%A9{%- when 'espumante' -%}Espumante{%- when 'frisante' -%}Frisante{%- else -%}{{- category | url_encode -}}{%- endcase -%}
+{%- endif -%}

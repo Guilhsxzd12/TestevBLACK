@@ -1,32 +1,112 @@
 {%- liquid
-  case field
-    when 'country'
-      assign fact = product.metafields.custom.country | default: product.metafields.custom.pais | default: product.metafields.custom.pa_s | default: product.metafields.shopify.country | default: product.selected_or_first_available_variant.metafields.shopify.country
+ assign fact = nil
+ assign standard_key = ''
+ case field
+  when 'country'
+   assign keys = 'country,pais,pa_s,pais_de_origem,origem_pais'
+   assign standard_key = 'country'
+  when 'grape'
+   assign keys = 'uvas_do_blend,uvas_blend,blend_de_uvas,uvas,castas,composicao_de_uvas,uvas_do_vinho,grape,uva,uva_s,variedade_de_uvas,blend'
+   assign standard_key = 'grape-variety'
+  when 'region'
+   assign keys = 'region,regiao,regi_o,regiao_do_vinho,regiao_de_origem,regiao_produtora'
+   assign standard_key = 'wine-region'
+  when 'alcohol'
+   assign keys = 'grau_alcoolico,grau_alco_lico,graduacao_alcoolica,gradua_o_alco_lica,teor_alcoolico,teor_alco_lico,alcohol,alcool,alcohol_content'
+   assign standard_key = 'alcohol-content'
+  when 'aging'
+   assign keys = 'amadurecimento,envelhecimento,maturacao,matura_o,aging'
+  when 'pairing'
+   assign keys = 'harmonizacao,harmoniza_o,harmonizacoes,harmoniza_es,harmonizacao_gastronomica,pairing'
+  when 'aromas'
+   assign keys = 'aromas,aroma'
+  when 'palate'
+   assign keys = 'paladar,palate'
+  when 'visual'
+   assign keys = 'visual,aspecto_visual'
+ endcase
+ assign names = keys | split: ','
+ for key in names
+  assign candidate = product.metafields.custom[key]
+  if candidate != blank and candidate.type != 'boolean'
+   assign fact = candidate
+   break
+  endif
+ endfor
+ if fact == nil or fact == blank
+  for property in product.metafields.custom
+   assign candidate = property.last
+   assign key = property.first | downcase | remove: '_' | remove: '-' | replace: 'í', 'i' | replace: 'ã', 'a'
+   assign matches = false
+   case field
     when 'grape'
-      assign fact = product.metafields.custom.grape | default: product.metafields.custom.uva | default: product.metafields.custom.uvas | default: product.metafields.shopify['grape-variety'] | default: product.selected_or_first_available_variant.metafields.shopify['grape-variety']
-    when 'region'
-      assign fact = product.metafields.custom.region | default: product.metafields.custom.regiao | default: product.metafields.custom.regi_o | default: product.metafields.shopify['wine-region'] | default: product.metafields.shopify.region
-  endcase
+     if key contains 'uva' or key contains 'casta'
+      unless key contains 'chuva'
+       assign matches = true
+      endunless
+     endif
+    when 'alcohol'
+     if key contains 'alco' or key == 'abv'
+      assign matches = true
+     endif
+    when 'aging'
+     if key contains 'amadurec' or key contains 'envelhec' or key contains 'matura'
+      assign matches = true
+     endif
+    when 'pairing'
+     if key contains 'harmoniz'
+      assign matches = true
+     endif
+    when 'aromas'
+     if key contains 'aroma'
+      assign matches = true
+     endif
+    when 'palate'
+     if key contains 'paladar' or key contains 'palate'
+      assign matches = true
+     endif
+    when 'visual'
+     if key contains 'visual'
+      assign matches = true
+     endif
+   endcase
+   if matches and candidate != blank and candidate.type != 'boolean'
+    assign fact = candidate
+    break
+   endif
+  endfor
+ endif
+ if fact == nil and standard_key != blank
+  assign fact = product.metafields.shopify[standard_key] | default: product.selected_or_first_available_variant.metafields.shopify[standard_key]
+ endif
+ if field == 'region' and fact == nil
+  assign fact = product.metafields.shopify.region
+ endif
 -%}
-{%- capture fact_text -%}{%- if fact != blank -%}
+{%- capture fact_text -%}
+ {%- if fact -%}
   {%- if fact.type contains 'list.' -%}
-    {%- assign separator = '' -%}
-    {%- for entry in fact.value -%}
-      {%- assign label = entry.label.value | default: entry.label | default: entry.name.value | default: entry.name | default: entry -%}
-      {%- unless label contains 'gid://' -%}{%- if label != blank -%}{{- separator -}}{{- label | escape -}}{%- assign separator = ', ' -%}{%- endif -%}{%- endunless -%}
-    {%- endfor -%}
+   {%- assign separator = '' -%}{%- for entry in fact.value -%}
+    {%- assign label = entry.label.value | default: entry.label | default: entry.name.value | default: entry.name | default: entry -%}
+    {%- unless label contains 'gid://' -%}{%- if label != blank -%}{{- separator -}}{{- label | escape -}}{%- assign separator = ', ' -%}{%- endif -%}{%- endunless -%}
+   {%- endfor -%}
   {%- elsif fact.type == 'metaobject_reference' -%}
-    {%- assign label = fact.value.label.value | default: fact.value.label | default: fact.value.name.value | default: fact.value.name -%}{{- label | escape -}}
+   {%- assign label = fact.value.label.value | default: fact.value.label | default: fact.value.name.value | default: fact.value.name -%}{{- label | escape -}}
   {%- else -%}{{- fact | metafield_text | strip_html | escape -}}{%- endif -%}
-{%- endif -%}
+ {%- endif -%}
 {%- endcapture -%}
-{%- assign fact_text = fact_text | strip -%}{%- if field == 'grape' and fact_text == 'Outro' -%}{%- assign fact_text = '' -%}{%- endif -%}
-{%- if fact_text != blank -%}{{- fact_text -}}{%- elsif field == 'grape' -%}
-  {%- assign wine_title = product.title | downcase -%}
-  {%- assign grape_names = 'Cabernet Sauvignon,Sauvignon Blanc,Chardonnay,Chenin Blanc,Pinot Noir,Malbec,Merlot,Syrah,Shiraz,Tannat,Tempranillo' | split: ',' -%}
-  {%- assign separator = '' -%}{%- for grape in grape_names -%}{%- assign token = grape | downcase -%}{%- if wine_title contains token -%}{{- separator -}}{{- grape -}}{%- assign separator = ', ' -%}{%- endif -%}{%- endfor -%}
-  {%- if separator == '' -%}{%- if wine_title contains 'carménère' or wine_title contains 'carmenere' or wine_title contains 'carmenérè' -%}Carménère{%- elsif wine_title contains 'moscatel' -%}Moscatel{%- endif -%}{%- endif -%}
+{%- assign fact_text = fact_text | strip -%}
+{%- if field == 'grape' and fact_text == 'Outro' -%}{%- assign fact_text = '' -%}{%- endif -%}
+{%- if field == 'alcohol' -%}
+ {%- assign sem_alcool = product.metafields.custom.sem_alcool.value | default: product.metafields.custom.sem_alco_ol.value -%}
+ {%- assign normalized_alcohol = fact_text | downcase | remove: '%' | strip -%}
+ {%- if sem_alcool == true or normalized_alcohol == '0' or normalized_alcohol == '0.0' or normalized_alcohol == '0,0' or normalized_alcohol contains 'sem álcool' -%}Sem álcool
+ {%- elsif fact_text != blank -%}{{- fact_text -}}{%- if fact.type == 'number_decimal' or fact.type == 'number_integer' -%}%{%- endif -%}{%- endif -%}
+{%- elsif fact_text != blank -%}{{- fact_text -}}
+{%- elsif field == 'grape' -%}
+ {%- assign wine_title = product.title | downcase -%}{%- assign grape_names = 'Cabernet Sauvignon,Sauvignon Blanc,Chardonnay,Chenin Blanc,Pinot Noir,Malbec,Merlot,Syrah,Shiraz,Tannat,Tempranillo' | split: ',' -%}{%- assign separator = '' -%}
+ {%- for grape in grape_names -%}{%- assign token = grape | downcase -%}{%- if wine_title contains token -%}{{- separator -}}{{- grape -}}{%- assign separator = ', ' -%}{%- endif -%}{%- endfor -%}
+ {%- if separator == '' -%}{%- if wine_title contains 'carménère' or wine_title contains 'carmenere' or wine_title contains 'carmenérè' -%}Carménère{%- elsif wine_title contains 'moscatel' -%}Moscatel{%- endif -%}{%- endif -%}
 {%- elsif field == 'region' -%}
- {%- assign description = product.description | strip_html | downcase -%}
- {%- if description contains 'de mendoza' or description contains 'em mendoza' -%}Mendoza{%- elsif description contains 'produzido na serra gaúcha' -%}Serra Gaúcha{%- endif -%}
+ {%- assign description = product.description | strip_html | downcase -%}{%- if description contains 'de mendoza' or description contains 'em mendoza' -%}Mendoza{%- elsif description contains 'produzido na serra gaúcha' -%}Serra Gaúcha{%- endif -%}
 {%- endif -%}

@@ -18,7 +18,7 @@ engine.registerFilter('image_tag',(url,...args)=>{let options=Object.fromEntries
 engine.registerFilter('money',n=>(Number(n||0)/100).toLocaleString('pt-BR',{style:'currency',currency:'BRL'}));
 engine.registerFilter('url_for_vendor',s=>'/collections/vendors?q='+encodeURIComponent(s));
 engine.registerFilter('url_for_type',s=>'/collections/types?q='+encodeURIComponent(s));
-engine.registerFilter('metafield_text',s=>s?.value||'');
+engine.registerFilter('metafield_text',s=>s?.value??'');
 engine.registerFilter('structured_data',value=>JSON.stringify({'@context':'https://schema.org','@type':'Product',name:value.title}));
 engine.registerFilter('default_errors',()=> '');engine.registerFilter('default_pagination',()=> '');
 const variants=[{id:11,title:'750 ml',price:6500,compare_at_price:8000,available:true,quantity_rule:{min:1,increment:1,max:null}},{id:12,title:'1,5 L',price:12000,compare_at_price:0,available:true,quantity_rule:{min:1,increment:1,max:6}},{id:13,title:'Safra especial',price:18000,compare_at_price:0,available:false,quantity_rule:{min:1,increment:1,max:null}}];

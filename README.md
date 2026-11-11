@@ -1,6 +1,6 @@
 # Videira Vinhoteca · TestevBLACK
 
-Tema Shopify com estrutura de loja baseada na referência Mistral e identidade Videira: **somente fundo branco, bordô e dourado, sem modo escuro e sem fundo creme**. A forma original da logo foi preservada, aplicada em bordô sobre fundo transparente e centralizada no celular.
+Tema Shopify com estrutura de loja baseada na referência Mistral e identidade Videira: **somente fundo branco, bordô e dourado, sem modo escuro e sem fundo creme**. A forma original da logo foi preservada, aplicada em bordô sobre fundo transparente e à esquerda, ao lado do menu, em celular, tablet e computador.
 
 ## Instalar
 
@@ -59,3 +59,13 @@ Os cards mostram bodega, uva e região, com uma faixa de país colorida por orig
 Os botões +/− dos cards têm tamanho fixo e não deslocam o card. No carrinho, +/− atualiza a página e o subtotal após uma breve pausa entre os cliques, usando o formulário nativo Shopify. O botão Atualizar carrinho continua disponível.
 
 No celular, Filtrar abre um painel compacto dentro da página, com grupos recolhíveis. Não existe mais diálogo/modal de filtros ou fundo escurecido. Os filtros laterais continuam disponíveis no computador.
+
+## Navegação, banners e ficha técnica atual
+
+- Compra somente pelo site: os botões “Comprar no WhatsApp” foram removidos dos produtos. Os contatos de atendimento permanecem no cabeçalho/rodapé.
+- Banner com troca automática a cada cinco segundos, indicadores e gesto horizontal de deslizar; sem setas ou botão de pausa no banner. A preferência de redução de movimento do dispositivo é respeitada.
+- Espumante e Frisante usam filtros nativos de categoria. Os valores atuais da própria loja foram conferidos para garantir links funcionais; consultas técnicas não aparecem nos campos de busca.
+- Logo sempre à esquerda, ao lado do ícone de menu. Layout validado em 390, 820 e 1440 px.
+- Ficha técnica: **Grau alcoólico**, **Amadurecimento** (quando preenchido), **Uvas**, **Harmonização**, **Aromas**, **Paladar** e **Visual**. Valor zero ou indicação explícita exibe **Sem álcool**.
+- A leitura aceita nomes de metacampos em português e inglês. As listas de uvas têm prioridade sobre um campo antigo de uva única, exibindo o blend completo. Exemplos aceitos: `custom.uvas`, `custom.uvas_do_blend`, `custom.grau_alcoolico`, `custom.amadurecimento`, `custom.harmonizacao`, `custom.paladar`. Campos técnicos com outras variações de nome no namespace `custom` também são reconhecidos por suas chaves.
+- País e região aparecem na página do vinho, junto da identificação da bodega. Campos ausentes não geram informações inventadas.

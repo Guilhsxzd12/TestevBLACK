@@ -13,3 +13,5 @@
 A fixture simula os endpoints Shopify. Frete, pagamento, inscrições reais e configuração da loja exigem conferência na prévia Shopify. Não houve publicação direta na loja. Os dados técnicos dos testes são demonstrativos e não são adicionados ao catálogo real.
 
 Revisão de logo, cards e filtros: logo em tinta bordô sem fundo; repetidos cliques em + sem alteração de largura/altura do card; controles +/− no carrinho com atualização dos totais; filtro móvel inline compacto e sem diálogo; campos de categoria Shopify e aliases de metacampos testados, com faixas de país. A prévia incorporou somente dados públicos de categoria disponíveis na própria loja; campos ausentes permanecem indicados como não informados.
+
+Revisão final: Chromium em 390, 820 e 1440 px verificou posição esquerda da logo, ausência de compra WhatsApp, banner automático/gesto horizontal/indicadores sem setas, categorias nativas incluindo Frisante, cards e carrinho. Os testes Liquid validaram listas de duas uvas, metacampos portugueses, ausência de amadurecimento vazio e grau zero exibido como Sem álcool. A leitura técnica continua condicionada aos valores cadastrados nos produtos.
