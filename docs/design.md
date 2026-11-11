@@ -1,13 +1,13 @@
-# Referência Mistral
+# Videira · somente branco
 
-A página inicial da Mistral foi aberta no Chromium em 1440 e 390 px. Foram inspecionados cabeçalho, banners, categorias, vitrines, tipografia, rodapé e o controle de tema. As fontes de referência são Lexend e Playfair Display, incluídas localmente com licenças OFL.
+A organização das vitrines e os componentes comerciais da referência Mistral foram mantidos. A apresentação agora utiliza branco #ffffff, bordô #651242 e dourado #b59758, sem preferência de modo escuro. O HTML, o fundo geral, carrinho, busca e páginas de produto também usam branco.
 
-A composição usa o fundo #1c1c1c, superfícies #303030 e destaque #efd79a observados no tema escuro da referência. O controle de tema disponibiliza também a apresentação clara. Dimensões do cabeçalho, proporção dos banners desktop/móvel, largura da faixa de categorias e hierarquia das vitrines foram reconstruídas para Shopify.
+A arte original da logo não foi alterada. Uma base bordô mantém a legibilidade da logo branca no cabeçalho; no celular ela é centralizada entre áreas laterais de largura igual.
 
-A logo original da Videira foi preservada em seu arquivo original, sem filtro de cor. Os textos institucionais e contatos são da Videira. O layout de produto permanece integrado aos componentes Shopify da Videira, com a apresentação escura/dourada aplicada.
+O primeiro banner dispõe de arte móvel recomposta a partir da imagem desktop para uma proporção de aproximadamente 4:3. A altura móvel fica entre 240 e 330 px; no computador, entre 300 e 480 px. Banners adicionais também aceitam imagens próprias para cada dispositivo.
 
-O banner Black Friday e as fotografias de categorias são recursos da referência pública. A foto da caixa foi editada para remover o emblema Mistral; o segundo banner foi montado com o texto do catálogo Videira. As fotos dos produtos são da própria Videira. Créditos e licenças estão em assets/media-credits.txt.
+Os cards têm superfície branca, bordas discretas, preço e compra bordô e faixa dourada. Logos opcionais podem ser configuradas nas vitrines, na faixa de produtores e por metacampo nos produtos.
 
-Não são copiados como fatos da Videira os preços, pontuações, estoque, parcelamento ou serviços empresariais da referência. A reprodução é da apresentação de loja; não inclui o backend Mistral, autenticação, clube, CEP e logística próprios daquele serviço.
+A página de carrinho substitui o diálogo antigo, inclusive após uma compra rápida. A página de produto mantém sua estrutura e acrescenta descrição normal, ficha técnica expansível com ícones e harmonizações. O código só apresenta dados existentes.
 
-As fotos já cadastradas na Videira possuem fundo claro. Os painéis de imagem preservam esse fundo para manter os rótulos legíveis; os demais elementos dos cards seguem a paleta escura da referência.
+O símbolo de troca de tema foi removido. O emblema flutuante do reCAPTCHA é ocultado visualmente com a divulgação e links exigidos; a proteção e os desafios do provedor continuam ativos.

@@ -60,4 +60,4 @@ print(f'PASS: {checks} verificações de arquivos, schemas e referências; JSON,
 import hashlib
 assert hashlib.sha256((root/'assets/videira-logo.svg').read_bytes()).hexdigest() == '25a508cded1ccf31c143e089ef9f600a71c57f70ab3ffa89f6de01a20d5a78d8', 'Logo original alterada'
 
-assert 'videira-mistral.css' in (root/'layout/theme.liquid').read_text()
+assert 'videira-white.css' in (root/'layout/theme.liquid').read_text()

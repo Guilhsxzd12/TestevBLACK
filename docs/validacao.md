@@ -1,12 +1,13 @@
-# Validação
+# Validação da revisão branca
 
-- 52 verificações de schemas, JSON, referências de snippets/assets, Instagram e integridade da logo.
-- Oito páginas renderizadas em quatro cenários de catálogo e metadados, totalizando 32 renderizações.
-- Chromium em 1440 e 390 px: imagens carregadas, ausência de erros JavaScript e de rolagem horizontal da página.
-- Alternância de tema claro/escuro, banners, indicadores, pausa, menus desktop, gaveta móvel, carrosséis e rodapé responsivo.
-- Quantidade, carrinho e favoritos; duas unidades de R$ 49 totalizam R$ 98. Variante indisponível desabilita compra; duas unidades de R$ 120 totalizam R$ 240.
-- Filtros laterais no computador e painel de filtros no celular. Países testados com dez itens simulados.
+- 50 verificações estruturais de schemas, JSON, referências, Instagram e integridade da logo.
+- 32 renderizações: oito páginas em quatro cenários de catálogo e metadados; testes de logos opcionais e ausência de informação técnica inventada.
+- Chromium real em 1440 e 390 px, sem erros JavaScript, imagens quebradas ou rolagem horizontal.
+- HTML e corpo brancos mesmo com a preferência antiga de modo escuro gravada; ausência do seletor de tema e do diálogo de carrinho.
+- Logo centralizada no celular; arte móvel correta e altura do banner limitada por dispositivo.
+- Carrinho: clique abre `/cart`; compra de duas unidades de R$ 49 redireciona à página com total R$ 98; variantes indisponíveis desabilitam compra; duas unidades de variante a R$ 120 totalizam R$ 240.
+- Descrição fora do acordeão, ficha inicialmente fechada, ícones dourados, expansão/recolhimento e harmonizações.
+- Banners, indicadores, pausa, menus, filtros, favoritos e carrosséis preservados.
+- Emblema reCAPTCHA ocultado e divulgação com links Google presente; não foi desativada a proteção do provedor.
 
-A prévia usa LiquidJS e endpoints simulados. Pagamento, frete, cadastro real da newsletter e configurações da Shopify exigem prévia hospedada e pedido de teste. Não foi feita publicação na loja. Os produtos extras de testes não são adicionados ao catálogo real.
-
-A reprodução foi comparada visualmente com capturas da referência; não há alegação de igualdade de todos os pixels, páginas e serviços da Mistral.
+A fixture simula os endpoints Shopify. Frete, pagamento, inscrições reais e configuração da loja exigem conferência na prévia Shopify. Não houve publicação direta na loja. Os dados técnicos dos testes são demonstrativos e não são adicionados ao catálogo real.

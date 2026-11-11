@@ -98,9 +98,3 @@
  const run=()=>{setup();drawerSetup();};if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',run);else run();document.addEventListener('shopify:section:load',e=>{setup(e.target);drawerSetup();});
  matchMedia('(max-width:760px)').addEventListener('change',()=>{document.querySelectorAll('[data-footer-group]').forEach(el=>el.open=!matchMedia('(max-width:760px)').matches);const shell=document.getElementById('vn-mobile');if(shell&&!matchMedia('(max-width:760px)').matches){shell.hidden=true;document.querySelector('[data-menu-toggle]')?.setAttribute('aria-expanded','false');}});
 })();
-// Theme switch mirrors the light/dark control of the reference storefront.
-(() => {
- const setup=()=>{const button=document.querySelector('[data-theme-toggle]');if(!button)return;let light=false;try{light=localStorage.getItem('videira-color-mode')==='light';}catch{}
- const render=()=>{document.body.classList.toggle('mi-light',light);button.setAttribute('aria-pressed',String(!light));button.setAttribute('aria-label',light?'Ativar tema escuro':'Ativar tema claro');button.textContent=light?'☀':'☾';};render();button.addEventListener('click',()=>{light=!light;render();try{localStorage.setItem('videira-color-mode',light?'light':'dark');}catch{}});
- document.querySelectorAll('[data-banner-slider]').forEach(slider=>{if(slider.querySelectorAll('[data-banner-slide]').length<2)slider.querySelectorAll('[data-banner-next],[data-banner-previous],[data-banner-pause]').forEach(button=>button.hidden=true);});};if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',setup);else setup();
-})();

@@ -2,7 +2,6 @@
   const boot = () => {
     const config = JSON.parse(document.getElementById('videira-config').textContent);
     const root = config.root.endsWith('/') ? config.root : config.root + '/';
-    const drawer = document.querySelector('[data-cart-dialog]');
     const status = document.querySelector('[data-cart-status]');
     let returnFocus;
     const show = dialog => {
@@ -25,19 +24,6 @@
     });
     let statusTimer;
     const report = message => { clearTimeout(statusTimer); status.textContent = message; statusTimer = setTimeout(() => { status.textContent = ''; }, 5000); };
-    const updateCart = async () => {
-      const [cartResponse, sectionResponse] = await Promise.all([
-        fetch(root + 'cart.js', { headers: { Accept: 'application/json' } }),
-        fetch(config.cart + '?section_id=cart-drawer-content', { headers: { Accept: 'text/html' } })
-      ]);
-      if (!cartResponse.ok || !sectionResponse.ok) throw new Error(config.cartError);
-      const cart = await cartResponse.json();
-      const html = await sectionResponse.text();
-      const content = new DOMParser().parseFromString(html, 'text/html').querySelector('.shopify-section');
-      if (!content) throw new Error(config.cartError);
-      drawer.querySelector('[data-drawer-content]').innerHTML = content.innerHTML;
-      document.querySelectorAll('[data-cart-count]').forEach(el => { el.textContent = cart.item_count; el.hidden = cart.item_count === 0 && el.classList.contains('sf-cart-count'); });
-    };
     const initializeCarousels = (scope = document) => {
       scope.querySelectorAll('.wc-section').forEach(section => {
         const row = section.querySelector('.wc-viewport');
@@ -66,12 +52,6 @@
     document.addEventListener('click', async event => {
       const close = event.target.closest('[data-dialog-close]');
       if (close) close.closest('dialog')?.close();
-      const cartLink = event.target.closest('[data-cart-open]');
-      if (cartLink && drawer) {
-        event.preventDefault();
-        try { await updateCart(); show(drawer); }
-        catch { window.location.assign(cartLink.href); }
-      }
       const filter = event.target.closest('[data-filter-open]');
       if (filter) show(document.querySelector('[data-filter-dialog]'));
       const step = event.target.closest('[data-carousel-step]');
@@ -102,8 +82,7 @@
         added = true;
         report(config.added);
         if (localStatus) localStatus.textContent = config.added;
-        await updateCart();
-        show(drawer);
+        window.location.assign(config.cart);
       } catch (error) {
         const message = added ? config.added + ' ' + config.cartError : error.message || config.error;
         report(message);

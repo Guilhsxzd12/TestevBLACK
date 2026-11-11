@@ -47,3 +47,16 @@ assert.ok(card.includes('card_variant.id'));
 assert.ok(card.includes('product.selected_or_first_available_variant'));
 assert.ok(card.includes('product.compare_at_price > product.price'));
 console.log(`PASS render: ${pages.length} páginas, products=${count}, metadata=${metadata}; conta, faixa opcional e compra nativa.`);
+// Optional shelf and producer logos are merchant-controlled, not fabricated.
+const logo={src:'/assets/videira-logo.svg'};
+const branded=await renderSection('videira-storefront',globals('index'),{featured_logo:logo},[{type:'producer',settings:{name:'Produtor de teste',logo,link:'/collections/all'}}]);
+assert.ok(branded.includes('vm-shelf-logo') || count===0);
+assert.ok(branded.includes('vm-producer-tile'));
+assert.ok(branded.includes('Produtor de teste'));
+const productContext=globals('product');
+const productHTML=await renderSection('main-product',productContext);
+assert.ok(productHTML.includes('pd-description'));
+assert.ok(productHTML.includes('pd-technical-panel'));
+if(!metadata)assert.equal(productHTML.includes('<h3>Visual</h3>'),false);
+assert.equal(productHTML.includes('data-cart-dialog'),false);
+console.log('PASS optional logos, description and technical data without fabricated fields');
