@@ -1,0 +1,12 @@
+{%- liquid
+ assign award = product.metafields.custom.premiacao | default: product.metafields.custom.premia_o | default: product.metafields.custom.premiacoes | default: product.metafields.custom.awards
+-%}
+{%- capture award_text -%}{%- if award != blank and award.type != 'boolean' -%}{%- if award.type contains 'list.' -%}{%- for entry in award.value -%}{{ entry | escape }}{% unless forloop.last %}<br />{% endunless %}{%- endfor -%}{%- else -%}{{ award | metafield_text | strip_html | escape | newline_to_br }}{%- endif -%}{%- endif -%}{%- endcapture -%}
+{%- assign award_text = award_text | strip -%}
+{%- if award_text != blank -%}
+<div class="vm-awards" aria-label="Premiações">
+{%- assign awards = award_text | split: '<br />' -%}{%- for text in awards limit: 3 -%}{%- assign text = text | strip -%}{%- if text != blank -%}
+{%- assign parts = text | split: '|' -%}{%- assign score = parts.first | strip -%}
+<div class="vm-award">{% if parts.size > 1 %}<strong>{{ score }}</strong><span>{{ parts.last | strip }}</span>{% else %}<span>{{ text }}</span>{% endif %}</div>
+{%- endif -%}{%- endfor -%}</div>
+{%- endif -%}

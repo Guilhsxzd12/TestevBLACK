@@ -2,6 +2,9 @@
  assign fact = nil
  assign standard_key = ''
  case field
+  when 'volume'
+   assign keys = 'volume,volume_da_garrafa,conteudo,conteudo_liquido'
+   assign standard_key = 'volume'
   when 'country'
    assign keys = 'country,pais,pa_s,pais_de_origem,origem_pais'
    assign standard_key = 'country'

@@ -79,3 +79,11 @@ A faixa acima do cabeçalho alterna uma mensagem completa por vez: **ENVIO PARA 
 A newsletter continua usando o formulário nativo Shopify. Após `form.posted_successfully?`, mostra **Inscrição recebida com sucesso!** e leva o foco para essa confirmação. Erros retornados pela Shopify têm um bloco separado; o tema não informa sucesso somente por clicar. O aplicativo futuro de e-mails poderá cuidar dos envios, conforme sua integração e configuração.
 
 O rodapé mantém a estrutura aprovada, com o texto **Uma seleção de vinhos. Um mundo para descobrir.** e apresentação tipográfica revisada.
+
+### Produto: referência Mistral e premiação
+
+Conferido em mistral.com.br: Lexend nos textos e Playfair Display 600 no título do produto (30 px no celular). A identidade continua branco, bordô e dourado. Produtor, origem e uvas usam os dados do produto, separados por ícones e divisórias. A compra móvel tem um único formulário fixo; variantes, estoque, limites de quantidade e carrinho nativo continuam ativos.
+
+Para o selo opcional, use um metacampo de **produto** chamado **Premiação**, namespace/chave **`custom.premiacao`**, tipo **Texto de várias linhas** (também aceita lista de textos). Uma premiação por linha: `91 | Nome do avaliador` ou `Medalha de Ouro`. O primeiro formato destaca a nota acima do nome; o segundo exibe o texto informado. Até três selos aparecem na foto e nos cards. Campo vazio não gera selo. Não há notas ou avaliadores inventados. O tema lê o campo; a definição e os valores são gerenciados no admin da Shopify.
+
+`tests/product-reference.mjs` valida celular, tablet e desktop; as capturas `docs/product-reference-*.png` usam premiação fictícia explicitamente identificada para demonstrar o layout, sem alterar produtos da loja.

@@ -96,3 +96,21 @@ const newsletterError=await renderSection('videira-newsletter',{...globals('inde
 assert.ok(newsletterError.includes('data-newsletter-error'));
 assert.equal(newsletterError.includes('data-newsletter-success'),false);
 console.log('PASS native newsletter success, idle and error states');
+// Awards are optional merchant data, never generated from product names.
+const awardProduct=structuredClone(globals('product').product);
+awardProduct.metafields.custom.premiacao={type:'multi_line_text_field',value:'91 | James Suckling\nMedalha de Ouro'};
+const awarded=await renderSection('main-product',{...globals('product'),product:awardProduct});
+assert.match(awarded,/class="vm-award"><strong>91<\/strong><span>James Suckling<\/span>/);
+assert.match(awarded,/Medalha de Ouro/);
+assert.equal((awarded.match(/data-product-price/g)||[]).length,1,'one price, no duplicate mobile purchase');
+assert.equal((awarded.match(/id="product-quantity"/g)||[]).length,1);
+const noAward=await renderSection('main-product',globals('product'));
+assert.equal(noAward.includes('aria-label="Premiações"'),false);
+awardProduct.metafields.custom.premiacao={type:'list.single_line_text_field',value:['92 | Decanter','90 | Wine Enthusiast']};
+const awardList=await renderSection('main-product',{...globals('product'),product:awardProduct});
+assert.match(awardList,/<strong>92<\/strong><span>Decanter<\/span>/);
+assert.match(awardList,/<strong>90<\/strong><span>Wine Enthusiast<\/span>/);
+awardProduct.metafields.custom.premiacao={type:'single_line_text_field',value:'<script>unsafe</script>'};
+const escapedAward=await renderSection('main-product',{...globals('product'),product:awardProduct});
+assert.equal(escapedAward.includes('<script>unsafe</script>'),false);
+console.log('PASS optional text/list awards, escaped content and single native purchase form');
