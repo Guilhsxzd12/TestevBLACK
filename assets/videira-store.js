@@ -87,7 +87,20 @@
   });
   const media=matchMedia('(max-width:760px)');scope.querySelectorAll('[data-footer-group]').forEach(el=>{el.open=!media.matches;});
  };
- document.addEventListener('click',e=>{const step=e.target.closest('[data-quantity-step]');if(step){const input=step.closest('.vm-quantity').querySelector('input');if(Number(step.dataset.quantityStep)>0)input.stepUp();else input.stepDown();input.dispatchEvent(new Event('change',{bubbles:true}));}});
+ let cartUpdateTimer;
+ document.addEventListener('change',e=>{
+  if(!e.target.matches('.vm-cart-quantity input'))return;
+  const form=e.target.form;if(!form)return;clearTimeout(cartUpdateTimer);
+  cartUpdateTimer=setTimeout(()=>{if(!form.isConnected||!form.reportValidity())return;form.setAttribute('aria-busy','true');form.requestSubmit(form.querySelector('[name="update"]'));},450);
+ });
+ document.addEventListener('click',e=>{
+  const button=e.target.closest('[data-quantity-step]');if(!button)return;
+  const group=button.closest('.vm-quantity'),input=group?.querySelector('input');if(!input)return;
+  const min=Number(input.min||1),max=input.max?Number(input.max):Infinity,step=Number(input.step||1);
+  const current=Number.isFinite(input.valueAsNumber)?input.valueAsNumber:min;
+  const next=Math.min(max,Math.max(min,Math.round((current+Number(button.dataset.quantityStep)*step)*1000)/1000));
+  input.value=String(next);input.dispatchEvent(new Event('input',{bubbles:true}));input.dispatchEvent(new Event('change',{bubbles:true}));
+ });
  let lastFocus;
  const drawerSetup=()=>{const shell=document.getElementById('vn-mobile'),toggle=document.querySelector('[data-menu-toggle]');if(!shell||shell.dataset.drawerReady)return;shell.dataset.drawerReady='true';const panel=shell.querySelector('.vm-menu-panel');
   const close=()=>{shell.hidden=true;toggle.setAttribute('aria-expanded','false');lastFocus?.focus();};

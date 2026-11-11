@@ -53,7 +53,8 @@
       const close = event.target.closest('[data-dialog-close]');
       if (close) close.closest('dialog')?.close();
       const filter = event.target.closest('[data-filter-open]');
-      if (filter) show(document.querySelector('[data-filter-dialog]'));
+      if (filter) { const panel=document.querySelector('[data-filter-panel]'); if(panel){panel.hidden=!panel.hidden;filter.setAttribute('aria-expanded',String(!panel.hidden));} }
+      if(event.target.closest('[data-filter-close]')){const panel=document.querySelector('[data-filter-panel]');if(panel)panel.hidden=true;const trigger=document.querySelector('[data-filter-open]');trigger?.setAttribute('aria-expanded','false');trigger?.focus();}
       const step = event.target.closest('[data-carousel-step]');
       if (step) {
         const row = step.closest('.wc-section').querySelector('.wc-viewport');
@@ -117,6 +118,7 @@
     }, true);
     document.addEventListener('keydown', event => {
       if (event.key !== 'Escape') return;
+      const panel=document.querySelector('[data-filter-panel]');if(panel&&!panel.hidden){panel.hidden=true;const trigger=document.querySelector('[data-filter-open]');trigger?.setAttribute('aria-expanded','false');trigger?.focus();}
       if (menu?.getAttribute('aria-expanded') === 'true') { mobile.hidden = true; menu.setAttribute('aria-expanded', 'false'); menu.focus(); }
       document.querySelectorAll('.vn-group details[open], details.vn-group[open]').forEach(el => el.open = false);
     });

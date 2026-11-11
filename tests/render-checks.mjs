@@ -60,3 +60,14 @@ assert.ok(productHTML.includes('pd-technical-panel'));
 if(!metadata)assert.equal(productHTML.includes('<h3>Visual</h3>'),false);
 assert.equal(productHTML.includes('data-cart-dialog'),false);
 console.log('PASS optional logos, description and technical data without fabricated fields');
+// Category metafields in the shopify namespace must work alongside older custom fields.
+const taxonomyContext=globals('collection');
+taxonomyContext.collection={...taxonomyContext.collection,products:[{...taxonomyContext.product,id:99,metafields:{shopify:{country:{type:'list.metaobject_reference',value:[{label:{value:'Chile'}}]},'grape-variety':{type:'list.metaobject_reference',value:[{label:{value:'Cabernet Sauvignon'}}]}},custom:{regiao:{value:'Valle Central'}}}}]};
+const taxonomy=await renderSection('main-collection',taxonomyContext);
+assert.ok(taxonomy.includes('vm-country-chile'));
+assert.ok(taxonomy.includes('Valle Central'));
+assert.ok(taxonomy.includes('Cabernet Sauvignon'));
+assert.equal(taxonomy.includes('Seleção Videira</div>'),false);
+assert.ok(taxonomy.includes('data-filter-panel'));
+assert.equal(taxonomy.includes('<dialog'),false);
+console.log('PASS Shopify category metafields, country bands and non-modal filters');

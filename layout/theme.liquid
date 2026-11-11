@@ -21,6 +21,7 @@
 <script type="application/json" id="videira-config">{"root":{{ routes.root_url | json }},"cart":{{ routes.cart_url | json }},"add":{{ 'product.add' | t | json }},"soldOut":{{ 'product.sold_out' | t | json }},"added":{{ 'product.added' | t | json }},"error":{{ 'product.error' | t | json }},"cartError":{{ 'product.cart_error' | t | json }}}</script>
 {{ content_for_header }}
 </head><body class="storefront vm-store template-{{ request.page_type }}">
+<svg width="0" height="0" aria-hidden="true" class="vm-color-filter"><defs><filter id="videira-bordo" color-interpolation-filters="sRGB"><feFlood flood-color="#651242"/><feComposite in2="SourceAlpha" operator="in"/></filter></defs></svg>
 <a class="sf-skip" href="#conteudo">{{ 'general.skip' | t }}</a>
 {% sections 'header-group' %}
 <main id="conteudo" class="{% if request.page_type == 'index' %}nv-home{% elsif request.page_type == 'product' %}pd-main{% endif %}">{{ content_for_layout }}</main>

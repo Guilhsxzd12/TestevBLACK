@@ -1,0 +1,32 @@
+{%- liquid
+  case field
+    when 'country'
+      assign fact = product.metafields.custom.country | default: product.metafields.custom.pais | default: product.metafields.custom.pa_s | default: product.metafields.shopify.country | default: product.selected_or_first_available_variant.metafields.shopify.country
+    when 'grape'
+      assign fact = product.metafields.custom.grape | default: product.metafields.custom.uva | default: product.metafields.custom.uvas | default: product.metafields.shopify['grape-variety'] | default: product.selected_or_first_available_variant.metafields.shopify['grape-variety']
+    when 'region'
+      assign fact = product.metafields.custom.region | default: product.metafields.custom.regiao | default: product.metafields.custom.regi_o | default: product.metafields.shopify['wine-region'] | default: product.metafields.shopify.region
+  endcase
+-%}
+{%- capture fact_text -%}{%- if fact != blank -%}
+  {%- if fact.type contains 'list.' -%}
+    {%- assign separator = '' -%}
+    {%- for entry in fact.value -%}
+      {%- assign label = entry.label.value | default: entry.label | default: entry.name.value | default: entry.name | default: entry -%}
+      {%- unless label contains 'gid://' -%}{%- if label != blank -%}{{- separator -}}{{- label | escape -}}{%- assign separator = ', ' -%}{%- endif -%}{%- endunless -%}
+    {%- endfor -%}
+  {%- elsif fact.type == 'metaobject_reference' -%}
+    {%- assign label = fact.value.label.value | default: fact.value.label | default: fact.value.name.value | default: fact.value.name -%}{{- label | escape -}}
+  {%- else -%}{{- fact | metafield_text | strip_html | escape -}}{%- endif -%}
+{%- endif -%}
+{%- endcapture -%}
+{%- assign fact_text = fact_text | strip -%}{%- if field == 'grape' and fact_text == 'Outro' -%}{%- assign fact_text = '' -%}{%- endif -%}
+{%- if fact_text != blank -%}{{- fact_text -}}{%- elsif field == 'grape' -%}
+  {%- assign wine_title = product.title | downcase -%}
+  {%- assign grape_names = 'Cabernet Sauvignon,Sauvignon Blanc,Chardonnay,Chenin Blanc,Pinot Noir,Malbec,Merlot,Syrah,Shiraz,Tannat,Tempranillo' | split: ',' -%}
+  {%- assign separator = '' -%}{%- for grape in grape_names -%}{%- assign token = grape | downcase -%}{%- if wine_title contains token -%}{{- separator -}}{{- grape -}}{%- assign separator = ', ' -%}{%- endif -%}{%- endfor -%}
+  {%- if separator == '' -%}{%- if wine_title contains 'carménère' or wine_title contains 'carmenere' or wine_title contains 'carmenérè' -%}Carménère{%- elsif wine_title contains 'moscatel' -%}Moscatel{%- endif -%}{%- endif -%}
+{%- elsif field == 'region' -%}
+ {%- assign description = product.description | strip_html | downcase -%}
+ {%- if description contains 'de mendoza' or description contains 'em mendoza' -%}Mendoza{%- elsif description contains 'produzido na serra gaúcha' -%}Serra Gaúcha{%- endif -%}
+{%- endif -%}

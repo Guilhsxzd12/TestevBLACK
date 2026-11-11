@@ -1,6 +1,6 @@
 # Videira Vinhoteca · TestevBLACK
 
-Tema Shopify com estrutura de loja baseada na referência Mistral e identidade Videira: **somente fundo branco, bordô e dourado, sem modo escuro e sem fundo creme**. A logo original foi preservada e centralizada no celular.
+Tema Shopify com estrutura de loja baseada na referência Mistral e identidade Videira: **somente fundo branco, bordô e dourado, sem modo escuro e sem fundo creme**. A forma original da logo foi preservada, aplicada em bordô sobre fundo transparente e centralizada no celular.
 
 ## Instalar
 
@@ -51,3 +51,11 @@ Campos vazios não geram linhas vazias. Produtor e tipo vêm do cadastro normal 
 - [Design](docs/design.md), [validação](docs/validacao.md) e [testes](tests/README.md).
 
 As capturas usam um servidor de teste e um retrato do catálogo público Videira. As informações técnicas demonstrativas pertencem ao produto de teste e não são gravadas nos produtos reais. Pagamento, frete e newsletter reais precisam ser conferidos na prévia Shopify. O ZIP contém apenas arquivos de tema.
+
+## Cards, quantidade e filtros
+
+Os cards mostram bodega, uva e região, com uma faixa de país colorida por origem. País e uvas leem tanto metacampos `custom` quanto os campos de categoria nativos `shopify.country` e `shopify.grape-variety`, inclusive referências/listas. Região também aceita `custom.regiao` e `custom.regi_o`. Quando a uva está no próprio título, ele pode ser usado como alternativa. Uma região explicitamente declarada na descrição também pode ser aproveitada. Dados não existentes ficam como “Não informada”; o tema não atribui países a partir da bodega.
+
+Os botões +/− dos cards têm tamanho fixo e não deslocam o card. No carrinho, +/− atualiza a página e o subtotal após uma breve pausa entre os cliques, usando o formulário nativo Shopify. O botão Atualizar carrinho continua disponível.
+
+No celular, Filtrar abre um painel compacto dentro da página, com grupos recolhíveis. Não existe mais diálogo/modal de filtros ou fundo escurecido. Os filtros laterais continuam disponíveis no computador.

@@ -6,7 +6,9 @@
     "handle": "ponto-nero-celebration-moscatel-rose",
     "price": 49.0,
     "image": "https://cdn.shopify.com/s/files/1/1068/6201/8720/files/IMG_1238.png?v=1793574757",
-    "available": true
+    "available": true,
+    "taxonomy": {},
+    "description": " Os melhores momentos pertencem aos que sabem aproveitar. Espumantes.Nero Live Celebration são perfeitos para serem degustados em qualquer momento. Jovens e descomplicados, foram elaborados para quem aprecia comemorar a vida com estilo. Elaborado com as uvas Moscato de Hamburgo e Moscato Branco . "
   },
   {
     "title": "Ponto Nero Celebration Moscatel",
@@ -15,7 +17,9 @@
     "handle": "ponto-nero-celebration-moscatel",
     "price": 49.0,
     "image": "https://cdn.shopify.com/s/files/1/1068/6201/8720/files/CELEBRATION-MOSCATEL-ECOMMERCE.webp?v=1793382087",
-    "available": true
+    "available": true,
+    "taxonomy": {},
+    "description": " Os melhores momentos pertencem aos que sabem aproveitar. Espumantes.Nero Celebration são perfeitos para serem degustados em qualquer momento. Jovens e descomplicados, foram elaborados para quem aprecia comemorar a vida com estilo. "
   },
   {
     "title": "Escorihuela Familia Gascón Syrah",
@@ -24,7 +28,13 @@
     "handle": "escorihuela-familia-gascon-syrah",
     "price": 107.0,
     "image": "https://cdn.shopify.com/s/files/1/1068/6201/8720/files/escorihuela-gascon-familia-gascon-syrah.webp?v=1793380989",
-    "available": true
+    "available": true,
+    "taxonomy": {
+      "grapes": [
+        "Syrah/Shiraz"
+      ]
+    },
+    "description": " Revela notas marcantes de frutas negras maduras, como amora e ameixa, que se entrelaçam a toques sutis de especiarias e um leve defumado. Em boca, é estruturado e envolvente, com taninos macios e final persistente, ideal para quem busca um vinho de caráter vibrante e prazeroso. "
   },
   {
     "title": "Crios Malbec",
@@ -33,7 +43,14 @@
     "handle": "crios-malbec",
     "price": 109.0,
     "image": "https://cdn.shopify.com/s/files/1/1068/6201/8720/files/susana-balbo-crios-malbec-vivavinho.webp?v=1793190156",
-    "available": true
+    "available": true,
+    "taxonomy": {
+      "country": "Argentina",
+      "grapes": [
+        "Malbec"
+      ]
+    },
+    "description": " O vinho Susana Balbo Crios Malbec é um tinto argentino de Mendoza, com cor violeta avermelhada, aromas florais e frutas como cereja preta e ameixa. Estagia 9 meses em barricas de carvalho francês, o que traz toques sutis de madeira. Aveludado e pronto para beber, combina com carnes grelhadas e hambúrgueres. Compre o vinho Crios Malbec na Way Distribuidora. "
   },
   {
     "title": "Becas Reserva Sauvignon Blanc",
@@ -42,7 +59,13 @@
     "handle": "becas-reserva-sauvignon-blanc",
     "price": 49.0,
     "image": "https://cdn.shopify.com/s/files/1/1068/6201/8720/files/images_2_6d85da46-0361-4cee-a814-47db7666345e.jpg?v=1793139244",
-    "available": true
+    "available": true,
+    "taxonomy": {
+      "grapes": [
+        "Sauvignon blanc"
+      ]
+    },
+    "description": " Becas representa a nova era dos vinhos modernos: versáteis e convidativos. Inspirada nas ovelhas comumente utilizadas nos vinhedos sustentáveis, chancelando a sinergia entre a natureza e a mão do homem. A marca Becas é composta por vinhos instigantes e democráticos que nos propõe um consumo com menos informalidades. A Sauvignon blanc é uma uva emblemática, famosa por seus vinhos frescos seu aroma inconfundível. Quando falamos da sua produção, as características organolépticas podem ter uma tênue mudança conforme a região – mais quente, mais fria, altitude – mas o aroma de frutas tropicais, de frutas de caroço e o inconfundível maracujá presentes nestes vinhos sempre trazem uma certeza: não importa qual a procedência, uma taça de sauvignon blanc sempre vai nos permitir levitar com seus aromas! "
   },
   {
     "title": "Becas Reserva Malbec",
@@ -51,7 +74,13 @@
     "handle": "becas-reserva-malbec",
     "price": 49.9,
     "image": "https://cdn.shopify.com/s/files/1/1068/6201/8720/files/Becas---Malbec---1.webp?v=1793139093",
-    "available": true
+    "available": true,
+    "taxonomy": {
+      "grapes": [
+        "Malbec"
+      ]
+    },
+    "description": " Becas representa a nova era dos vinhos modernos: versáteis e convidativos. Inspirada nas ovelhas comumente utilizadas nos vinhedos sustentáveis, chancelando a sinergia entre a natureza e a mão do homem. A marca Becas é composta por vinhos instigantes e democráticos que nos propõe um consumo com menos informalidades. A uva Malbec é um dos grandes símbolos da viticultura Argentina, traduzindo com maestria o equilíbrio entre fruta e intensidade . Na nossa releitura de Becas , ela ganha vida em um rótulo que celebra outro ícone do país: a dança do tango . Juntos, vinho e tango se unem em um mesmo compasso, formando um elo de tradição, paixão e cultura argentina . "
   },
   {
     "title": "Becas Reserva Chardonnay",
@@ -60,7 +89,13 @@
     "handle": "becas-reserva-chardonnay",
     "price": 49.9,
     "image": "https://cdn.shopify.com/s/files/1/1068/6201/8720/files/images_1_e7ef5de3-e150-47b2-b12a-3c73103c40b0.jpg?v=1793138992",
-    "available": true
+    "available": true,
+    "taxonomy": {
+      "grapes": [
+        "Chardonnay"
+      ]
+    },
+    "description": " A uva Chardonnay é considerada a rainha das brancas, a uva branca mais plantada ao redor do mundo é versátil, com aromas frutados e acidez inconfundível. Por isso nosso Becas Chardonnay traz nossa carismática ovelha de rainha, uma singela homenagem a esta uva que conquistou o mundo com maestria. Para deixar o seu dia ainda melhor, harmonize este versátil Chardonnay com uma Pizza de Camarão. "
   },
   {
     "title": "Becas Reserva Cabernet Sauvignon",
@@ -69,7 +104,13 @@
     "handle": "becas-reserva-cabernet-sauvignon",
     "price": 49.0,
     "image": "https://cdn.shopify.com/s/files/1/1068/6201/8720/files/Becas---Cabernet-Sauvignon---2021.png?v=1793138858",
-    "available": true
+    "available": true,
+    "taxonomy": {
+      "grapes": [
+        "Cabernet Sauvignon"
+      ]
+    },
+    "description": " Vinho coringa versátil que combina com tudo, e realça os sabores com a PIZZA DE BACON COM CEBOLA CARAMELIZADA. Embora julho celebre oficialmente o Mês da Pizza, há prazeres que merecem ser apreciados o ano inteiro. Para homenagear essa paixão atemporal, propomos uma harmonização especial, uma combinação pensada para elevar cada degustação a uma verdadeira experiência sensorial. Um brinde à sofisticação dos momentos inesquecíveis! (Imagem da pizza meramente ilustrativa) A Cabernet Sauvignon ressalva elegância e sofisticação, a casta vinífera mais plantada e mais consumida ao redor do mundo sabe que encanta a todos, e principalmente que seu nome é conhecido por todos. Com casca grossa, os vinhos de Cabernet Sauvignon possuem taninos firmes, combinados com muita fruta e um toque de acidez inconfundível. Sem dúvidas a nossa Becas Cabernet Sauvignon não teria uma escolha melhor do que um visual superelegante. "
   },
   {
     "title": "Becas Reserva Carménère",
@@ -78,7 +119,13 @@
     "handle": "becas-reserva-carmenere",
     "price": 49.0,
     "image": "https://cdn.shopify.com/s/files/1/1068/6201/8720/files/Becas---Carmenere---2021.png?v=1793138687",
-    "available": true
+    "available": true,
+    "taxonomy": {
+      "grapes": [
+        "Outro"
+      ]
+    },
+    "description": " A uva Carmenérè não é originária do Chile, mas foi no país Sul-americano que encontrou o terroir perfeito para se desenvolver e criar raízes, sendo hoje a uva emblemática do país e referência em qualidade. Não podemos falar de Carmenérè sem falar do Chile, com vinhos frutados e com notas herbáceas típicas, estes vinhos encantam enófilos ao redor do mundo, e hoje podemos dizer que a Carmenérè já se sente em casa no Chile, assim como nossa Becas, que gostou tanto do país que já ama e se sente super à vontade no Chile. "
   },
   {
     "title": "Espumante Arte Brut 375ml",
@@ -87,7 +134,9 @@
     "handle": "espumante-arte-brut-375ml",
     "price": 59.9,
     "image": "https://cdn.shopify.com/s/files/1/1068/6201/8720/files/Arte-Brut-375ml-ecommerce.webp?v=1793138437",
-    "available": true
+    "available": true,
+    "taxonomy": {},
+    "description": " Arte Brut: Elaborado pelo método Champenoise e maturado em caves subterrâneas, possui perlage fino e duradouro. "
   },
   {
     "title": "Espumante Arte Brut",
@@ -96,7 +145,9 @@
     "handle": "espumante-arte-brut",
     "price": 83.9,
     "image": "https://cdn.shopify.com/s/files/1/1068/6201/8720/files/ARTE-BRUT-ECOMMERCE.webp?v=1792881969",
-    "available": true
+    "available": true,
+    "taxonomy": {},
+    "description": " Arte Brut: Elaborado pelo método Champenoise e maturado em caves subterrâneas, possui perlage fino e duradouro. "
   },
   {
     "title": "Espumante Ponto Nero Live Zero Rosé",
@@ -105,7 +156,9 @@
     "handle": "ponto-nero-live-zero-rose",
     "price": 47.5,
     "image": "https://cdn.shopify.com/s/files/1/1068/6201/8720/files/live-zero-rose-scaled.png?v=1792881766",
-    "available": true
+    "available": true,
+    "taxonomy": {},
+    "description": " Com 0% de álcool e baixa caloria, o Ponto Nero Live Zero Rosé é a escolha perfeita para celebrar com leveza e tranquilidade. "
   },
   {
     "title": "Espumante Ponto Nero Live Zero",
@@ -114,7 +167,9 @@
     "handle": "ponto-nero-live-zero",
     "price": 47.5,
     "image": "https://cdn.shopify.com/s/files/1/1068/6201/8720/files/Live-Zero-Alcool-ecommerce.webp?v=1792881522",
-    "available": true
+    "available": true,
+    "taxonomy": {},
+    "description": " Com 0% de álcool, o Ponto Nero Live Zero é a escolha ideal para quem quer celebrar sem preocupações. Elaborado a partir de uvas selecionadas, esta bebida gaseificada de uva é uma alternativa mais leve e de baixa caloria em comparação a outras opções da categoria. Seus delicados aromas de frutas cítricas e flores brancas trazem frescor, enquanto a acidez equilibrada proporciona uma experiência agradável e revigorante. Tudo isso sem renunciar ao toque festivo e refinado característico da Ponto Nero. Perfeito para brindar em qualquer ocasião, Live Zero se adapta ao seu estado de espírito. "
   },
   {
     "title": "Naturelle Branco Suave",
@@ -123,7 +178,9 @@
     "handle": "naturelle-branco-suave",
     "price": 65.9,
     "image": "https://cdn.shopify.com/s/files/1/1068/6201/8720/files/NATURELLE-SUAVE-BRANCO-ECOMMERCE.webp?v=1792881385",
-    "available": true
+    "available": true,
+    "taxonomy": {},
+    "description": " Naturelle Branco Suave: Representa a história da Famiglia Valduga e o legado de gerações passadas. É um resgate do belo e simples. São as raízes mais profundas, o alicerce mais resistente, a inspiração mais doce. "
   },
   {
     "title": "Naturelle Rosé Suave",
@@ -132,7 +189,9 @@
     "handle": "naturelle-rose-suave",
     "price": 65.9,
     "image": "https://cdn.shopify.com/s/files/1/1068/6201/8720/files/163404-600-800.webp?v=1792880986",
-    "available": true
+    "available": true,
+    "taxonomy": {},
+    "description": " Naturelle representa a história da Famiglia Valduga e o legado de gerações passadas. É um resgate do belo e simples. São as raízes mais profundas, o alicerce mais resistente, a inspiração mais doce. "
   },
   {
     "title": "Cordero Con Piel de Lobo Syrah",
@@ -141,7 +200,13 @@
     "handle": "cordero-con-piel-de-lobo-syrah",
     "price": 59.9,
     "image": "https://cdn.shopify.com/s/files/1/1068/6201/8720/files/9oww072ianksmbfhchov2rinmhvaeahufxlv.webp?v=1792880820",
-    "available": true
+    "available": true,
+    "taxonomy": {
+      "grapes": [
+        "Syrah/Shiraz"
+      ]
+    },
+    "description": " O Vinho Tinto Cordero Con Piel de Lobo Syrah é um tinto produzido com a uva Syrah pela Mosquita Muerta Wines, em Mendoza, Argentina. Na taça, é de cor vermelho escuro intenso com aromas a cerejas e temperos pretos. Revela aromas intensos de cerejas maduras e frutas negras, acompanhados por notas marcantes de especiarias negras, como pimenta-preta e cravo, criando um perfil aromático expressivo e típico da variedade Syrah. Em boca, é intenso e apresenta uma ligeira queimação. Em concreto por 6 meses. Harmoniza com carnes brancas, carnes vermelhas e pizza e deve ser servido a 16 a 18 ºC. "
   },
   {
     "title": "Cordero Con Piel de Lobo Dulce Natural",
@@ -150,7 +215,13 @@
     "handle": "cordero-con-piel-de-lobo-dulce-natural",
     "price": 64.9,
     "image": "https://cdn.shopify.com/s/files/1/1068/6201/8720/files/2.webp?v=1792880695",
-    "available": true
+    "available": true,
+    "taxonomy": {
+      "grapes": [
+        "Chenin Blanc"
+      ]
+    },
+    "description": " Ovelhas em pele de lobo” … Nada é o que parece, a percepção é a nossa melhor habilidade. Cuidado com a ovelha que deixa o rebanho para ser o personagem principal, a ironia é sua melhor qualidade. "
   },
   {
     "title": "Naturelle Branco Frisante",
@@ -159,7 +230,11 @@
     "handle": "naturelle-branco-frisante",
     "price": 65.9,
     "image": "https://cdn.shopify.com/s/files/1/1068/6201/8720/files/Naturelle-Branco-Frisante-ecommerce.webp?v=1792880253",
-    "available": true
+    "available": true,
+    "taxonomy": {
+      "country": "Brasil"
+    },
+    "description": " Naturelle Branco Frisante: Representa a história da Famiglia Valduga e o legado de gerações passadas. É um resgate do belo e simples. São as raízes mais profundas, o alicerce mais resistente, a inspiração mais doce. "
   },
   {
     "title": "Naturelle Frisante Rosé",
@@ -168,7 +243,9 @@
     "handle": "naturelle-frisante-rose",
     "price": 65.9,
     "image": "https://cdn.shopify.com/s/files/1/1068/6201/8720/files/GARRAFA.webp?v=1792880017",
-    "available": true
+    "available": true,
+    "taxonomy": {},
+    "description": " Naturelle Frisante Rosé: Representa a história da Famiglia Valduga e o legado de gerações passadas. É um resgate do belo e simples. São as raízes mais profundas, o alicerce mais resistente, a inspiração mais doce. "
   },
   {
     "title": "Naturelle Tinto Suave",
@@ -177,7 +254,9 @@
     "handle": "naturelle-tinto-suave",
     "price": 65.9,
     "image": "https://cdn.shopify.com/s/files/1/1068/6201/8720/files/NATURELLE-SUAVE-TINTO-ECOMMERCE.webp?v=1792879844",
-    "available": true
+    "available": true,
+    "taxonomy": {},
+    "description": " Naturelle Tinto Suave: Representa a história da Famiglia Valduga e o legado de gerações passadas. É um resgate do belo e simples. São as raízes mais profundas, o alicerce mais resistente, a inspiração mais doce. "
   },
   {
     "title": "Terroir Chardonnay 375ml",
@@ -186,7 +265,13 @@
     "handle": "terroir-chardonnay-375ml",
     "price": 59.9,
     "image": "https://cdn.shopify.com/s/files/1/1068/6201/8720/files/images_3.jpg?v=1792879653",
-    "available": true
+    "available": true,
+    "taxonomy": {
+      "grapes": [
+        "Chardonnay"
+      ]
+    },
+    "description": " A procura incessante pela verdadeira identidade de cada parcela de solo e seu minucioso estudo, nos estimula a buscarmos os melhores resultados. "
   },
   {
     "title": "Terroir Chardonnay",
@@ -195,7 +280,14 @@
     "handle": "terroir-chardonnay",
     "price": 99.0,
     "image": "https://cdn.shopify.com/s/files/1/1068/6201/8720/files/imgi_12_Ecommerce1200x1600.png?v=1792875589",
-    "available": true
+    "available": true,
+    "taxonomy": {
+      "country": "Brasil",
+      "grapes": [
+        "Chardonnay"
+      ]
+    },
+    "description": " Terroir Chardonnay: A vocação vitivinícola da Famiglia Valduga aflorou no coração do Vale dos Vinhedos, onde há mais de um século era denominado como Via Leopoldina, sendo impulsionados pela vontade de prosperar e extrair do solo o suficiente para se viver com dignidade. Respeitar o terroir e compreender que cada casta de uva irá se desenvolver de maneira distinta são as raízes que alicerçam o desenvolvimento de uma grande história. A procura incessante pela verdadeira identidade de cada parcela de solo e seu minucioso estudo, nos estimula a buscarmos os melhores resultados. Compreendendo que a alma do vinho está conectada ao clima, solo, relevo e a constante mudança dos ventos, fez com que a Linha Terroir fosse concebida, valorizando o potencial de cada varietal, cultivados nas principais regiões vitícolas do Rio Grande do Sul. "
   },
   {
     "title": "Martino Superiore Malbec",
@@ -204,7 +296,9 @@
     "handle": "martino-superiore-malbec",
     "price": 160.0,
     "image": "https://cdn.shopify.com/s/files/1/1068/6201/8720/files/images_2.jpg?v=1792875029",
-    "available": true
+    "available": true,
+    "taxonomy": {},
+    "description": ""
   },
   {
     "title": "Zuccardi Q Cabernet Sauvignon",
@@ -213,7 +307,9 @@
     "handle": "zuccardi-q-cabernet-sauvignon",
     "price": 140.0,
     "image": "https://cdn.shopify.com/s/files/1/1068/6201/8720/files/q.jpg?v=1792874807",
-    "available": true
+    "available": true,
+    "taxonomy": {},
+    "description": ""
   },
   {
     "title": "Puna Malbec Reserve",
@@ -222,7 +318,13 @@
     "handle": "puna-malbec-reserve",
     "price": 120.0,
     "image": "https://cdn.shopify.com/s/files/1/1068/6201/8720/files/Design-sem-nome-3-4_png.webp?v=1792874632",
-    "available": true
+    "available": true,
+    "taxonomy": {
+      "grapes": [
+        "Malbec"
+      ]
+    },
+    "description": ""
   },
   {
     "title": "Santa Julia Chenin Dulce",
@@ -231,7 +333,13 @@
     "handle": "santa-julia-chenin-dulce",
     "price": 50.0,
     "image": "https://cdn.shopify.com/s/files/1/1068/6201/8720/files/vinho-santa-julia-chenin-dulce-natural-troca.jpg?v=1792874359",
-    "available": true
+    "available": true,
+    "taxonomy": {
+      "grapes": [
+        "Chenin Blanc"
+      ]
+    },
+    "description": ""
   },
   {
     "title": "Terroir Cabernet Sauvignon 375 ml",
@@ -240,7 +348,14 @@
     "handle": "terroir-cabernet-sauvignon-375-ml",
     "price": 59.0,
     "image": "https://cdn.shopify.com/s/files/1/1068/6201/8720/files/Terroir-Cabernet-Sauvignon-ecommerce.webp?v=1792874182",
-    "available": true
+    "available": true,
+    "taxonomy": {
+      "country": "Brasil",
+      "grapes": [
+        "Cabernet Sauvignon"
+      ]
+    },
+    "description": " Terroir - Cabernet Sauvignon: A vocação vitivinícola da Famiglia Valduga aflorou no coração do Vale dos Vinhedos, onde há mais de um século era denominado como Via Leopoldina, sendo impulsionados pela vontade de prosperar e extrair do solo o suficiente para se viver com dignidade. Respeitar o terroir e compreender que cada casta de uva irá se desenvolver de maneira distinta são as raízes que alicerçam o desenvolvimento de uma grande história. A procura incessante pela verdadeira identidade de cada parcela de solo e seu minucioso estudo, nos estimula a buscarmos os melhores resultados. Compreendendo que a alma do vinho está conectada ao clima, solo, relevo e a constante mudança dos ventos, fez com que a Linha Terroir fosse concebida, valorizando o potencial de cada varietal, cultivados nas principais regiões vitícolas do Rio Grande do Sul. "
   },
   {
     "title": "Terroir Pinot Noir",
@@ -249,7 +364,14 @@
     "handle": "terroir-pinot-noir",
     "price": 110.0,
     "image": "https://cdn.shopify.com/s/files/1/1068/6201/8720/files/1200x1600pinot.png?v=1792873989",
-    "available": true
+    "available": true,
+    "taxonomy": {
+      "country": "Brasil",
+      "grapes": [
+        "Pinot Noir"
+      ]
+    },
+    "description": " Terroir Pinot Noir: A vocação vitivinícola da Famiglia Valduga aflorou no coração do Vale dos Vinhedos, onde há mais de um século era denominado como Via Leopoldina, sendo impulsionados pela vontade de prosperar e extrair do solo o suficiente para se viver com dignidade. Respeitar o terroir e compreender que cada casta de uva irá se desenvolver de maneira distinta são as raízes que alicerçam o desenvolvimento de uma grande história. A procura incessante pela verdadeira identidade de cada parcela de solo e seu minucioso estudo, nos estimula a buscarmos os melhores resultados. Compreendendo que a alma do vinho está conectada ao clima, solo, relevo e a constante mudança dos ventos, fez com que a Linha Terroir fosse concebida, valorizando o potencial de cada varietal, cultivados nas principais regiões vitícolas do Rio Grande do Sul. "
   },
   {
     "title": "Terroir Cabernet Sauvignon",
@@ -258,7 +380,14 @@
     "handle": "terroir-cabernet-sauvignon",
     "price": 99.9,
     "image": "https://cdn.shopify.com/s/files/1/1068/6201/8720/files/Terroir-Cabernet-Sauvignon_Ecomm_1200x1600_df2a251c-8c74-45f7-9671-deb3e582b2e8.png?v=1792873663",
-    "available": true
+    "available": true,
+    "taxonomy": {
+      "country": "Brasil",
+      "grapes": [
+        "Cabernet Sauvignon"
+      ]
+    },
+    "description": " Terroir Cabernet Sauvignon: A vocação vitivinícola da Famiglia Valduga aflorou no coração do Vale dos Vinhedos, onde há mais de um século era denominado como Via Leopoldina, sendo impulsionados pela vontade de prosperar e extrair do solo o suficiente para se viver com dignidade. Respeitar o terroir e compreender que cada casta de uva irá se desenvolver de maneira distinta são as raízes que alicerçam o desenvolvimento de uma grande história. A procura incessante pela verdadeira identidade de cada parcela de solo e seu minucioso estudo, nos estimula a buscarmos os melhores resultados. Compreendendo que a alma do vinho está conectada ao clima, solo, relevo e a constante mudança dos ventos, fez com que a Linha Terroir fosse concebida, valorizando o potencial de cada varietal, cultivados nas principais regiões vitícolas do Rio Grande do Sul. "
   },
   {
     "title": "Terroir Merlot",
@@ -267,7 +396,14 @@
     "handle": "terroir-merlot",
     "price": 99.9,
     "image": "https://cdn.shopify.com/s/files/1/1068/6201/8720/files/TerroirMerlot_Ecomm_1200x1600_deca10ce-4427-4066-9fae-608efaad1420.png?v=1792873370",
-    "available": true
+    "available": true,
+    "taxonomy": {
+      "country": "Brasil",
+      "grapes": [
+        "Merlot"
+      ]
+    },
+    "description": " Terroir Merlot: A vocação vitivinícola da Famiglia Valduga aflorou no coração do Vale dos Vinhedos, onde há mais de um século era denominado como Via Leopoldina, sendo impulsionados pela vontade de prosperar e extrair do solo o suficiente para se viver com dignidade. Respeitar o terroir e compreender que cada casta de uva irá se desenvolver de maneira distinta são as raízes que alicerçam o desenvolvimento de uma grande história. A procura incessante pela verdadeira identidade de cada parcela de solo e seu minucioso estudo, nos estimula a buscarmos os melhores resultados. Compreendendo que a alma do vinho está conectada ao clima, solo, relevo e a constante mudança dos ventos, fez com que a Linha Terroir fosse concebida, valorizando o potencial de cada varietal, cultivados nas principais regiões vitícolas do Rio Grande do Sul. "
   },
   {
     "title": "Ponto Nero Celebration Brut",
@@ -276,7 +412,9 @@
     "handle": "ponto-nero-celebration-brut",
     "price": 60.0,
     "image": "https://cdn.shopify.com/s/files/1/1068/6201/8720/files/163411-600-800.webp?v=1792873049",
-    "available": true
+    "available": true,
+    "taxonomy": {},
+    "description": " O Ponto Nero Celebration Brut é a escolha ideal para quem busca um espumante brasileiro elegante, fresco e versátil. Produzido na Serra Gaúcha , região referência em espumantes no Brasil, ele combina qualidade, leveza e excelente custo-benefício para celebrar todos os momentos. "
   },
   {
     "title": "Origem Sauvignon Blanc",
@@ -285,7 +423,14 @@
     "handle": "origem-sauvignon-blanc",
     "price": 65.0,
     "image": "https://cdn.shopify.com/s/files/1/1068/6201/8720/files/Origem-Sauvignon-Blanc-ecommerce.webp?v=1792872643",
-    "available": true
+    "available": true,
+    "taxonomy": {
+      "country": "Brasil",
+      "grapes": [
+        "Sauvignon blanc"
+      ]
+    },
+    "description": " Tudo na natureza tem a sua origem. A jovialidade e a criatividade resultam em um vinho leve e equilibrado. Este vinho representa a evolução, o movimento e a originalidade do mundo vinícola. Inovação sempre foi considerada a palavra que melhor define o jeito Casa Valduga de elaborar seus vinhos. Pensando nisso, a Famiglia Valduga resolveu explorar outros terroirs. De produção própria, porém proveniente de vinhedos do outro lado da Cordilheira dos Andes, surge o Origem Sauvignon Blanc Chile. "
   },
   {
     "title": "Origem Elegance Cabernet Sauvignon",
@@ -294,7 +439,13 @@
     "handle": "origem-elegance-cabernet-sauvignon",
     "price": 65.0,
     "image": "https://cdn.shopify.com/s/files/1/1068/6201/8720/files/Origem-Cabernet-Sauvignon-Elegance-ecommerce.webp?v=1792872497",
-    "available": true
+    "available": true,
+    "taxonomy": {
+      "grapes": [
+        "Cabernet Sauvignon"
+      ]
+    },
+    "description": " Tudo na natureza tem a sua origem. Resgatamos da nossa história o que nos trouxe até aqui. Este vinho representa a nossa evolução, o que nos movimenta, a nossa originalidade. Inovação sempre foi considerada a palavra que melhor define o “jeito” Casa Valduga de elaborar seus vinhos. Pensando nisso, a Famiglia Valduga resolveu explorar outros terroirs. De produção própria, porém proveniente de vinhedos do outro lado da Cordilheira dos Andes, surge o Origem Cabernet Sauvignon Elegance, com inebriante perfil frutado, além das típicas nuances herbáceas. Um vinho intenso e de paladar elegante, chancelando o poder da fruta plenamente madura e sadia. "
   },
   {
     "title": "Origem Merlot",
@@ -303,7 +454,13 @@
     "handle": "origem-merlot",
     "price": 65.0,
     "image": "https://cdn.shopify.com/s/files/1/1068/6201/8720/files/images_1.jpg?v=1792872337",
-    "available": true
+    "available": true,
+    "taxonomy": {
+      "grapes": [
+        "Merlot"
+      ]
+    },
+    "description": " Tudo na natureza tem a sua origem. Resgatamos da nossa história o que nos trouxe até aqui. Este vinho representa a nossa evolução, o que nos movimenta, a nossa originalidade. Inovação sempre foi considerada a palavra que melhor define o jeito Casa Valduga de elaborar seus vinhos. Pensando nisso, a Famiglia Valduga resolveu explorar outros terroirs. De produção própria, porém proveniente de vinhedos do outro lado da Cordilheira dos Andes, surge o Origem Merlot Chile. "
   },
   {
     "title": "Origem Chardonnay",
@@ -312,7 +469,14 @@
     "handle": "origem-chardonnay",
     "price": 65.0,
     "image": "https://cdn.shopify.com/s/files/1/1068/6201/8720/files/Origem-chardonnay--rotulo-novo--ecommerce.webp?v=1792871684",
-    "available": true
+    "available": true,
+    "taxonomy": {
+      "country": "Chile",
+      "grapes": [
+        "Chardonnay"
+      ]
+    },
+    "description": " Tudo na natureza tem a sua origem. A jovialidade e a criatividade resultam em um vinho leve e equilibrado. Este vinho representa a evolução, o movimento e a originalidade do mundo vinícola. Inovação sempre foi considerada a palavra que melhor define o jeito Casa Valduga de elaborar seus vinhos. Pensando nisso, a Famiglia Valduga resolveu explorar outros terroirs. De produção própria, porém proveniente de vinhedos do outro lado da Cordilheira dos Andes, surge o Origem Chardonnay Chile. "
   },
   {
     "title": "Origem Carménére",
@@ -321,7 +485,13 @@
     "handle": "origem-carmenere",
     "price": 65.0,
     "image": "https://cdn.shopify.com/s/files/1/1068/6201/8720/files/Origem-Carmenere-ecommerce_fead8160-f002-44b5-9be7-ecd382b57bfd.webp?v=1792868735",
-    "available": true
+    "available": true,
+    "taxonomy": {
+      "grapes": [
+        "Outro"
+      ]
+    },
+    "description": ""
   },
   {
     "title": "Puna Malbec",
@@ -330,7 +500,13 @@
     "handle": "puna-malbec",
     "price": 69.9,
     "image": "https://cdn.shopify.com/s/files/1/1068/6201/8720/files/Design-sem-nome-2-10_png.webp?v=1792762266",
-    "available": true
+    "available": true,
+    "taxonomy": {
+      "grapes": [
+        "Malbec"
+      ]
+    },
+    "description": " sdadfas "
   },
   {
     "title": "Origem Cabernet Sauvignon",
@@ -339,6 +515,12 @@
     "handle": "origem-cabernet-sauvignon",
     "price": 65.0,
     "image": "https://cdn.shopify.com/s/files/1/1068/6201/8720/files/download.webp?v=1792702771",
-    "available": true
+    "available": true,
+    "taxonomy": {
+      "grapes": [
+        "Cabernet Sauvignon"
+      ]
+    },
+    "description": " Origem Cabernet Sauvignon Chile: Tudo na natureza tem a sua origem. Resgatamos da nossa história o que nos trouxe até aqui. Este vinho representa a nossa evolução, o que nos movimenta, a nossa originalidade. Inovação sempre foi considerada a palavra que melhor define o “jeito” Casa Valduga de elaborar seus vinhos. Pensando nisso, a Famiglia Valduga resolveu explorar outros terroirs. De produção própria, porém proveniente de vinhedos do outro lado da Cordilheira dos Andes, surge o Origem Cabernet Sauvignon Chile, com inebriante perfil frutado, além das típicas nuances herbáceas. Um vinho intenso e de paladar elegante, chancelando o poder da fruta plenamente madura e sadia. "
   }
 ]
