@@ -17,7 +17,7 @@ const browser=await chromium.launch({executablePath:process.env.BROWSER_EXECUTAB
 try {
  for(const width of [390,820,1440]) {
   const page=await browser.newPage({viewport:{width,height:900}});
-  await page.addInitScript(()=>localStorage.setItem('videira-age-ok','1'));
+  await page.addInitScript(()=>sessionStorage.setItem('videira-age-session-v1','1'));
   await page.route(base+'/product-award-demo',r=>r.fulfill({body:html,contentType:'text/html'}));
   await page.route('**/fixture-product-photo',r=>r.fulfill({body:fs.readFileSync(root+'docs/images/product-2.img'),contentType:'image/jpeg'}));
   await page.goto(base+'/product-award-demo');await page.evaluate(()=>document.fonts.ready);

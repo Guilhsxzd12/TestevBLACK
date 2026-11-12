@@ -56,3 +56,11 @@ Em **Videira · Produtores**, cada marca aparece como um bloco identificado pelo
 A configuração anterior foi preservada em docs/home-layout-before-index.json e a seção antiga permanece como legado, sem opção de adicioná-la novamente como uma página inteira. Coleções, imagens e blocos existentes são transferidos para as respectivas seções. Nenhum dado de produto é migrado ou alterado.
 
 Carrosséis podem ser arrastados com mouse, sem arraste nativo das imagens nem navegação acidental após o gesto. Clique normal, botões de compra, campos e seleção por teclado continuam disponíveis. O toque usa a rolagem nativa. A barra dos produtores fica oculta, e os controles existentes têm contraste maior e estado desabilitado distinguível. `tests/editor-drag.mjs` cobre a estrutura editável, campos de logo/nome/link, pratos personalizados, arraste e ausência de overflow em notebook/PC e celular.
+
+## Bandeiras, faixa e confirmação de idade
+
+A faixa preta/dourada associa um símbolo a cada mensagem da loja (envio e campanha). Alterna uma mensagem completa por vez, mantendo os textos editáveis e sem anunciar benefícios não cadastrados. Países usam bandeiras grandes com cantos arredondados e nomes compactos; nome, imagem personalizada e destino seguem editáveis. Os botões de carrossel ficam ocultos até 760 px. O toque e os controles do computador continuam funcionando.
+
+O aviso 18+ agora usa sessionStorage (`videira-age-session-v1`). Uma confirmação antiga em localStorage não impede novas sessões de exibir a pergunta. A resposta vale para a aba durante a navegação/recarregamento; uma nova sessão volta a perguntar. O editor da Shopify continua sem o bloqueio para permitir a edição. Negar mantém o aviso aberto e Escape não o dispensa. O tema mantém a opção Aviso 18+ nas configurações gerais.
+
+`tests/mobile-country-age.mjs` valida confirmação antiga, nova sessão, continuidade entre páginas, recusa, armazenamento indisponível, editor, símbolos, bandeiras e controles responsivos.

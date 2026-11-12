@@ -9,7 +9,7 @@ try {
  for(const width of [1440,820,390]) {
   const page=await browser.newPage({viewport:{width,height:1000}}),errors=[];
   page.on('pageerror',e=>errors.push(e.message));
-  await page.addInitScript(()=>{localStorage.setItem('videira-age-ok','1');localStorage.setItem('videira-color-mode','dark');});
+  await page.addInitScript(()=>{sessionStorage.setItem('videira-age-session-v1','1');localStorage.setItem('videira-color-mode','dark');});
   await page.route('**/*',route=>{
    const u=new URL(route.request().url());if(u.origin===base)return route.continue();
    const i=catalog.findIndex(p=>p.image===route.request().url());

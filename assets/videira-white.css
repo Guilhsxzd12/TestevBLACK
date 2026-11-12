@@ -85,3 +85,29 @@ html:has(body.storefront.vm-store){background:#fff!important}.storefront.vm-stor
 @media(min-width:1024px){.storefront.vm-store .vm-inline-controls button,.storefront.vm-store [data-carousel-step]{width:34px;height:34px;min-width:34px}.storefront.vm-store .vm-shelf-prev{left:-12px}.storefront.vm-store .vm-shelf-next{right:-12px}}
 .storefront.vm-store .vm-brand-track .vm-producer-tile:not(.vm-producer-has-logo)>span{font-size:24px!important}@media(max-width:760px){.storefront.vm-store .vm-brand-track .vm-producer-tile:not(.vm-producer-has-logo){min-height:100px}.storefront.vm-store .vm-brand-track .vm-producer-tile:not(.vm-producer-has-logo)>span{font-size:22px!important}}
 .storefront.vm-store .vm-mouse-scrolled{scroll-snap-type:none!important}
+
+/* Flag destinations: generous flags and compact country labels. */
+.storefront.vm-store .vm-origins-track{gap:32px;padding:12px 0;scrollbar-width:none;scroll-snap-type:x mandatory}
+.storefront.vm-store .vm-origins-track::-webkit-scrollbar{display:none}
+.storefront.vm-store .vm-origins-track>a{flex:0 0 190px;min-height:0;padding:0;gap:12px;background:transparent;border:0;border-radius:0;scroll-snap-align:start;justify-content:flex-start}
+.storefront.vm-store .vm-origins-track>a>.vm-country-flag,.storefront.vm-store .vm-origins-track>a>.vm-custom-flag{display:block;width:190px;height:auto;aspect-ratio:3/2;margin:0;overflow:hidden;border-radius:12px;box-shadow:none;object-fit:cover;transition:transform .2s ease}
+.storefront.vm-store .vm-origins-track .vm-country-flag>svg{display:block;width:100%;height:100%}
+.storefront.vm-store .vm-origins-track>a>strong{font:500 11px/1.5 Lexend,Arial,sans-serif!important;letter-spacing:.8px;text-transform:uppercase;color:#36242f}
+.storefront.vm-store .vm-origins-track>a:hover>.vm-country-flag,.storefront.vm-store .vm-origins-track>a:hover>.vm-custom-flag{transform:translateY(-3px)}
+/* Symbols accompany the store's own messages, with no extra offers. */
+.storefront.vm-store .vm-announcement-track>[data-store-message]{display:flex;align-items:center;justify-content:center;gap:9px}
+.storefront.vm-store .vm-announcement-track>[data-store-message]>svg{display:block;width:17px;height:17px;flex:none;color:#dfc68a;stroke-width:1.5}
+@media(max-width:760px){
+ .storefront.vm-store .vm-inline-controls,.storefront.vm-store [data-carousel-step]{display:none!important}
+ .storefront.vm-store .vm-origins-track{gap:22px;padding:10px 0 12px}
+ .storefront.vm-store .vm-origins-track>a{flex-basis:calc((100% - 44px)/3);gap:8px}
+ .storefront.vm-store .vm-origins-track>a>.vm-country-flag,.storefront.vm-store .vm-origins-track>a>.vm-custom-flag{width:100%;border-radius:9px}
+ .storefront.vm-store .vm-origins-track>a>strong{font-size:9px!important;letter-spacing:.5px}
+ .storefront.vm-store .vm-announcement-track>[data-store-message]{gap:7px}
+ .storefront.vm-store .vm-announcement-track>[data-store-message]>svg{width:15px;height:15px}
+}
+@media(prefers-reduced-motion:reduce){.storefront.vm-store .vm-origins-track>a>.vm-country-flag,.storefront.vm-store .vm-origins-track>a>.vm-custom-flag{transition:none;transform:none}}
+
+.storefront.vm-store .vm-origins-track>a:first-child{margin-left:auto}
+.storefront.vm-store .vm-origins-track>a:last-child{margin-right:auto}
+.storefront.vm-store .vm-origins .vm-section-heading h2:after{content:'';display:block;width:32px;height:3px;margin:14px auto 0;background:#651242}

@@ -3,7 +3,7 @@ const {chromium}=await import(process.env.PLAYWRIGHT_TEST_MODULE || 'playwright'
 const base=process.env.TEST_BASE_URL||'http://127.0.0.1:8179',root=new URL('../',import.meta.url).pathname;
 const browser=await chromium.launch({executablePath:process.env.BROWSER_EXECUTABLE||'/usr/bin/chromium',args:['--no-sandbox']});
 try{for(const width of [390,820,1440]){
- const page=await browser.newPage({viewport:{width,height:900}});await page.addInitScript(()=>localStorage.setItem('videira-age-ok','1'));
+ const page=await browser.newPage({viewport:{width,height:900}});await page.addInitScript(()=>sessionStorage.setItem('videira-age-session-v1','1'));
  await page.goto(base,{waitUntil:'networkidle'});await page.evaluate(()=>document.fonts.ready);
  if(width<1024){
   await page.locator('[data-menu-toggle]').click();const panel=page.locator('.vm-menu-panel');

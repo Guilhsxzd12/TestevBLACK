@@ -158,10 +158,12 @@
     const age = document.querySelector('[data-age-gate]');
     if (age) {
       let accepted = false;
-      try { accepted = localStorage.getItem('videira-age-ok') === '1' || localStorage.getItem('videira-age-confirmed') === 'yes'; } catch {}
+      // A previous visit must not suppress the age question indefinitely.
+      // Keep the answer only for this tab's browsing session.
+      try { accepted = sessionStorage.getItem('videira-age-session-v1') === '1'; } catch {}
       if (!accepted && !window.Shopify?.designMode) show(age);
       age.addEventListener('cancel', event => event.preventDefault());
-      age.querySelector('[data-age-confirm]').addEventListener('click', () => { try { localStorage.setItem('videira-age-ok', '1'); } catch {} age.close(); });
+      age.querySelector('[data-age-confirm]').addEventListener('click', () => { try { sessionStorage.setItem('videira-age-session-v1', '1'); } catch {} age.close(); });
       age.querySelector('[data-age-deny]').addEventListener('click', () => { age.querySelector('[data-age-denied]').hidden = false; age.querySelector('.age-actions').hidden = true; });
     }
   };
