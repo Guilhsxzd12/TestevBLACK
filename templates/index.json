@@ -1,39 +1,53 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "banners": {
       "type": "videira-home-hero",
-      "settings": {
-        "autoplay": true
-      },
       "blocks": {
         "black": {
           "type": "banner",
           "settings": {
             "title": "Esquenta Black Friday Videira",
-            "style": "black"
+            "style": "black",
+            "link": ""
           }
         },
         "arrivals": {
           "type": "banner",
           "settings": {
             "title": "Acabou de chegar — Novidades no catálogo Videira",
-            "style": "arrivals"
+            "style": "arrivals",
+            "link": ""
           }
         }
       },
       "block_order": [
         "black",
         "arrivals"
-      ]
+      ],
+      "settings": {
+        "page_heading": "Videira Vinhoteca — a sua seleção de vinhos",
+        "anchor": "black-friday",
+        "autoplay": true,
+        "interval": 5
+      }
     },
     "categories": {
       "type": "videira-home-categories",
-      "settings": {},
       "blocks": {
         "category0": {
           "type": "category",
           "settings": {
             "title": "SELEÇÃO MALBEC",
+            "link": "",
             "style": "malbec"
           }
         },
@@ -41,6 +55,7 @@
           "type": "category",
           "settings": {
             "title": "NOVIDADES",
+            "link": "",
             "style": "new"
           }
         },
@@ -48,6 +63,7 @@
           "type": "category",
           "settings": {
             "title": "SELEÇÃO VIDEIRA",
+            "link": "",
             "style": "selection"
           }
         },
@@ -55,6 +71,7 @@
           "type": "category",
           "settings": {
             "title": "VINHO E PIZZA",
+            "link": "",
             "style": "pizza"
           }
         },
@@ -62,6 +79,7 @@
           "type": "category",
           "settings": {
             "title": "PARA COMPARTILHAR",
+            "link": "",
             "style": "sharing"
           }
         }
@@ -72,106 +90,120 @@
         "category2",
         "category3",
         "category4"
-      ]
+      ],
+      "settings": {
+        "label": "Seleções de vinho"
+      }
     },
     "pairings": {
       "type": "videira-home-pairings",
-      "settings": {},
       "blocks": {
         "food0": {
           "type": "food",
           "settings": {
+            "title": "Carnes vermelhas",
             "term": "carnes-vermelhas",
             "default_image": "carnes-vermelhas",
-            "title": "Carnes vermelhas"
+            "link": ""
           }
         },
         "food1": {
           "type": "food",
           "settings": {
+            "title": "Pizzas",
             "term": "pizzas",
             "default_image": "pizzas",
-            "title": "Pizzas"
+            "link": ""
           }
         },
         "food2": {
           "type": "food",
           "settings": {
+            "title": "Queijos",
             "term": "queijos",
             "default_image": "queijos",
-            "title": "Queijos"
+            "link": ""
           }
         },
         "food3": {
           "type": "food",
           "settings": {
+            "title": "Cozinha oriental",
             "term": "orientais",
             "default_image": "orientais",
-            "title": "Cozinha oriental"
+            "link": ""
           }
         },
         "food4": {
           "type": "food",
           "settings": {
+            "title": "Massas",
             "term": "massas",
             "default_image": "massas",
-            "title": "Massas"
+            "link": ""
           }
         },
         "food5": {
           "type": "food",
           "settings": {
+            "title": "Frutos do mar",
             "term": "frutos-do-mar",
             "default_image": "frutos-do-mar",
-            "title": "Frutos do mar"
+            "link": ""
           }
         },
         "food6": {
           "type": "food",
           "settings": {
+            "title": "Carnes brancas",
             "term": "carnes-brancas",
             "default_image": "carnes-brancas",
-            "title": "Carnes brancas"
+            "link": ""
           }
         },
         "food7": {
           "type": "food",
           "settings": {
+            "title": "Risotos",
             "term": "risotos",
             "default_image": "risotos",
-            "title": "Risotos"
+            "link": ""
           }
         },
         "food8": {
           "type": "food",
           "settings": {
+            "title": "Peixes",
             "term": "peixes",
             "default_image": "peixes",
-            "title": "Peixes"
+            "link": ""
           }
         },
         "food9": {
           "type": "food",
           "settings": {
+            "title": "Legumes",
             "term": "legumes",
             "default_image": "legumes",
-            "title": "Legumes"
+            "link": ""
           }
         },
         "food10": {
           "type": "food",
           "settings": {
+            "title": "Saladas",
             "term": "saladas",
             "default_image": "saladas",
-            "title": "Saladas"
+            "link": ""
           }
         },
         "food11": {
           "type": "food",
           "settings": {
+            "title": "Sobremesas",
             "term": "sobremesas",
             "default_image": "sobremesas",
-            "title": "Sobremesas"
+            "link": ""
           }
         }
       },
@@ -188,23 +220,48 @@
         "food9",
         "food10",
         "food11"
-      ]
+      ],
+      "settings": {
+        "title": "Harmonizações",
+        "subtitle": "Escolha o prato. Descubra o vinho.",
+        "anchor": "harmonizacoes"
+      }
     },
     "selection": {
       "type": "videira-home-shelf",
       "settings": {
         "title": "Seleção da Videira",
         "subtitle": "Vinhos para descobrir e compartilhar",
-        "anchor": "selecao"
+        "anchor": "selecao",
+        "collection": "",
+        "limit": 12,
+        "newest_first": false,
+        "button_label": "VER TODOS OS VINHOS",
+        "link": ""
       }
     },
     "good_buys": {
       "type": "videira-home-good-buys",
-      "settings": {}
+      "settings": {
+        "title": "Boas Compras",
+        "anchor": "boas-compras",
+        "collection": "",
+        "limit": 6,
+        "button_label": "Conheça →"
+      }
     },
     "origins_story": {
       "type": "videira-home-editorial",
-      "settings": {}
+      "settings": {
+        "style": "origin",
+        "eyebrow": "CONHEÇA",
+        "heading": "Uma seleção.",
+        "heading_second": "Muitas origens.",
+        "text": "Descubra os vinhos e produtores que fazem parte da Videira.",
+        "image_alt": "Paisagem de vinhedos",
+        "button_label": "Explore as origens",
+        "link": ""
+      }
     },
     "newest": {
       "type": "videira-home-shelf",
@@ -212,29 +269,35 @@
         "title": "Novidades",
         "subtitle": "Encontre seu próximo favorito",
         "anchor": "novidades",
-        "newest_first": true
+        "collection": "",
+        "limit": 12,
+        "newest_first": true,
+        "button_label": "VER TODOS OS VINHOS",
+        "link": ""
       }
     },
     "countries": {
       "type": "videira-home-countries",
-      "settings": {},
       "blocks": {
         "country0": {
           "type": "country",
           "settings": {
-            "title": "Argentina"
+            "title": "Argentina",
+            "link": ""
           }
         },
         "country1": {
           "type": "country",
           "settings": {
-            "title": "Chile"
+            "title": "Chile",
+            "link": ""
           }
         },
         "country2": {
           "type": "country",
           "settings": {
-            "title": "Brasil"
+            "title": "Brasil",
+            "link": ""
           }
         }
       },
@@ -242,64 +305,86 @@
         "country0",
         "country1",
         "country2"
-      ]
+      ],
+      "settings": {
+        "title": "Países e regiões",
+        "anchor": "paises",
+        "button_label": "Conheça →"
+      }
     },
     "producers": {
       "type": "videira-home-producers",
-      "settings": {},
       "blocks": {
         "producer0": {
           "type": "producer",
           "settings": {
-            "title": "Becas"
+            "title": "Becas",
+            "logo": "shopify://shop_images/becas-logo.jpg",
+            "link": ""
           }
         },
         "producer1": {
           "type": "producer",
           "settings": {
-            "title": "Casa Valduga"
+            "title": "Casa Valduga",
+            "logo": "shopify://shop_images/images.jpg",
+            "link": ""
           }
         },
         "producer2": {
           "type": "producer",
           "settings": {
-            "title": "Gascón"
+            "title": "Gascón",
+            "logo": "shopify://shop_images/IMG_0230.png",
+            "link": ""
           }
         },
         "producer3": {
           "type": "producer",
           "settings": {
-            "title": "Martino"
+            "title": "Martino",
+            "logo": "shopify://shop_images/martino-wines-logo-negro.webp",
+            "link": ""
           }
         },
         "producer4": {
           "type": "producer",
           "settings": {
-            "title": "Mosquita Muerta"
+            "title": "Mosquita Muerta",
+            "logo": "shopify://shop_images/Logo_MMW_839482b7-a7f9-419b-ba93-8cb7d666cd13.webp",
+            "link": ""
           }
         },
         "producer5": {
           "type": "producer",
           "settings": {
-            "title": "Ponto Nero"
+            "title": "Ponto Nero",
+            "logo": "shopify://shop_images/pontonero.png",
+            "link": ""
           }
         },
         "producer6": {
           "type": "producer",
           "settings": {
-            "title": "Puna"
+            "title": "Puna",
+            "logo": "shopify://shop_images/Logo.png",
+            "link": ""
           }
         },
         "producer7": {
           "type": "producer",
           "settings": {
-            "title": "Susana Balbo"
+            "title": "Susana Balbo",
+            "logo": "shopify://shop_images/susana-balbo.jpg",
+            "link": ""
           }
         },
         "producer8": {
           "type": "producer",
           "settings": {
-            "title": "Zuccardi"
+            "title": "Zuccardi",
+            "logo": "shopify://shop_images/turismo-logo-zuccardi.png",
+            "link": ""
           }
         }
       },
@@ -313,7 +398,13 @@
         "producer6",
         "producer7",
         "producer8"
-      ]
+      ],
+      "settings": {
+        "title": "Produtores",
+        "anchor": "bodegas",
+        "logo_height": 56,
+        "show_names": true
+      }
     },
     "brand_story": {
       "type": "videira-home-editorial",
@@ -323,8 +414,9 @@
         "heading": "Vinhos com identidade.",
         "heading_second": "Momentos que ficam.",
         "text": "O seu próximo vinho está aqui.",
+        "image_alt": "Vinhedos e suas origens",
         "button_label": "Conheça",
-        "image_alt": "Vinhedos e suas origens"
+        "link": ""
       }
     }
   },
