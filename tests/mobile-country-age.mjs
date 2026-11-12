@@ -9,6 +9,7 @@ try {
  await context.addInitScript(()=>{try{localStorage.setItem('videira-age-ok','1');localStorage.setItem('videira-age-confirmed','yes');}catch{}});
  const p=await context.newPage(),errors=[];p.on('pageerror',e=>errors.push(e.message));
  await p.goto(base);await p.locator('[data-age-gate][open]').waitFor();
+ const gate=await p.locator('[data-age-gate]').boundingBox();assert.ok(gate.x>=15&&gate.x+gate.width<=391);assert.equal(await p.locator('.age-card').evaluate(e=>e.scrollWidth>e.clientWidth),false);
  await p.keyboard.press('Escape');assert.equal(await p.locator('[data-age-gate]').evaluate(e=>e.open),true);
  await p.locator('[data-age-confirm]').click();assert.equal(await p.locator('[data-age-gate]').evaluate(e=>e.open),false);
  await p.reload();assert.equal(await p.locator('[data-age-gate]').evaluate(e=>e.open),false);

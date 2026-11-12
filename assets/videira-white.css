@@ -111,3 +111,10 @@ html:has(body.storefront.vm-store){background:#fff!important}.storefront.vm-stor
 .storefront.vm-store .vm-origins-track>a:first-child{margin-left:auto}
 .storefront.vm-store .vm-origins-track>a:last-child{margin-right:auto}
 .storefront.vm-store .vm-origins .vm-section-heading h2:after{content:'';display:block;width:32px;height:3px;margin:14px auto 0;background:#651242}
+/* The modal must fit narrow phones instead of inheriting a desktop max-width. */
+.storefront.vm-store .age-gate{width:500px;max-width:calc(100vw - 32px)!important;max-height:calc(100dvh - 32px);box-sizing:border-box;overflow-y:auto;overflow-x:hidden}
+.storefront.vm-store .age-card{width:100%;min-width:0;box-sizing:border-box;padding:30px 24px}
+.storefront.vm-store .age-card>.age-kicker{font:500 12px/1.6 Lexend,Arial,sans-serif;letter-spacing:1.5px;white-space:normal;color:#651242;margin:20px 0 14px}
+.storefront.vm-store .age-card h2{font-size:clamp(24px,6vw,30px);line-height:1.25;white-space:normal;overflow-wrap:break-word;margin:0 0 18px}
+.storefront.vm-store .age-card>p:not(.age-kicker){font:400 13px/1.75 Lexend,Arial,sans-serif;white-space:normal;overflow-wrap:break-word}
+.storefront.vm-store .age-actions>button:focus-visible{outline:2px solid #b59758;outline-offset:3px}
