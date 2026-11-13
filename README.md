@@ -71,4 +71,7 @@ A campanha ativa substitui Black Friday no banner, na chamada de navegação e n
 
 A alteração é de comunicação no tema: a aplicação do desconto e os meios de pagamento elegíveis continuam sob a regra de checkout cadastrada pelo lojista. O tema não configura uma restrição financeira a Pix nem altera a regra automática existente.
 
-Os cinco mini banners usam fotografias próprias de ocasiões, o Malbec real da loja e descrições editáveis. O atalho Vinho e pizza mantém o filtro de harmonização de pizzas. Fotos e destinos personalizados continuam disponíveis. O recorte elíptico dos pratos exclui as sombras embutidas nas fotos, sem apagar fotos cadastradas ou interferir nos filtros.
+Os cinco mini banners voltaram às fotos anteriores e aos títulos sobre a imagem, com o Malbec real da loja. O atalho Vinho e pizza mantém o filtro de harmonização de pizzas. Fotos e destinos personalizados continuam disponíveis. O recorte elíptico dos pratos exclui as sombras embutidas nas fotos, sem apagar fotos cadastradas ou interferir nos filtros.
+
+
+A navegação do computador usa chevrons SVG com contorno circular, rotação e destaque ao abrir o submenu. O link VER TODOS foi retirado da barra; MONTE SUA CAIXA, tanto no menu do computador quanto nos destaques do celular, abre diretamente /collections/all. O botão do banner também abre o catálogo. A foto da campanha passou a mostrar uma caixa fechada e três garrafas inteiras ao lado, substituindo a composição de garrafas em divisórias.

@@ -135,23 +135,10 @@ html:has(body.storefront.vm-store){background:#fff!important}.storefront.vm-stor
 .storefront.vm-store .vm-case-visual{height:100%;min-width:0;overflow:hidden}
 .storefront.vm-store .vm-case-visual>svg{display:block;width:100%;height:100%}
 .storefront.vm-store .mi-hero-stage .vm-case-visual img{object-fit:cover}
-/* Consistent miniature editorials, with actual Malbec and newly created imagery. */
-.storefront.vm-store .mi-categories.vm-shortcuts{width:calc(100% - 96px);max-width:1300px;padding:30px 0 22px;margin:auto}
-.storefront.vm-store .vm-shortcuts>div{gap:16px;padding:0;align-items:stretch}
-.storefront.vm-store .vm-shortcuts a{display:flex;flex-direction:column;flex:0 0 calc((100% - 64px)/5);height:auto;background:white;border:1px solid #e9dfe5;border-radius:8px;overflow:hidden}
-.storefront.vm-store .vm-shortcuts a:after{content:none}
-.storefront.vm-store .vm-shortcut-photo{height:190px;overflow:hidden;background:#f2ecef}
-.storefront.vm-store .vm-shortcut-photo>svg,.storefront.vm-store .vm-shortcut-photo>img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .3s}
-.storefront.vm-store .vm-shortcuts .vm-malbec-tile img{object-fit:contain;background:none;padding:12px 24px;mix-blend-mode:multiply}
-.storefront.vm-store .vm-shortcut-copy{position:relative;display:flex;flex-direction:column;justify-content:center;gap:5px;min-height:78px;padding:13px 38px 13px 14px}
-.storefront.vm-store .vm-shortcut-copy>span{font:500 12px/1.5 Lexend,Arial,sans-serif;color:#651242;letter-spacing:.1px}
-.storefront.vm-store .vm-shortcut-copy>small{font:400 10px/1.6 Lexend,Arial,sans-serif;color:#796570}
-.storefront.vm-store .vm-shortcut-copy>svg{position:absolute;right:12px;top:50%;transform:translateY(-50%);width:18px;height:18px;color:#b59758}
-.storefront.vm-store .vm-shortcuts a:hover .vm-shortcut-photo>svg{transform:scale(1.035)}
 /* Clip the baked rectangular cast shadow outside the circular dish itself. */
 .storefront.vm-store .vm-food-photo{clip-path:ellipse(48% 47% at 50% 48%);background:transparent!important;filter:none!important;box-shadow:none!important}
 .storefront.vm-store .vm-food-photo>svg,.storefront.vm-store .vm-food-photo img{filter:none!important;box-shadow:none!important}
-@media(max-width:1023px) and (min-width:761px){.storefront.vm-store .vm-case-copy{padding:20px 30px}.storefront.vm-store .vm-case-copy h2{font-size:36px}.storefront.vm-store .vm-case-offer strong{font-size:34px}.storefront.vm-store .vm-case-offer span{font-size:11px}.storefront.vm-store .vm-shortcut-photo{height:155px}.storefront.vm-store .vm-shortcuts>div{gap:12px}.storefront.vm-store .vm-shortcuts a{flex-basis:calc((100% - 48px)/5)}.storefront.vm-store .vm-shortcut-copy{padding:10px;min-height:95px}.storefront.vm-store .vm-shortcut-copy>svg{display:none}}
+@media(max-width:1023px) and (min-width:761px){.storefront.vm-store .vm-case-copy{padding:20px 30px}.storefront.vm-store .vm-case-copy h2{font-size:36px}.storefront.vm-store .vm-case-offer strong{font-size:34px}.storefront.vm-store .vm-case-offer span{font-size:11px}}
 @media(max-width:760px){
  .storefront.vm-store .mi-hero-stage{height:420px}
  .storefront.vm-store .mi-hero-stage .vm-case-banner{grid-template-columns:1fr;grid-template-rows:55% 45%}
@@ -166,18 +153,30 @@ html:has(body.storefront.vm-store){background:#fff!important}.storefront.vm-stor
  .storefront.vm-store .vm-case-cta>svg{width:16px;height:16px}
  .storefront.vm-store .vm-case-copy>small{display:none}
  .storefront.vm-store .vm-case-visual>svg{object-position:center}
- .storefront.vm-store .mi-categories.vm-shortcuts{width:100%;padding:22px 0 18px 16px}
- .storefront.vm-store .vm-shortcuts>div{gap:12px;padding-right:16px}
- .storefront.vm-store .vm-shortcuts a{flex-basis:calc((100vw - 44px)/2.1)}
- .storefront.vm-store .vm-shortcut-photo{height:158px}
- .storefront.vm-store .vm-shortcut-copy{min-height:85px;padding:10px 12px;justify-content:flex-start;gap:5px}
- .storefront.vm-store .vm-shortcut-copy>span{font-size:11px}
- .storefront.vm-store .vm-shortcut-copy>small{font-size:9px}
- .storefront.vm-store .vm-shortcut-copy>svg{display:none}
- .storefront.vm-store .vm-shortcuts .vm-malbec-tile img{padding:10px 18px}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 }
-@media(prefers-reduced-motion:reduce){.storefront.vm-store .vm-shortcut-photo>svg{transition:none}.storefront.vm-store .vm-shortcuts a:hover .vm-shortcut-photo>svg{transform:none}}
+
 @media(max-width:760px){.storefront.vm-store .mi-banner-dots{left:auto;right:18px;top:16px;bottom:auto;transform:none}}
 
 .storefront.vm-store .vm-case-visual>.vm-case-mobile-custom{display:none!important}
 @media(max-width:760px){.storefront.vm-store .vm-case-visual>.vm-case-mobile-custom{display:block!important}.storefront.vm-store .vm-case-visual:has(>.vm-case-mobile-custom)>.vm-case-default-scene{display:none}}
+
+/* A drawn chevron, consistent stroke and a clear open state. */
+@media(min-width:1024px){
+ .storefront.vm-store .vm-desktop-nav details>summary{display:flex;align-items:center;gap:8px}
+ .storefront.vm-store .vm-desktop-nav summary>.vm-nav-chevron{display:inline-flex;align-items:center;justify-content:center;flex:none;width:22px;height:22px;margin:0;border:1px solid #e5dbe1;border-radius:50%;background:#faf7f9;transition:transform .18s ease,background-color .18s ease,border-color .18s ease}
+ .storefront.vm-store .vm-desktop-nav .vm-nav-chevron>.vm-menu-icon{display:block;width:14px;height:14px;stroke-width:2;color:#651242!important}
+ .storefront.vm-store .vm-desktop-nav details[open]>summary>.vm-nav-chevron{transform:rotate(180deg);background:#651242;border-color:#b59758}
+ .storefront.vm-store .vm-desktop-nav details[open]>summary>.vm-nav-chevron>.vm-menu-icon{color:#fff!important}
+}
+@media(prefers-reduced-motion:reduce){.storefront.vm-store .vm-desktop-nav summary>.vm-nav-chevron{transition:none}}
+
+@media(max-width:760px){.storefront.vm-store .mi-hero-stage{height:480px}.storefront.vm-store .mi-hero-stage .vm-case-banner{grid-template-rows:48% 52%}}

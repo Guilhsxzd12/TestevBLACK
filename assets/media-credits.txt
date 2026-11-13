@@ -12,3 +12,5 @@ Arrival banners: generated edits correcting the Videira engraving alignment to t
 
 November 2026 case campaign and occasion imagery: original generated four-panel editorial photography, Videira logo supplied as reference. Source retained at /workspace/generated_images/exec-236d31a8-31b6-40b0-a232-999d9d57c37e.png. Optimized WebP used with independent SVG viewports; offer and shortcut captions remain live editable Shopify text. Black Friday artwork no longer used by the homepage.
 Pairing shadows: the original photographs remain intact; elliptical website clipping excludes the embedded cast shadows outside the dishes.
+
+Campaign bottle correction: generated edit replaces malformed bottles in the top-left panel with a closed Videira case and three full upright wine bottles. Source: /workspace/generated_images/exec-b7d96bc7-25ad-4ce0-8c90-8e4a9ae891c2.png. Category banners restored to prior photos and overlay captions by merchant request.

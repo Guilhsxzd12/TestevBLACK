@@ -39,8 +39,7 @@
           "settings": {
             "title": "SELEÇÃO MALBEC",
             "link": "",
-            "style": "malbec",
-            "subtitle": "Descubra seu próximo Malbec"
+            "style": "malbec"
           }
         },
         "category1": {
@@ -48,8 +47,7 @@
           "settings": {
             "title": "NOVIDADES",
             "link": "",
-            "style": "new",
-            "subtitle": "Os últimos rótulos a chegar"
+            "style": "new"
           }
         },
         "category2": {
@@ -57,8 +55,7 @@
           "settings": {
             "title": "SELEÇÃO VIDEIRA",
             "link": "",
-            "style": "selection",
-            "subtitle": "Escolhas para cada ocasião"
+            "style": "selection"
           }
         },
         "category3": {
@@ -66,8 +63,7 @@
           "settings": {
             "title": "VINHO E PIZZA",
             "link": "",
-            "style": "pizza",
-            "subtitle": "A combinação perfeita"
+            "style": "pizza"
           }
         },
         "category4": {
@@ -75,8 +71,7 @@
           "settings": {
             "title": "PARA COMPARTILHAR",
             "link": "",
-            "style": "sharing",
-            "subtitle": "Bons vinhos, bons encontros"
+            "style": "sharing"
           }
         }
       },
