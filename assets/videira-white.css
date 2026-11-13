@@ -118,3 +118,66 @@ html:has(body.storefront.vm-store){background:#fff!important}.storefront.vm-stor
 .storefront.vm-store .age-card h2{font-size:clamp(24px,6vw,30px);line-height:1.25;white-space:normal;overflow-wrap:break-word;margin:0 0 18px}
 .storefront.vm-store .age-card>p:not(.age-kicker){font:400 13px/1.75 Lexend,Arial,sans-serif;white-space:normal;overflow-wrap:break-word}
 .storefront.vm-store .age-actions>button:focus-visible{outline:2px solid #b59758;outline-offset:3px}
+/* An editable Videira campaign, replacing the dated Black Friday artwork. */
+.storefront.vm-store .mi-hero-stage{height:clamp(360px,33.333vw,480px);background:#40172b}
+.storefront.vm-store .mi-hero-stage .vm-case-banner{display:grid;grid-template-columns:52% 48%;background:#40172b;color:white;text-decoration:none}
+.storefront.vm-store .vm-case-copy{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;min-width:0;padding:24px clamp(24px,5vw,80px)}
+.storefront.vm-store .vm-case-copy p{margin:0}
+.storefront.vm-store .vm-case-eyebrow{font:500 10px/1.5 Lexend,Arial,sans-serif;letter-spacing:1.8px;color:#e0c18a;margin-bottom:10px!important}
+.storefront.vm-store .vm-case-copy h2{font:500 clamp(34px,4.2vw,60px)/1.12 'Playfair Display',Georgia,serif;color:#fff;margin:0 0 14px;letter-spacing:-.6px}
+.storefront.vm-store .vm-case-offer{display:flex;align-items:center;gap:15px;margin-bottom:10px!important}
+.storefront.vm-store .vm-case-offer strong{font:500 clamp(32px,3.2vw,46px)/1.1 Lexend,Arial,sans-serif;color:#e0c18a;white-space:nowrap}
+.storefront.vm-store .vm-case-offer span{font:400 13px/1.6 Lexend,Arial,sans-serif;max-width:125px;color:#fff}
+.storefront.vm-store .vm-case-conditions{font:400 12px/1.7 Lexend,Arial,sans-serif;color:#f2e8ef}
+.storefront.vm-store .vm-case-cta{display:inline-flex;align-items:center;justify-content:center;gap:18px;background:#dfc18c;color:#381424;font:500 12px/1.4 Lexend,Arial,sans-serif;padding:13px 20px;min-height:44px;margin-top:18px;border-radius:3px}
+.storefront.vm-store .vm-case-cta>svg{width:18px;height:18px}
+.storefront.vm-store .vm-case-copy>small{font:400 10px/1.5 Lexend,Arial,sans-serif;color:#e0cdd9;margin-top:10px}
+.storefront.vm-store .vm-case-visual{height:100%;min-width:0;overflow:hidden}
+.storefront.vm-store .vm-case-visual>svg{display:block;width:100%;height:100%}
+.storefront.vm-store .mi-hero-stage .vm-case-visual img{object-fit:cover}
+/* Consistent miniature editorials, with actual Malbec and newly created imagery. */
+.storefront.vm-store .mi-categories.vm-shortcuts{width:calc(100% - 96px);max-width:1300px;padding:30px 0 22px;margin:auto}
+.storefront.vm-store .vm-shortcuts>div{gap:16px;padding:0;align-items:stretch}
+.storefront.vm-store .vm-shortcuts a{display:flex;flex-direction:column;flex:0 0 calc((100% - 64px)/5);height:auto;background:white;border:1px solid #e9dfe5;border-radius:8px;overflow:hidden}
+.storefront.vm-store .vm-shortcuts a:after{content:none}
+.storefront.vm-store .vm-shortcut-photo{height:190px;overflow:hidden;background:#f2ecef}
+.storefront.vm-store .vm-shortcut-photo>svg,.storefront.vm-store .vm-shortcut-photo>img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .3s}
+.storefront.vm-store .vm-shortcuts .vm-malbec-tile img{object-fit:contain;background:none;padding:12px 24px;mix-blend-mode:multiply}
+.storefront.vm-store .vm-shortcut-copy{position:relative;display:flex;flex-direction:column;justify-content:center;gap:5px;min-height:78px;padding:13px 38px 13px 14px}
+.storefront.vm-store .vm-shortcut-copy>span{font:500 12px/1.5 Lexend,Arial,sans-serif;color:#651242;letter-spacing:.1px}
+.storefront.vm-store .vm-shortcut-copy>small{font:400 10px/1.6 Lexend,Arial,sans-serif;color:#796570}
+.storefront.vm-store .vm-shortcut-copy>svg{position:absolute;right:12px;top:50%;transform:translateY(-50%);width:18px;height:18px;color:#b59758}
+.storefront.vm-store .vm-shortcuts a:hover .vm-shortcut-photo>svg{transform:scale(1.035)}
+/* Clip the baked rectangular cast shadow outside the circular dish itself. */
+.storefront.vm-store .vm-food-photo{clip-path:ellipse(48% 47% at 50% 48%);background:transparent!important;filter:none!important;box-shadow:none!important}
+.storefront.vm-store .vm-food-photo>svg,.storefront.vm-store .vm-food-photo img{filter:none!important;box-shadow:none!important}
+@media(max-width:1023px) and (min-width:761px){.storefront.vm-store .vm-case-copy{padding:20px 30px}.storefront.vm-store .vm-case-copy h2{font-size:36px}.storefront.vm-store .vm-case-offer strong{font-size:34px}.storefront.vm-store .vm-case-offer span{font-size:11px}.storefront.vm-store .vm-shortcut-photo{height:155px}.storefront.vm-store .vm-shortcuts>div{gap:12px}.storefront.vm-store .vm-shortcuts a{flex-basis:calc((100% - 48px)/5)}.storefront.vm-store .vm-shortcut-copy{padding:10px;min-height:95px}.storefront.vm-store .vm-shortcut-copy>svg{display:none}}
+@media(max-width:760px){
+ .storefront.vm-store .mi-hero-stage{height:420px}
+ .storefront.vm-store .mi-hero-stage .vm-case-banner{grid-template-columns:1fr;grid-template-rows:55% 45%}
+ .storefront.vm-store .vm-case-copy{padding:16px 22px 12px;justify-content:center}
+ .storefront.vm-store .vm-case-eyebrow{font-size:8px;letter-spacing:1.5px;margin-bottom:5px!important}
+ .storefront.vm-store .vm-case-copy h2{font-size:32px;margin-bottom:9px}
+ .storefront.vm-store .vm-case-offer{gap:12px;margin-bottom:6px!important}
+ .storefront.vm-store .vm-case-offer strong{font-size:32px}
+ .storefront.vm-store .vm-case-offer span{font-size:11px;max-width:none}
+ .storefront.vm-store .vm-case-conditions{font-size:10px;line-height:1.5}
+ .storefront.vm-store .vm-case-cta{font-size:11px;min-height:35px;padding:9px 15px;margin-top:10px;gap:16px}
+ .storefront.vm-store .vm-case-cta>svg{width:16px;height:16px}
+ .storefront.vm-store .vm-case-copy>small{display:none}
+ .storefront.vm-store .vm-case-visual>svg{object-position:center}
+ .storefront.vm-store .mi-categories.vm-shortcuts{width:100%;padding:22px 0 18px 16px}
+ .storefront.vm-store .vm-shortcuts>div{gap:12px;padding-right:16px}
+ .storefront.vm-store .vm-shortcuts a{flex-basis:calc((100vw - 44px)/2.1)}
+ .storefront.vm-store .vm-shortcut-photo{height:158px}
+ .storefront.vm-store .vm-shortcut-copy{min-height:85px;padding:10px 12px;justify-content:flex-start;gap:5px}
+ .storefront.vm-store .vm-shortcut-copy>span{font-size:11px}
+ .storefront.vm-store .vm-shortcut-copy>small{font-size:9px}
+ .storefront.vm-store .vm-shortcut-copy>svg{display:none}
+ .storefront.vm-store .vm-shortcuts .vm-malbec-tile img{padding:10px 18px}
+}
+@media(prefers-reduced-motion:reduce){.storefront.vm-store .vm-shortcut-photo>svg{transition:none}.storefront.vm-store .vm-shortcuts a:hover .vm-shortcut-photo>svg{transform:none}}
+@media(max-width:760px){.storefront.vm-store .mi-banner-dots{left:auto;right:18px;top:16px;bottom:auto;transform:none}}
+
+.storefront.vm-store .vm-case-visual>.vm-case-mobile-custom{display:none!important}
+@media(max-width:760px){.storefront.vm-store .vm-case-visual>.vm-case-mobile-custom{display:block!important}.storefront.vm-store .vm-case-visual:has(>.vm-case-mobile-custom)>.vm-case-default-scene{display:none}}

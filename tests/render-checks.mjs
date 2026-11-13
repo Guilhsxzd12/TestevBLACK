@@ -20,7 +20,7 @@ for (const type of pages) {
     assert.ok(html.includes('mi-categories'));
     assert.equal(html.includes('id="selecao"'), count > 0);
     assert.ok(html.includes('id="paises"'));
-    assert.equal((html.match(/<section class="mi-categories"[^>]*><div>([\s\S]*?)<\/div>/)?.[1].match(/<a /g)||[]).length,5);
+    assert.equal((html.match(/<section class="mi-categories[^"]*"[^>]*>([\s\S]*?)<\/section>/)?.[1].match(/<a /g)||[]).length,5);
     if(count>0) assert.ok(html.includes('vm-product-card'));
 
   }

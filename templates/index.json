@@ -6,8 +6,8 @@
         "black": {
           "type": "banner",
           "settings": {
-            "title": "Esquenta Black Friday Videira",
-            "style": "black",
+            "title": "Monte sua caixa — 5% OFF no Pix a partir de 6 garrafas",
+            "style": "boxes",
             "link": ""
           }
         },
@@ -15,7 +15,7 @@
           "type": "banner",
           "settings": {
             "title": "Acabou de chegar — Novidades no catálogo Videira",
-            "style": "black",
+            "style": "arrivals",
             "link": ""
           }
         }
@@ -26,7 +26,7 @@
       ],
       "settings": {
         "page_heading": "Videira Vinhoteca — a sua seleção de vinhos",
-        "anchor": "black-friday",
+        "anchor": "monte-sua-caixa",
         "autoplay": true,
         "interval": 5
       }
@@ -39,7 +39,8 @@
           "settings": {
             "title": "SELEÇÃO MALBEC",
             "link": "",
-            "style": "malbec"
+            "style": "malbec",
+            "subtitle": "Descubra seu próximo Malbec"
           }
         },
         "category1": {
@@ -47,7 +48,8 @@
           "settings": {
             "title": "NOVIDADES",
             "link": "",
-            "style": "new"
+            "style": "new",
+            "subtitle": "Os últimos rótulos a chegar"
           }
         },
         "category2": {
@@ -55,7 +57,8 @@
           "settings": {
             "title": "SELEÇÃO VIDEIRA",
             "link": "",
-            "style": "selection"
+            "style": "selection",
+            "subtitle": "Escolhas para cada ocasião"
           }
         },
         "category3": {
@@ -63,7 +66,8 @@
           "settings": {
             "title": "VINHO E PIZZA",
             "link": "",
-            "style": "pizza"
+            "style": "pizza",
+            "subtitle": "A combinação perfeita"
           }
         },
         "category4": {
@@ -71,7 +75,8 @@
           "settings": {
             "title": "PARA COMPARTILHAR",
             "link": "",
-            "style": "sharing"
+            "style": "sharing",
+            "subtitle": "Bons vinhos, bons encontros"
           }
         }
       },

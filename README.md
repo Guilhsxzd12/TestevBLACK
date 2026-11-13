@@ -64,3 +64,11 @@ A faixa preta/dourada associa um símbolo a cada mensagem da loja (envio e campa
 O aviso 18+ agora usa sessionStorage (`videira-age-session-v1`). Uma confirmação antiga em localStorage não impede novas sessões de exibir a pergunta. A resposta vale para a aba durante a navegação/recarregamento; uma nova sessão volta a perguntar. O editor da Shopify continua sem o bloqueio para permitir a edição. Negar mantém o aviso aberto e Escape não o dispensa. O tema mantém a opção Aviso 18+ nas configurações gerais.
 
 `tests/mobile-country-age.mjs` valida confirmação antiga, nova sessão, continuidade entre páginas, recusa, armazenamento indisponível, editor, símbolos, bandeiras e controles responsivos.
+
+## Monte sua caixa — campanha no Pix
+
+A campanha ativa substitui Black Friday no banner, na chamada de navegação e na faixa do topo. O banner anuncia 5% OFF no Pix a partir de seis garrafas, com destino ao catálogo para compor a seleção. Título, chamada, desconto, pagamento, condição, botão, nota, foto e destino são editáveis no bloco do banner. O segundo slide usa a arte de novidades da Videira.
+
+A alteração é de comunicação no tema: a aplicação do desconto e os meios de pagamento elegíveis continuam sob a regra de checkout cadastrada pelo lojista. O tema não configura uma restrição financeira a Pix nem altera a regra automática existente.
+
+Os cinco mini banners usam fotografias próprias de ocasiões, o Malbec real da loja e descrições editáveis. O atalho Vinho e pizza mantém o filtro de harmonização de pizzas. Fotos e destinos personalizados continuam disponíveis. O recorte elíptico dos pratos exclui as sombras embutidas nas fotos, sem apagar fotos cadastradas ou interferir nos filtros.

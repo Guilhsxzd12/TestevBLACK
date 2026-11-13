@@ -9,3 +9,6 @@ Mobile Black Friday banner: adapted from the reference desktop banner to a short
 Pairing photographs: user-provided Cia do Vinho ZIP, images/carnes-vermelhas.png, pizzas.png, queijos.png, orientais.png, massas.png, frutos-do-mar.png, carnes-brancas.png, risotos.png, peixes.png, legumes.png, saladas.png and sobremesas.png. Original labels are clipped by the website layout and replaced with live text labels.
 Selection Malbec: Becas Reserva Malbec photograph from the live Videira product catalog, replacing Catena.
 Arrival banners: generated edits correcting the Videira engraving alignment to the crate lid; source artifacts retained in /workspace/generated_images.
+
+November 2026 case campaign and occasion imagery: original generated four-panel editorial photography, Videira logo supplied as reference. Source retained at /workspace/generated_images/exec-236d31a8-31b6-40b0-a232-999d9d57c37e.png. Optimized WebP used with independent SVG viewports; offer and shortcut captions remain live editable Shopify text. Black Friday artwork no longer used by the homepage.
+Pairing shadows: the original photographs remain intact; elliptical website clipping excludes the embedded cast shadows outside the dishes.
