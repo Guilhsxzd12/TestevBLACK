@@ -39,3 +39,23 @@ A revisão não transfere os prazos comerciais de outra empresa para a Videira. 
 O responsável informou 5% de desconto em caixas, de preferência no Pix ou crédito em uma vez. A comunicação do tema foi ajustada. A regra automática existente é a autoridade de cálculo; a preferência anunciada não cria uma restrição técnica por meio de pagamento. Uma exclusividade financeira exige configuração compatível no checkout.
 
 A conexão disponível nesta tarefa permite editar o tema pelo repositório. Não há conexão administrativa com permissão para salvar políticas oficiais ou atualizar produtos/metacampos. Por isso, os textos revisados e a lista de correções são entregues como arquivos concretos para aplicação no admin.
+
+
+## Conferência na loja publicada
+
+O fluxo real foi concluído até a abertura do checkout, em navegador com viewport móvel e sessão anônima separada, sem enviar contato ou pagamento e sem concluir pedido:
+
+- Catálogo carregou 38 produtos. Países: Argentina 10, Brasil 18 e Chile 10.
+- Busca por Cabernet Sauvignon combinada com país Chile, produtor Becas e tipo Tinto encontrou o vinho correspondente.
+- Cotação de seis unidades para 01001-000 retornou J&T Standard por R$19,06 e Jadlog Package por R$39,90 no momento da consulta.
+- O carrinho permaneceu inalterado durante a cotação.
+- Adicionar seis garrafas de R$49 manteve o cliente na página e atualizou o contador.
+- Carrinho: R$294,00 antes do desconto, economia nativa de R$14,70 e subtotal de R$279,30. O desconto retornado pela Shopify se chama Caixa.
+- O botão Finalizar compra abriu Checkout – Videira Vinhoteca. A sessão de teste foi limpa ao terminar.
+- CNPJ e informação de operação online apareceram na página institucional; a primeira vitrine veio antes dos atalhos e Boas Compras apresentou preços e botões.
+
+### Conferir dados de peso no sistema de frete
+
+O carrinho desse teste retornou total_weight igual a zero, e os campos gramas públicos dos produtos consultados também retornaram zero. As cotações funcionaram e variaram com a quantidade, então esse dado isolado não prova que o aplicativo da transportadora está calculando incorretamente: ele pode ter configuração própria.
+
+É necessário conferir onde estão mantidos peso e dimensões reais de garrafas, caixas e embalagem — na Shopify e/ou no aplicativo de frete. Não se deve estimar o peso bruto apenas pelo volume líquido do vinho. Essa validação é administrativa; o tema usa os valores de frete efetivamente retornados pela loja.
