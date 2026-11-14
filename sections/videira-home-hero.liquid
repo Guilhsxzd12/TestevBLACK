@@ -1,4 +1,4 @@
-<section id="{{ section.settings.anchor | default: 'monte-sua-caixa' | escape }}" class="mi-hero vm-campaigns" style="--campaign-height:{{ section.settings.desktop_height | default: 360 }}px;--campaign-mobile-height:{{ section.settings.mobile_height | default: 280 }}px" data-banner-slider data-autoplay="{{ section.settings.autoplay }}" data-interval="{{ section.settings.interval | times: 1000 }}">
+<section id="{{ section.settings.anchor | default: 'monte-sua-caixa' | escape }}" class="mi-hero vm-campaigns vm-editorial-campaigns" style="--campaign-height:{{ section.settings.desktop_height | default: 360 }}px;--campaign-mobile-height:{{ section.settings.mobile_height | default: 280 }}px" data-banner-slider data-autoplay="{{ section.settings.autoplay }}" data-interval="{{ section.settings.interval | times: 1000 }}">
 <h1 class="vm-sr-only">{{ section.settings.page_heading | escape }}</h1>
 <div class="mi-hero-stage vm-campaign-stage">
 {% for block in section.blocks %}
@@ -6,7 +6,7 @@
  assign campaign_style = block.settings.style | default: 'boxes'
  assign campaign_class = 'vm-case-banner'
  assign campaign_file = 'caixa'
- assign campaign_alt = 'Caixa de vinhos Videira com a marca gravada na madeira e garrafas ao lado'
+ assign campaign_alt = 'Detalhe de uma rolha de vinho e saca-rolhas'
  assign campaign_eyebrow = 'SEUS VINHOS, SUA ESCOLHA'
  assign campaign_headline = 'Monte sua caixa'
  assign campaign_text = 'Escolha 6 garrafas ou mais.'
@@ -17,7 +17,7 @@
  if campaign_style == 'arrivals'
   assign campaign_class = 'vm-arrivals-banner'
   assign campaign_file = 'chegou'
-  assign campaign_alt = 'Caixa de madeira Videira com a marca alinhada à frente da caixa'
+  assign campaign_alt = 'Caixa de madeira e garrafas em luz natural'
   assign campaign_eyebrow = 'NOVIDADES NA VIDEIRA'
   assign campaign_headline = 'Acabou de chegar'
   assign campaign_text = 'Novos rótulos para descobrir.'
@@ -29,7 +29,7 @@
  elsif campaign_style == 'festive'
   assign campaign_class = 'vm-festive-banner'
   assign campaign_file = 'fim-de-ano'
-  assign campaign_alt = 'Taças de espumante e luzes douradas em uma celebração de final de ano'
+  assign campaign_alt = 'Espumante Ponto Nero Celebration Moscatel Rosé e Naturelle Branco Frisante do catálogo Videira'
   assign campaign_eyebrow = 'BRINDE AOS BONS MOMENTOS'
   assign campaign_headline = 'Um brinde ao final de ano'
   assign campaign_text = 'Espumantes e frisantes para celebrar.'
@@ -49,9 +49,16 @@
 %}
 <div data-banner-slide{% unless forloop.first %} hidden{% endunless %} {{ block.shopify_attributes }}>
 <a class="vm-campaign vm-campaign--{{ campaign_style }} {{ campaign_class }}" href="{{ campaign_link | escape }}">
-<picture class="vm-campaign-photo"><source media="(max-width:760px)" srcset="{% if block.settings.mobile_image %}{{ block.settings.mobile_image | image_url: width: 1000 }}{% elsif block.settings.image %}{{ block.settings.image | image_url: width: 1000 }}{% else %}{{ photo_mobile | asset_url }}{% endif %}">
-{% if block.settings.image %}{{ block.settings.image | image_url: width: 1800 | image_tag: alt: block.settings.title, loading: 'eager' }}{% else %}<img src="{{ photo_desktop | asset_url }}" alt="{{ block.settings.title | default: campaign_alt | escape }}" width="1536" height="1024" {% if forloop.first %}fetchpriority="high" loading="eager"{% else %}loading="lazy"{% endif %}>{% endif %}</picture>
-<div class="vm-campaign-copy"><p class="vm-campaign-eyebrow">{{ campaign_eyebrow | escape }}</p><h2>{{ campaign_headline | escape }}</h2>
+{% if block.settings.image or block.settings.mobile_image %}
+<picture class="vm-campaign-photo vm-editorial-custom"><source media="(max-width:760px)" srcset="{% if block.settings.mobile_image %}{{ block.settings.mobile_image | image_url: width: 1000 }}{% else %}{{ block.settings.image | image_url: width: 1000 }}{% endif %}">{{ block.settings.image | default: block.settings.mobile_image | image_url: width: 1800 | image_tag: alt: block.settings.title, loading: 'eager' }}</picture>
+{% elsif campaign_style == 'boxes' %}
+<div class="vm-editorial-macro" aria-hidden="true"><svg viewBox="1720 350 1020 730" preserveAspectRatio="xMidYMid slice"><image href="{{ 'videira-editorial-rolha.webp' | asset_url }}" width="2880" height="1080"/></svg></div><span class="vm-editorial-ribbon" aria-hidden="true">6 GARRAFAS OU MAIS · SUA CAIXA, SUA ESCOLHA</span>
+{% elsif campaign_style == 'arrivals' %}
+<div class="vm-editorial-arrivals-photo"><img src="{{ 'videira-novidades.webp' | asset_url }}" alt="{{ campaign_alt }}" width="496" height="620" loading="lazy"><span class="vm-editorial-imprint" aria-hidden="true">{% render 'logo' %}</span></div><span class="vm-editorial-globe" aria-hidden="true"><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="41" fill="none" stroke="currentColor" stroke-width="2"/><g fill="currentColor"><path d="M20 29l15-10 12 3 5 9-10 7 2 9-9 4-6-10-8-2-7-7zM41 51l14 3 8 11-5 10-8 12-5-8 1-10-9-8zM58 21l18 7 8 15-11 5-3 10-9-4-8-13 7-8-8-5zM66 66l12 4 5 8-10 2-9-6z"/></g></svg></span>
+{% else %}
+<div class="vm-editorial-bottles" aria-hidden="true"><span class="vm-editorial-year">{{ 'now' | date: '%Y' | plus: 1 }}</span><svg class="vm-editorial-star" viewBox="0 0 100 100"><g fill="none" stroke="currentColor" stroke-width=".7"><circle cx="50" cy="50" r="25"/><path d="M50 0v100M0 50h100M15 15l70 70m0-70L15 85M31 4l38 92M4 31l92 38M69 4L31 96M4 69l92-38"/></g></svg><img class="vm-editorial-frisante" src="{{ 'videira-editorial-frisante.webp' | asset_url }}" alt="" width="675" height="900" loading="lazy"><img class="vm-editorial-rose" src="{{ 'videira-editorial-rose.webp' | asset_url }}" alt="" width="286" height="1000" loading="lazy"></div>
+{% endif %}
+<div class="vm-campaign-copy"><p class="vm-campaign-eyebrow">{{ campaign_eyebrow | escape }}</p>{% assign title_split = 2 %}{% if campaign_style == 'arrivals' %}{% assign title_split = 1 %}{% endif %}{% assign title_words = campaign_headline | split: ' ' %}<h2><span>{{ title_words | slice: 0, title_split | join: ' ' | escape }}</span> <span>{{ title_words | slice: title_split, 30 | join: ' ' | escape }}</span></h2>
 {% if campaign_style == 'boxes' %}<p class="vm-campaign-offer"><strong>{{ block.settings.offer | default: '5% OFF' | escape }}</strong><span>{{ block.settings.payment | default: 'pagando no Pix ou crédito à vista' | escape }}</span></p><p class="vm-campaign-description">{{ block.settings.conditions | default: campaign_text | escape }}</p>{% else %}<p class="vm-campaign-description">{{ campaign_text | escape }}</p>{% endif %}
 <span class="vm-campaign-cta">{{ campaign_cta | escape }}{% render 'icon', name: 'arrow' %}</span>
 {% if campaign_style == 'boxes' %}<small>{{ block.settings.note | default: 'Confira as condições no checkout.' | escape }}</small>{% endif %}

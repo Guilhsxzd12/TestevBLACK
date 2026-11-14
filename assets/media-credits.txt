@@ -14,3 +14,11 @@ November 2026 case campaign and occasion imagery: original generated four-panel 
 Pairing shadows: the original photographs remain intact; elliptical website clipping excludes the embedded cast shadows outside the dishes.
 
 Campaign bottle correction: generated edit replaces malformed bottles in the top-left panel with a closed Videira case and three full upright wine bottles. Source: /workspace/generated_images/exec-b7d96bc7-25ad-4ce0-8c90-8e4a9ae891c2.png. Category banners restored to prior photos and overlay captions by merchant request.
+
+November 2026 editorial campaign revision (merchant request to match supplied Mistral references):
+- Campaign layout is editable HTML/CSS, with separately framed photographic elements rather than a generated wine-room scene.
+- Cork detail: existing Mistral reference img_1314.jpg (URL above), resized and converted to videira-editorial-rolha.webp; the website SVG viewport displays only the cork/neck detail and excludes all baked campaign lettering.
+- Arrivals: existing videira-novidades.webp crate photo (source/brand removal documented above). The unchanged original Videira logo is positioned as a separate website overlay aligned to the lid. The background contour lines and grain are decorative SVG patterns.
+- Ponto Nero Celebration Moscatel Rosé: original public Videira catalog photograph, https://cdn.shopify.com/s/files/1/1068/6201/8720/files/IMG_1238.png?v=1793574757 (transparent original; resized/encoded as videira-editorial-rose.webp).
+- Naturelle Branco Frisante: original public Videira catalog photograph, https://cdn.shopify.com/s/files/1/1068/6201/8720/files/Naturelle-Branco-Frisante-ecommerce.webp?v=1792880253 (resized/encoded as videira-editorial-frisante.webp; no generated bottle or label).
+- Bodoni Moda: Google Fonts, https://fonts.google.com/specimen/Bodoni+Moda, SIL Open Font License included as bodonimoda-license.txt. Used only within the hero campaign headings, offer and year detail.
