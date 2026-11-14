@@ -9,7 +9,7 @@ Data: 14/11/2026. Catálogo público analisado: 38 produtos. Identidade preserva
 | Frete na página de produto | CEP e quantidade consultam preços reais de transportadoras pela Shopify em um carrinho de cotação isolado; o carrinho do cliente permanece intacto. Não é preciso comprar nem adicionar o vinho para consultar. Prazo só é exibido se retornado pelo serviço; quando ausente, a confirmação é indicada no checkout. |
 | Coleções vazias e promoções | Vitrines vazias e coleções sem produtos deixam de aparecer nas listagens. A coleção pública Promoções estava vazia. Ofertas e comparação de preço usam a variante disponível correspondente. Caixas seguem a regra financeira já cadastrada. |
 | Padronização dos vinhos | Grafia de Carménère, apresentação de blends e campos em branco tratados na exibição. Há uma lista separada de 18 ajustes de cadastro que precisam de conferência e edição no admin. Dados ausentes não foram inventados. |
-| Página de produto | Resumo de estilo, doçura, corpo/intensidade quando cadastrado, paladar e harmonização; ficha técnica completa acessível por link. Adicionar ao carrinho confirma e mantém o cliente no produto. Ao abrir uma caixa, a quantidade é preservada. |
+| Página de produto | Ficha técnica completa mantida; o resumo “Conheça este vinho” foi removido na revisão solicitada posteriormente. Adicionar ao carrinho confirma e mantém o cliente no produto. Ao abrir uma caixa, a quantidade é preservada. |
 | Credibilidade | CNPJ informado pelo responsável, operação exclusivamente online, contato público, página institucional e orientação para quebra, vazamento, violação e suspeita de alteração do vinho. Procedência continua vindo do país/produtor cadastrados, sem selos ou garantias fictícias. |
 | Políticas e termos | Mistral, Cia do Vinho e Oda consultadas. Revisão e textos próprios preparados em politicas-revisadas.md. Os documentos oficiais usados pelo checkout precisam ser substituídos no admin; não foram sobrepostos por uma política alternativa no tema. |
 | Testes | Verificações de schemas/renderização e testes de navegação em 320, 390, 820, 1280 e 1440 px conforme cada fluxo. Cobertura inclui filtros, busca, blend, paginação, URL antiga, vazio, preço, favoritos, caixas, estoque, carrinho, cotação e falhas. A compra real não é concluída durante a validação. |
@@ -59,3 +59,14 @@ O fluxo real foi concluído até a abertura do checkout, em navegador com viewpo
 O carrinho desse teste retornou total_weight igual a zero, e os campos gramas públicos dos produtos consultados também retornaram zero. As cotações funcionaram e variaram com a quantidade, então esse dado isolado não prova que o aplicativo da transportadora está calculando incorretamente: ele pode ter configuração própria.
 
 É necessário conferir onde estão mantidos peso e dimensões reais de garrafas, caixas e embalagem — na Shopify e/ou no aplicativo de frete. Não se deve estimar o peso bruto apenas pelo volume líquido do vinho. Essa validação é administrativa; o tema usa os valores de frete efetivamente retornados pela loja.
+
+
+## Ajuste solicitado na página de produto
+
+A seção “Conheça este vinho” foi removida a pedido do responsável. A descrição e a FICHA TÉCNICA permanecem; o resumo repetido deixou de ocupar espaço na página.
+
+Na investigação do prazo, o checkout de uma cotação isolada para uma garrafa de Becas Reserva Cabernet Sauvignon e CEP 85854-320 apresentou J&T Standard por R$14,80 com 4 dias úteis, e Jadlog Package por R$19,00 com 8 dias úteis. Nenhum contato ou pagamento foi enviado. Esses resultados são específicos da consulta e não devem virar valores fixos no tema.
+
+A API pública Storefront da loja expõe preço e descrição por modalidade, mas não expõe os campos de prazo exibidos no checkout; ambas as descrições vieram vazias. A consulta pública de esquema confirmou essa limitação. O checkout apresenta o prazo em seus próprios dados de entrega. A leitura direta desse checkout pelo simulador da página foi recusada com HTTP 403; essa via não será usada como integração.
+
+A apresentação dos prazos reais no produto depende de identificar e integrar o aplicativo de frete utilizado pela loja, ou de o provedor disponibilizar esses prazos na descrição pública da modalidade. O nome do aplicativo foi solicitado ao responsável. Até essa integração, o simulador continua sem inventar prazos e indica sua confirmação no checkout.
