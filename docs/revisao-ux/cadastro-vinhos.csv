@@ -1,0 +1,19 @@
+﻿Produto,Handle,Campo,Situação,Ação
+Espumante Ponto Nero Live Zero Rosé,ponto-nero-live-zero-rose,Harmonização,Não informado no cadastro consultado,Preencher com a informação do rótulo/produtor; não inferir.
+Naturelle Branco Suave,naturelle-branco-suave,Uvas/blend,Não informado no cadastro consultado,Preencher com a informação do rótulo/produtor; não inferir.
+Naturelle Rosé Suave,naturelle-rose-suave,Uvas/blend,Não informado no cadastro consultado,Preencher com a informação do rótulo/produtor; não inferir.
+Naturelle Tinto Suave,naturelle-tinto-suave,Uvas/blend,Não informado no cadastro consultado,Preencher com a informação do rótulo/produtor; não inferir.
+Martino Superiore Malbec,martino-superiore-malbec,Descrição,Descrição vazia,Adicionar descrição factual do vinho.
+Zuccardi Q Cabernet Sauvignon,zuccardi-q-cabernet-sauvignon,Conteúdo da garrafa,Não informado no cadastro consultado,Preencher com a informação do rótulo/produtor; não inferir.
+Zuccardi Q Cabernet Sauvignon,zuccardi-q-cabernet-sauvignon,Região,Não informado no cadastro consultado,Preencher com a informação do rótulo/produtor; não inferir.
+Zuccardi Q Cabernet Sauvignon,zuccardi-q-cabernet-sauvignon,Descrição,Descrição vazia,Adicionar descrição factual do vinho.
+Puna Malbec Reserve,puna-malbec-reserve,Descrição,Descrição vazia,Adicionar descrição factual do vinho.
+Santa Julia Chenin Dulce,santa-julia-chenin-dulce,Descrição,Descrição vazia,Adicionar descrição factual do vinho.
+Terroir Cabernet Sauvignon,terroir-cabernet-sauvignon,Produtor,Ponto Nero; descrição menciona Casa Valduga,Conferir marca do rótulo e corrigir o fornecedor no admin se necessário.
+Origem Sauvignon Blanc,origem-sauvignon-blanc,Região,Não informado no cadastro consultado,Preencher com a informação do rótulo/produtor; não inferir.
+Origem Carménére,origem-carmenere,Descrição,Descrição vazia,Adicionar descrição factual do vinho.
+Origem Carménére,origem-carmenere,Título,Grafia Carménére,Corrigir para Carménère. O tema já padroniza a exibição.
+Puna Malbec,puna-malbec,Harmonização,Não informado no cadastro consultado,Preencher com a informação do rótulo/produtor; não inferir.
+Origem Cabernet Sauvignon,origem-cabernet-sauvignon,Conteúdo da garrafa,Não informado no cadastro consultado,Preencher com a informação do rótulo/produtor; não inferir.
+Espumante Ponto Nero Live Zero,ponto-nero-live-zero,Classificação,Não localizado no filtro de tipos nativo consultado,Conferir a classificação do rótulo no admin. O tema usa o estilo explicitado no título como fallback.
+Espumante Ponto Nero Live Zero Rosé,ponto-nero-live-zero-rose,Classificação,Não localizado no filtro de tipos nativo consultado,Conferir a classificação do rótulo no admin. O tema usa o estilo explicitado no título como fallback.

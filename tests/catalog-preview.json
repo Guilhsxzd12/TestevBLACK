@@ -14,7 +14,12 @@
       "grape": "15% Moscato de Hamburgo,  85% Moscato Branco",
       "region": "Vale dos Vinhedos",
       "pairing": "Filé de anjo com molho de maracujá, Frutas tropicais, Risoto de frutos do mar",
-      "volume": "750 ml"
+      "volume": "750 ml",
+      "tipo_de_vinho": "Espumante, Rosé",
+      "alcohol": "7%",
+      "aromas": "Com intensa presença frutada, onde notas de morangos maduros, maçãs, peras e pêssegos frescos são seus principais descritores. O produto é arrematado por nuances florais, como lavanda.",
+      "palate": "De dulçor marcante, porém, perfeitamente alicerçado pela fina acidez natural da fruta. O retrogosto é amplo e intenso, reforçando o perfil frutado do produto.",
+      "visual": "Apresenta delicada coloração pêssego, límpido e com perlage fino e elegante."
     }
   },
   {
@@ -32,7 +37,12 @@
       "grape": "Moscatel",
       "region": "Vale dos Vinhedos",
       "pairing": "Mousse de limão, Pavê de tangerina e Salada de frutas com sorvete",
-      "volume": "750 ml"
+      "volume": "750 ml",
+      "tipo_de_vinho": "Branco, Espumante",
+      "alcohol": "7%",
+      "aromas": "Intenso aroma frutado, característico do varietal, acompanhado por notas de flores brancas e uma delicada nuance de erva doce.",
+      "palate": "É leve e frutado. Sua elegante acidez permite um bom equilíbrio com o generoso teor de açúcar. O final de boca é delicadamente doce, remetendo ao aroma frutado.",
+      "visual": "Cristalina coloração amarela verdeal, perlage fino e persistente."
     }
   },
   {
@@ -54,7 +64,13 @@
       "grape": "Syrah/Shiraz",
       "region": "Luján de Cuyo",
       "pairing": "Ideal com massas recheadas, carnes grelhadas e queijos duros.",
-      "volume": "750 ml"
+      "volume": "750 ml",
+      "tipo_de_vinho": "Tinto",
+      "alcohol": "13,4%",
+      "aging": "Envelhecido em carvalho francês e americano por 4 meses.",
+      "aromas": "Frutas vermelhas e negras como amora, cerejas e ameixas. Notas de especiarias, café e chocolate",
+      "palate": "Corpo médio. Especiado e frutado com taninos macios e agradável acidez",
+      "visual": "Vermelho brilhante com reflexos violáceos"
     }
   },
   {
@@ -77,7 +93,13 @@
       "grape": "Malbec",
       "region": "Mendoza",
       "pairing": "Combina bem com carnes grelhadas, hambúrgueres e cordeiro. Também funciona com massas com molhos de carne e queijos de maturação média. Sirva levemente fresco, entre 16 °C e 17 °C, para realçar a fruta e a maciez.",
-      "volume": "750 ml"
+      "volume": "750 ml",
+      "tipo_de_vinho": "Tinto",
+      "alcohol": "14%",
+      "aging": "9 meses em barricas de carvalho francês",
+      "aromas": "No nariz, surgem aromas florais e notas de groselha, seguidos de especiarias e um toque de mocha, que dão profundidade ao conjunto.",
+      "palate": "Na boca, predominam cereja preta, ameixa e morango, com a fruta bem presente. Os taninos são suculentos e a acidez é equilibrada, o que deixa o vinho macio e agradável. A madeira aparece de forma discreta, sem encobrir a fruta, e o final é de média persistência com sensação aveludada.",
+      "visual": "No copo, apresenta cor violeta avermelhada e vibrante."
     }
   },
   {
@@ -99,7 +121,12 @@
       "grape": "Sauvignon blanc",
       "region": "Vale Central",
       "pairing": "Mariscos, Salada Poke, Vegetais Grelhados.",
-      "volume": "750 ml"
+      "volume": "750 ml",
+      "tipo_de_vinho": "Branco",
+      "alcohol": "12,5%",
+      "aromas": "Notas de frutas tropicais e cítricas, especialmente de maracujá perfeitamente balanceado com pêssego.",
+      "palate": "Vinho leve, no paladar ressalta os aromas do olfato e traz uma acidez refrescante.",
+      "visual": "Coloração amarelo palha brilhante."
     }
   },
   {
@@ -121,7 +148,13 @@
       "grape": "Malbec",
       "region": "Luján de Cuyo e parcelas especiais do Vale de Uco.",
       "pairing": "Carré de Cordeiro. Massa ao Funghi. Paella. Queijo Parmesão.",
-      "volume": "750 ml"
+      "volume": "750 ml",
+      "tipo_de_vinho": "Tinto",
+      "alcohol": "13%",
+      "aging": "Breve passagem por carvalho",
+      "aromas": "Intensos e sofisticados, destacam frutas negras maduras como ameixa e amora, envoltas por notas florais de violeta e toques sutis de baunilha, cacau e especiarias doces.",
+      "palate": "Estruturado com taninos macios e bem integrados. A acidez equilibrada proporciona frescor e um final longo e elegante, marcado por notas de frutas maduras e carvalho bem dosado.",
+      "visual": "Vermelho profundo com reflexos violáceos, típico dos grandes malbecs de altitude."
     }
   },
   {
@@ -143,7 +176,12 @@
       "grape": "Chardonnay",
       "region": "Vale Central",
       "pairing": "Sushis",
-      "volume": "750 ml"
+      "volume": "750 ml",
+      "tipo_de_vinho": "Branco",
+      "alcohol": "13%",
+      "aromas": "Apresenta aromas frutado, em especial maracujá, pêssego, lima um toque de mel e sutil notas florais.",
+      "palate": "Possui ataque frutado, ressaltado or aromas, equilibrado com boa acidez e boa persistência.",
+      "visual": "Coloração amarelo palha brilhante."
     }
   },
   {
@@ -165,7 +203,12 @@
       "grape": "Cabernet Sauvignon",
       "region": "Vale Central",
       "pairing": "Queijos de média intensidade, Filé ao molho de ervas finas e Risoto de parmesão",
-      "volume": "750 ml"
+      "volume": "750 ml",
+      "tipo_de_vinho": "Tinto",
+      "alcohol": "13%",
+      "aromas": "Seus aromas marcantes remetem a frutas vermelhas maduras, suaves notas de ervas frescas e especiarias.",
+      "palate": "No paladar, seus taninos macios conferem estrutura aos vinhos na medida certa e seu considerável teor alcoólico contribui para uma textura aveludada e harmônica. Sua acidez sutil e final longo, são um convite para apreciar a próxima taça.",
+      "visual": "Coloração vermelho rubi intenso, com delicadas nuances violáceas."
     }
   },
   {
@@ -187,7 +230,13 @@
       "grape": "carménére",
       "region": "Vale Central",
       "pairing": "Lombo suíno caramelizado.",
-      "volume": "750 ml"
+      "volume": "750 ml",
+      "tipo_de_vinho": "Tinto",
+      "alcohol": "13%",
+      "aging": "30% do vinho tem breve passagem por barricas.",
+      "aromas": "Apresenta aromas de frutas vermelhas frescas, toque de temperos e especiarias.",
+      "palate": "Possui taninos macios, intenso e com frutas maduras, bom final de boca.",
+      "visual": "Vermelho rubi intenso com reflexos violáceos."
     }
   },
   {
@@ -205,7 +254,13 @@
       "grape": "60% Chardonnay, 40% Pinot Noir",
       "region": "Vale dos Vinhedos",
       "pairing": "Peixes, frutos do mar, molhos leves e queijos cremosos.",
-      "volume": "375 ml"
+      "volume": "375 ml",
+      "tipo_de_vinho": "Espumante",
+      "alcohol": "11,5%",
+      "aging": "12 meses de Autólise em Cave",
+      "aromas": "Aroma elegante e nítido, com notas de frutas tropicais e pão tostado.",
+      "palate": "De acidez moderada, apresenta-se leve e fresco, com atraente final de boca, remetendo às notas frutadas.",
+      "visual": "Coloração amarelo palha, límpido e brilhante, com perlage fino e persistente."
     }
   },
   {
@@ -223,7 +278,13 @@
       "grape": "60% Chardonnay , 40% Pinot Noir",
       "region": "Vale dos Vinhedos",
       "pairing": "Peixes, frutos do mar, molhos leves e queijos cremosos.",
-      "volume": "750 ml"
+      "volume": "750 ml",
+      "tipo_de_vinho": "Espumante",
+      "alcohol": "12%",
+      "aging": "12 meses de Autólise em Cave",
+      "aromas": "Revela um incomparável aroma de frutas tropicais, envolto pelas características notas de pão tostado.",
+      "palate": "Leve e refrescante, com uma acidez vivaz e espuma cremosa.",
+      "visual": "Apresenta delicada coloração amarelo-palha, com perlage fino e persistente."
     }
   },
   {
@@ -240,7 +301,11 @@
       "country": "Brasil",
       "grape": "97% Prosecco,  3% Merlot, ,",
       "region": "Serra Gaúcha",
-      "volume": "750 ml"
+      "volume": "750 ml",
+      "alcohol": "Sem álcool",
+      "aromas": "Notas de frutas de caroço, como nectarinas e pêssegos, harmonizam\u0002se delicadamente com toques de maçã e framboesa.",
+      "palate": "Em boca, revela frescor, destacando as mesmas frutas percebidas no olfato. Leve, com acidez vibrante e refrescante",
+      "visual": "Rosa flor de cerejeira"
     }
   },
   {
@@ -258,7 +323,11 @@
       "grape": "Moscato, ,",
       "region": "Serra Gaúcha",
       "pairing": "Sobremesas à base de frutas, aperitivos e bruschettas",
-      "volume": "750 ml"
+      "volume": "750 ml",
+      "alcohol": "Sem álcool",
+      "aromas": "Aromas de lichia e jasmin, acompanhados de frutas como pêssego e abacaxi",
+      "palate": "Em boca é leve e refrescante",
+      "visual": "Coloração amarelo palha com reflexos esverdeados"
     }
   },
   {
@@ -275,7 +344,12 @@
       "country": "Brasil",
       "region": "Vale dos Vinhedos",
       "pairing": "Queijos azuis, doces, frutas, sobremesas e pratos leves.",
-      "volume": "750 ml"
+      "volume": "750 ml",
+      "tipo_de_vinho": "Branco",
+      "alcohol": "10%",
+      "aromas": "Com predominância de aromas frutados e florais, possui notas de melão, pêssego e limão, harmonizados com flores brancas.",
+      "palate": "Caracteriza-se pela sua leveza, reflexo do equilíbrio entre acidez e doçura.",
+      "visual": "Límpido e brilhante, de coloração amarelo esverdeado."
     }
   },
   {
@@ -292,7 +366,12 @@
       "country": "Brasil",
       "region": "Vale dos Vinhedos",
       "pairing": "Queijos azuis, doces, frutas, sobremesas, pratos leves.",
-      "volume": "750 ml"
+      "volume": "750 ml",
+      "tipo_de_vinho": "Rosé",
+      "alcohol": "9%",
+      "aromas": "Aromas primários, com notas de frutas frescas como morango, goiaba, pêssego, cereja e leve nuance floral.",
+      "palate": "Leve e de agradável frescor, com paladar adocicado.",
+      "visual": "De coloração rosado intenso, é límpido e brilhante."
     }
   },
   {
@@ -314,7 +393,13 @@
       "grape": "Syrah/Shiraz",
       "region": "Mendoza",
       "pairing": "Carne de vaca, Carne de cordeiro e Aves",
-      "volume": "750 ml"
+      "volume": "750 ml",
+      "tipo_de_vinho": "Tinto",
+      "alcohol": "13,1%",
+      "aging": "Em concreto por 6 meses",
+      "aromas": "Na boca é intenso e apresenta uma ligeira queimação",
+      "palate": "Revela aromas intensos de cerejas maduras e frutas negras, acompanhados por notas marcantes de especiarias negras, como pimenta-preta e cravo, criando um perfil aromático expressivo e típico da variedade Syrah",
+      "visual": "É de cor vermelho escuro intenso com aromas a cerejas e temperos pretos"
     }
   },
   {
@@ -336,7 +421,13 @@
       "grape": "Chenin Blanc",
       "region": "Mendoza",
       "pairing": "Saladas, queijos e massas",
-      "volume": "750 ml"
+      "volume": "750 ml",
+      "tipo_de_vinho": "Branco",
+      "alcohol": "8,3%",
+      "aging": "Sem passagem por barrica",
+      "aromas": "Aromas a flores brancas e a frutas frescas como maçãs verdes e peras, além disso podemos encontras notas cítricas e mel",
+      "palate": "Na boca apresenta uma acidez refrescante que equilibra a sua doçura e arredondamento",
+      "visual": "Apresenta uma cor amarela pálida"
     }
   },
   {
@@ -356,7 +447,12 @@
       "grape": "Malvasia ,  Moscato, ,",
       "region": "Vale dos Vinhedos",
       "pairing": "Queijos azuis, doces, frutas, sobremesas e pratos leves.",
-      "volume": "750 ml"
+      "volume": "750 ml",
+      "tipo_de_vinho": "Branco, Frisante",
+      "alcohol": "8,5%",
+      "aromas": "Frutas cítricas e tropicais são os principais descritores, ressaltando o perfil multifacetado do produto.",
+      "palate": "Delicadamente adocicado, de corpo leve e refrescante.",
+      "visual": "Amarelo esverdeado, límpido e brilhante. Com delicada formação de borbulhas, característica do estilo do produto."
     }
   },
   {
@@ -374,7 +470,12 @@
       "grape": "Moscato Hamburgo, Malvasia , Moscato Branco",
       "region": "Vale dos Vinhedos",
       "pairing": "Queijos azuis, doces, frutas, sobremesas e pratos leves.",
-      "volume": "750 ml"
+      "volume": "750 ml",
+      "tipo_de_vinho": "Frisante, Rosé",
+      "alcohol": "8,5%",
+      "aromas": "Intenso, notas de flores, frutas vermelhas e tropicais.",
+      "palate": "Efervescência cremosa, delicadamente adocicado, de corpo leve e refrescante.",
+      "visual": "Rosa intenso, límpido e brilhante. Com delicada formação de borbulhas, característica do estilo do produto."
     }
   },
   {
@@ -391,7 +492,12 @@
       "country": "Brasil",
       "region": "Vale dos Vinhedos",
       "pairing": "Queijos azuis, doces, frutas, sobremesas, pratos leves.",
-      "volume": "750 ml"
+      "volume": "750 ml",
+      "tipo_de_vinho": "Tinto",
+      "alcohol": "11,5%",
+      "aromas": "Aromas de frutas frescas, primários das variedades.",
+      "palate": "Leve, de agradável frescor e paladar adocicado.",
+      "visual": "Límpido e brilhante, com tons violáceos."
     }
   },
   {
@@ -413,7 +519,12 @@
       "grape": "Chardonnay",
       "region": "Vale dos Vinhedos",
       "pairing": "Queijos cremosos, peixes, molhos leves e frutos do mar",
-      "volume": "375 ml"
+      "volume": "375 ml",
+      "tipo_de_vinho": "Branco",
+      "alcohol": "13,5%",
+      "aromas": "Destaca-se pela fineza e delicadeza aromática, evidenciando-se notas de frutas frescas como maçã e pera. Sua evolução na taça revela nuances de frutas tropicais, como abacaxi.",
+      "palate": "Pleno, com bom ataque de boca e muito frescor, apresenta equilíbrio e untuosidade, qualidade clássica dos bons Chardonnays. Final de boca persistente, com retrogosto que remete essencialmente às notas de abacaxi.",
+      "visual": "Coloração amarelo palha, límpido e brilhante."
     }
   },
   {
@@ -437,7 +548,12 @@
       "region": "Vale dos Vinhedos",
       "pairing": "Queijos cremosos, peixes, molhos leves e frutos do mar.",
       "volume": "750 ml",
-      "caixa": 6
+      "caixa": 6,
+      "tipo_de_vinho": "Branco",
+      "alcohol": "13,5%",
+      "aromas": "Destaca-se pela fineza e delicadeza aromática, evidenciando-se notas de frutas frescas como maçã e pera. Sua evolução na taça revela nuances de frutas tropicais, como abacaxi.",
+      "palate": "Pleno, com bom ataque de boca e muito frescor, apresenta equilíbrio e untuosidade, qualidade clássica dos bons Chardonnays. Final de boca persistente, com retrogosto que remete essencialmente às notas de abacaxi.",
+      "visual": "Coloração amarelo palha, límpido e brilhante."
     }
   },
   {
@@ -455,7 +571,13 @@
       "grape": "Malbec",
       "region": "Mendoza",
       "pairing": "Carnes vermelhas, carne de porco e cordeiro",
-      "volume": "750 ml"
+      "volume": "750 ml",
+      "tipo_de_vinho": "Tinto",
+      "alcohol": "14,5%",
+      "aging": "16 a 20 meses em barricas de carvalho francês",
+      "aromas": "Aromas de frutas negras, especiarias e nuances de carvalho",
+      "palate": "Taninos firmes, frescor, retrogosto frutado e persistente",
+      "visual": "Cor rubi intensa com bordas violáceas"
     }
   },
   {
@@ -471,7 +593,11 @@
     "facts": {
       "country": "Argentina",
       "grape": "Cabernet Sauvignon",
-      "pairing": "ideal com massas com molho vermelho estruturado e bem temperado, carnes vermelhas como picanha ou entrecot (bisteca) e caças em geral. Acompanha também queijos como o Roquefort ou Gorgonzola"
+      "pairing": "ideal com massas com molho vermelho estruturado e bem temperado, carnes vermelhas como picanha ou entrecot (bisteca) e caças em geral. Acompanha também queijos como o Roquefort ou Gorgonzola",
+      "tipo_de_vinho": "Tinto",
+      "alcohol": "14%",
+      "aromas": "Notas intensas de frutas vermelhas e negras e especiarias. Aromas de chocolate e baunilha",
+      "palate": "complexo e com presença de notas frutais, estrutura refinada e final longo"
     }
   },
   {
@@ -493,7 +619,13 @@
       "grape": "Malbec",
       "region": "Salta",
       "pairing": "Carnes vermelhas, massas e risotos, charcutaria e queijos",
-      "volume": "750 ml"
+      "volume": "750 ml",
+      "tipo_de_vinho": "Tinto",
+      "alcohol": "15%",
+      "aging": "12 meses em barricas de carvalho, com referências a carvalho francês e americano conforme a comercialização/safra.\n\nVinificação: As uvas são colhidas manualmente em caixas de 20 kg. A vinificação inclui sangria de aproximadamente 15% para aumentar a relação sólido-líquido, maceração pré-fermentativa a frio por cerca de 76 horas a 10°C e fermentação com temperatura controlada, iniciando em torno de 22°C e chegando a aproximadamente 29°C na etapa final de maior extração.",
+      "aromas": "Aromas complexos de ameixa madura, cassis e cereja em compota, acompanhados por notas de alcaçuz e suaves nuances tostadas provenientes do amadurecimento em carvalho.",
+      "palate": "Em boca apresenta-se intenso e concentrado, com taninos marcantes, suculentos e de sensação adocicada, boa acidez e sabores de frutas maduras. O final é longo, expressivo e persistente.",
+      "visual": "Coloração vermelho-bordô intensa, com leves tonalidades violáceas e centro de taça muito profundo, apresentando aspecto límpido e brilhante."
     }
   },
   {
@@ -515,7 +647,12 @@
       "grape": "Chenin",
       "region": "Mendoza",
       "pairing": "Especialistas recomendam vinho de bebida emparelhado com lanches, sobremesas de frutas e saladas de frutas.",
-      "volume": "750 ml"
+      "volume": "750 ml",
+      "tipo_de_vinho": "Branco",
+      "alcohol": "8%",
+      "aromas": "No bouquet aromático do vinho é dominado por tons de pêssego branco e damasco, que são complementados por notas de ervas frescas, frutas cítricas, como limão e grapefruit.",
+      "palate": "Sabor doce de vinho, com leves notas cítricas, bom equilíbrio entre acidez e doçura. Tem uma textura suave e um final longo e liso.",
+      "visual": "O vinho tem uma cor amarelo-esverdeada de intensidade média"
     }
   },
   {
@@ -538,7 +675,13 @@
       "grape": "Cabernet Sauvignon",
       "region": "Campanha Gaúcha",
       "pairing": "Queijos maduros, massas e carnes com molhos condimentados.",
-      "volume": "375 ml"
+      "volume": "375 ml",
+      "tipo_de_vinho": "Tinto",
+      "alcohol": "13%",
+      "aging": "8 meses em Carvalho Francês",
+      "aromas": "Possui excelente complexidade aromática. A madeira integra-se de maneira simbiótica, apresentando-se através de marcantes aromas de especiarias. Também remete à cassis, ameixa preta e amêndoas.",
+      "palate": "Apresenta corpo intenso, denotando o clássico caráter do Cabernet Sauvignon. Sua acidez é moderada, e os taninos médios, gerando excelente volume em boca. Seu retrogosto é intenso e persistente.",
+      "visual": "Vermelho rubi profundo e intenso."
     }
   },
   {
@@ -561,7 +704,13 @@
       "grape": "Pinot Noir",
       "region": "Serra do Sudeste",
       "pairing": "Acompanha carnes brancas, carnes grelhadas, peixes e queijos leves, não muito curados e embutidos.",
-      "volume": "750 ml"
+      "volume": "750 ml",
+      "tipo_de_vinho": "Tinto",
+      "alcohol": "13,5%",
+      "aging": "8 meses em Carvalho Francês",
+      "aromas": "Bouquet complexo que lembra frutas maduras como cereja e morango aliados a aromas de marmelo e notas atribuídas pelo carvalho, como anis, tabaco e um leve toque mentolado.",
+      "palate": "A expressão do Pinot Noir está impressa neste vinho, que possui taninos macios e excelente acidez. Tal combinação nos apresenta um resultado leve e fresco, onde as características varietais são ainda mais evidentes em seu retrogosto essencialmente frutado.",
+      "visual": "Coloração vermelho rubi, brilhante e translúcido."
     }
   },
   {
@@ -584,7 +733,13 @@
       "grape": "Cabernet Sauvignon",
       "region": "Campanha Gaúcha",
       "pairing": "Queijos maduros, massas e carnes com molhos condimentados.",
-      "volume": "750 ml"
+      "volume": "750 ml",
+      "tipo_de_vinho": "Tinto",
+      "alcohol": "13%",
+      "aging": "8 meses em Carvalho Francês",
+      "aromas": "Possui excelente complexidade aromática. A madeira integra-se de maneira simbiótica, apresentando-se através de marcantes aromas de especiarias. Também remete à cassis, ameixa preta e amêndoas.",
+      "palate": "Apresenta corpo intenso, denotando o clássico caráter do Cabernet Sauvignon. Sua acidez é moderada, e os taninos médios, gerando excelente volume em boca. Seu retrogosto é intenso e persistente.",
+      "visual": "Vermelho rubi profundo e intenso."
     }
   },
   {
@@ -607,7 +762,13 @@
       "grape": "Merlot",
       "region": "Vale dos Vinhedos",
       "pairing": "Queijos maduros, carnes vermelhas, massas com molhos condimentados.",
-      "volume": "750 ml"
+      "volume": "750 ml",
+      "tipo_de_vinho": "Tinto",
+      "alcohol": "13,5%",
+      "aging": "8 meses em Carvalho Francês",
+      "aromas": "Por tratar-se de um Merlot com respeitável maturação, é notável a presença dos aromas advindos do carvalho, como cacau, baunilha e especiarias doces, acompanhados de notas de amora e blueberry.",
+      "palate": "Encorpado, com taninos macios característicos da variedade Merlot. Sua acidez moderada lhe dá equilíbrio, e seu retrogosto é longo com notas amadeiradas e toque de frutas maduras.",
+      "visual": "Coloração rubi com tons violáceos."
     }
   },
   {
@@ -625,7 +786,13 @@
       "grape": "30% Chardonnay, 20% Pinot Noir,  30% Riesling, 20% Glera",
       "region": "Vale dos Vinhedos - RS",
       "pairing": "Mix de folhas verdes, Pescados e Petiscos",
-      "volume": "750 ml"
+      "volume": "750 ml",
+      "tipo_de_vinho": "Espumante",
+      "alcohol": "10%",
+      "aging": "3 meses método Charmat",
+      "aromas": "Aroma elegante com notas de frutas como maçã e pêssego. Nuances cítricos aportam um estilo leve e delicado ao seu perfil aromático.",
+      "palate": "Excelente equilíbrio, destaca-se pela leveza e frescor em boca.",
+      "visual": "Coloração amarelo palha, translúcido, perlage fino e persistente."
     }
   },
   {
@@ -647,7 +814,12 @@
       "country": "Chile",
       "grape": "Sauvignon blanc",
       "pairing": "Saladas, canapés e outras entradas, pratos leves, frutos do mar e sushi.",
-      "volume": "750 ml"
+      "volume": "750 ml",
+      "tipo_de_vinho": "Branco",
+      "alcohol": "12,5%",
+      "aromas": "Aroma intenso e típico da variedade Sauvignon Blanc. Característica que lembra frutas tropicais e cítricas, além de elementos herbáceos. Principais descritores: maracujá, goiaba, pomelo, broto de tomate e aspargos",
+      "palate": "É um vinho leve, que preconiza a refrescância e a drinkability. Entrega em boca a sensação de jovialidade que o aroma desperta.",
+      "visual": "Aspecto verde claro e brilhante."
     }
   },
   {
@@ -669,7 +841,12 @@
       "grape": "Cabernet Sauvignon",
       "region": "Vale Central",
       "pairing": "Carnes e massas com molhos agridoces, risotos e queijos suaves.",
-      "volume": "750 ml"
+      "volume": "750 ml",
+      "tipo_de_vinho": "Tinto",
+      "alcohol": "13%",
+      "aromas": "Apresenta intensas notas frutadas, com destaque para frutas vermelhas como cereja e framboesa.",
+      "palate": "O ataque inicial é macio e sedoso, revelando seu exuberante caráter frutado. O equilíbrio perfeito entre taninos e acidez proporciona uma textura aveludada, com um suave final de boca.",
+      "visual": "Vermelho rubi com reflexos violáceos, de aspecto límpido e brilhante."
     }
   },
   {
@@ -691,7 +868,12 @@
       "grape": "Merlot",
       "region": "Vale Central",
       "pairing": "Carnes vermelhas grelhadas, pizzas, massas e aperitivos.",
-      "volume": "750 ml"
+      "volume": "750 ml",
+      "tipo_de_vinho": "Tinto",
+      "alcohol": "13,5%",
+      "aromas": "Mostra-se vivo ao olfato, com predominância de frutas vermelhas e negras como framboesa e ameixa. Um aroma fino e elegante.",
+      "palate": "É igualmente frutado no paladar. A suavidade dos taninos torna o vinho macio e proporciona um bom equilíbrio com a acidez e o moderado teor alcoólico.",
+      "visual": "Vermelho violáceo, de aspecto límpido e brilhante."
     }
   },
   {
@@ -714,7 +896,12 @@
       "grape": "Chardonnay",
       "region": "Leyda",
       "pairing": "Pratos leves. Sugestões: Salada Ceasar, brusquetas, risotos, peixes e frutos do mar.",
-      "volume": "750 ml"
+      "volume": "750 ml",
+      "tipo_de_vinho": "Branco",
+      "alcohol": "12,8%",
+      "aromas": "Aroma elegante e agradável. Lembra frutas tropicais como abacaxi, frutas de polpa branca - maçã e pera - alémde toques florais como o da flor de laranjeira.",
+      "palate": "Em boca o vinho tem uma acidez equilibrada, com corpo leve e um toque amanteigado que aporta untuosidade e permite a versatilidade de harmonizar ou ser bebido desacompanhado.",
+      "visual": "Amarelo esverdeado claro brilhante."
     }
   },
   {
@@ -736,7 +923,12 @@
       "grape": "carménére",
       "region": "Vale Central",
       "pairing": "Carnes vermelhas grelhadas, pizzas, massas e aperitivos.",
-      "volume": "750 ml"
+      "volume": "750 ml",
+      "tipo_de_vinho": "Tinto",
+      "alcohol": "13,5%",
+      "aromas": "Mostra-se vivo ao olfato, com predominância de frutas vermelhas e negras como framboesa e ameixa. Um aroma fino e elegante.",
+      "palate": "É igualmente frutado no paladar. A suavidade dos taninos torna o vinho macio e proporciona um bom equilíbrio com a acidez e o moderado teor alcoólico.",
+      "visual": "Vermelho violáceo, de aspecto límpido e brilhante."
     }
   },
   {
@@ -757,7 +949,13 @@
       "country": "Argentina",
       "grape": "Malbec",
       "region": "Salta",
-      "volume": "750 ml"
+      "volume": "750 ml",
+      "tipo_de_vinho": "Tinto",
+      "alcohol": "14,8%",
+      "aging": "8 meses de carvalho Francês",
+      "aromas": "Tem uma entrada agradável, é os taninos estão presentes, mas macios, redondos.",
+      "palate": "O primeiro plano é frutado, lembrando frutas vermelhas frescas, como framboesas, cerejas e geleia de ameixa. Um fundo expressa notas picantes e alcaçuz, bem como notas lácticas que lembram sua fermentação malo-láctica e uma baunilha sutil que certamente forneceu a proporção com madeira.",
+      "visual": "Apresenta um atraente vermelho rubi muito intenso, com tons violetas e um centro de copo preto, límpido e brilhante."
     }
   },
   {
@@ -778,7 +976,12 @@
       "country": "Chile",
       "grape": "Cabernet Sauvignon",
       "region": "Vale do Curicó",
-      "pairing": "Carnes vermelhas grelhadas, massas, risotos e queijos suaves."
+      "pairing": "Carnes vermelhas grelhadas, massas, risotos e queijos suaves.",
+      "tipo_de_vinho": "Tinto",
+      "alcohol": "[13]",
+      "aromas": "Mostra-se intenso e vivaz, com predominância de frutas vermelhas como framboesa e cereja, acompanhadas por delicadas nuances de especiarias.",
+      "palate": "O perfil frutado é confirmado no paladar, onde a suavidade dos taninos proporciona perfeito equilíbrio com a acidez.",
+      "visual": "Vermelho violáceo, intenso e brilhante."
     }
   }
 ]

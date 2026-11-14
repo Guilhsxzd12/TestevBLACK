@@ -6,9 +6,12 @@
         "black": {
           "type": "banner",
           "settings": {
-            "title": "Monte sua caixa — 5% OFF no Pix a partir de 6 garrafas",
+            "title": "Monte sua caixa — 5% OFF a partir de 6 garrafas",
             "style": "boxes",
-            "link": ""
+            "link": "",
+            "payment": "no Pix ou 1x no cartão",
+            "conditions": "5% OFF em caixas a partir de 6 garrafas.",
+            "note": "Confira os valores e as condições no checkout."
           }
         },
         "arrivals": {
@@ -238,7 +241,7 @@
         "anchor": "boas-compras",
         "collection": "",
         "limit": 6,
-        "button_label": "Conheça →"
+        "button_label": "VER VINHOS POR PREÇO"
       }
     },
     "origins_story": {
@@ -412,14 +415,14 @@
   },
   "order": [
     "banners",
+    "selection",
     "categories",
     "pairings",
-    "selection",
     "good_buys",
-    "origins_story",
     "newest",
     "countries",
     "producers",
+    "origins_story",
     "brand_story"
   ]
 }

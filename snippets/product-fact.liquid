@@ -2,6 +2,15 @@
  assign fact = nil
  assign standard_key = ''
  case field
+  when 'type'
+   assign keys = 'tipo_de_vinho,tipo_do_vinho,wine_type,tipo'
+   assign standard_key = 'wine-variety'
+  when 'body'
+   assign keys = 'corpo,intensidade,wine_body,estrutura'
+   assign standard_key = 'wine-body'
+  when 'sweetness'
+   assign keys = 'docura,do_ura,sweetness,classificacao_acucar'
+   assign standard_key = 'wine-sweetness'
   when 'volume'
    assign keys = 'volume,volume_da_garrafa,conteudo,conteudo_liquido,conte_do,conte_do_l_quido,ml,capacidade,volume_ml,tamanho_da_garrafa'
    assign standard_key = 'volume'
@@ -110,7 +119,11 @@
   {%- else -%}{{- fact | metafield_text | strip_html | escape -}}{%- endif -%}
  {%- endif -%}
 {%- endcapture -%}
-{%- assign fact_text = fact_text | strip -%}
+{%- assign fact_text = fact_text | strip | replace: ' ,', ',' | replace: ',,', ',' | replace: '  ', ' ' | replace: '  ', ' ' -%}
+{%- if field == 'grape' -%}
+ {%- assign fact_text = fact_text | replace: 'Carménére', 'Carménère' | replace: 'carménére', 'Carménère' | replace: 'carménère', 'Carménère' | replace: 'Carmenere', 'Carménère' | replace: 'Carmenérè', 'Carménère' | replace: 'Sauvignon blanc', 'Sauvignon Blanc' | replace: 'cabernet sauvignon', 'Cabernet Sauvignon' | replace: 'pinot noir', 'Pinot Noir' -%}
+{%- endif -%}
+{%- assign translated_fact = fact_text | downcase -%}{%- if field == 'body' -%}{%- case translated_fact -%}{%- when 'light' -%}{%- assign fact_text = 'Leve' -%}{%- when 'medium' -%}{%- assign fact_text = 'Médio' -%}{%- when 'full' or 'full-bodied' -%}{%- assign fact_text = 'Encorpado' -%}{%- endcase -%}{%- elsif field == 'sweetness' -%}{%- case translated_fact -%}{%- when 'dry' -%}{%- assign fact_text = 'Seco' -%}{%- when 'sweet' -%}{%- assign fact_text = 'Doce' -%}{%- when 'semi-dry' or 'off-dry' -%}{%- assign fact_text = 'Meio seco' -%}{%- endcase -%}{%- endif -%}
 {%- if field == 'grape' and fact_text == 'Outro' -%}{%- assign fact_text = '' -%}{%- endif -%}
 {%- if field == 'volume' -%}
  {%- if fact_text != blank -%}{{- fact_text -}}{%- assign remainder = fact_text | remove: '0' | remove: '1' | remove: '2' | remove: '3' | remove: '4' | remove: '5' | remove: '6' | remove: '7' | remove: '8' | remove: '9' | remove: ',' | remove: '.' | strip -%}{%- if remainder == '' -%}{{- ' ml' -}}{%- endif -%}{%- endif -%}
@@ -121,9 +134,11 @@
  {%- elsif fact_text != blank -%}{%- assign numeric_remainder = fact_text | remove: '0' | remove: '1' | remove: '2' | remove: '3' | remove: '4' | remove: '5' | remove: '6' | remove: '7' | remove: '8' | remove: '9' | remove: ',' | remove: '.' | strip -%}{{- fact_text -}}{%- if numeric_remainder == '' -%}%{%- endif -%}{%- endif -%}
 {%- elsif fact_text != blank -%}{{- fact_text -}}
 {%- elsif field == 'grape' -%}
- {%- assign wine_title = product.title | downcase -%}{%- assign grape_names = 'Cabernet Sauvignon,Sauvignon Blanc,Chardonnay,Chenin Blanc,Pinot Noir,Malbec,Merlot,Syrah,Shiraz,Tannat,Tempranillo' | split: ',' -%}{%- assign separator = '' -%}
+ {%- assign wine_title = product.title | downcase | replace: 'carménére', 'carménère' -%}{%- assign grape_names = 'Cabernet Sauvignon,Sauvignon Blanc,Chardonnay,Chenin Blanc,Pinot Noir,Malbec,Merlot,Syrah,Shiraz,Tannat,Tempranillo' | split: ',' -%}{%- assign separator = '' -%}
  {%- for grape in grape_names -%}{%- assign token = grape | downcase -%}{%- if wine_title contains token -%}{{- separator -}}{{- grape -}}{%- assign separator = ', ' -%}{%- endif -%}{%- endfor -%}
  {%- if separator == '' -%}{%- if wine_title contains 'carménère' or wine_title contains 'carmenere' or wine_title contains 'carmenérè' -%}Carménère{%- elsif wine_title contains 'moscatel' -%}Moscatel{%- endif -%}{%- endif -%}
+{%- elsif field == 'type' -%}
+ {%- assign type_title = product.title | downcase -%}{%- if product.type != blank -%}{{- product.type | escape -}}{%- elsif type_title contains 'espumante' -%}Espumante{%- if type_title contains 'rosé' or type_title contains 'rose' -%}, Rosé{%- endif -%}{%- elsif type_title contains 'frisante' -%}Frisante{%- endif -%}
 {%- elsif field == 'region' -%}
  {%- assign description = product.description | strip_html | downcase -%}{%- if description contains 'de mendoza' or description contains 'em mendoza' -%}Mendoza{%- elsif description contains 'produzido na serra gaúcha' -%}Serra Gaúcha{%- endif -%}
 {%- endif -%}

@@ -4,7 +4,7 @@ Tema publicado pelo repositório Guilhsxzd12/TestevBLACK. Fundo branco, cabeçal
 
 ## Compra e carrinho
 
-Os cards têm quantidade, conteúdo da garrafa, nome, produtor, uvas, região, país, favoritos e botão com ícone de carrinho. Adicionar inclui as unidades reais usando `/cart/add.js`, atualiza o contador e confirma a inclusão sem navegar ou abrir pop-up. O aviso oferece Ver carrinho. Comprar agora na página individual mantém o fluxo para o carrinho. Estoque, variantes e regras de quantidade continuam nativos.
+Os cards têm quantidade, conteúdo da garrafa, nome, produtor, uvas, região, país, favoritos e botão com ícone de carrinho. Adicionar inclui as unidades reais usando `/cart/add.js`, atualiza o contador e confirma a inclusão sem navegar ou abrir pop-up. O aviso oferece Ver carrinho. A página individual usa Adicionar ao carrinho, atualiza o contador e mantém o cliente no produto. O carrinho abre pelo ícone ou pelo aviso de confirmação. Estoque, variantes e regras de quantidade continuam nativos.
 
 O carrinho apresenta os preços originais e finais fornecidos pela Shopify, descontos por produto, subtotal original, desconto total e subtotal com desconto. A economia exibida vem dos valores nativos, sem inferir um desconto que não tenha sido aplicado.
 
@@ -75,3 +75,17 @@ Os cinco mini banners voltaram às fotos anteriores e aos títulos sobre a image
 
 
 A navegação do computador usa chevrons SVG com contorno circular, rotação e destaque ao abrir o submenu. O link VER TODOS foi retirado da barra; MONTE SUA CAIXA, tanto no menu do computador quanto nos destaques do celular, abre diretamente /collections/all. O botão do banner também abre o catálogo. A foto da campanha passou a mostrar uma caixa fechada e três garrafas inteiras ao lado, substituindo a composição de garrafas em divisórias.
+
+## Revisão de UX — novembro de 2026
+
+O catálogo e a busca compartilham o mesmo índice dos metacampos apresentados nos cards. Há filtros combináveis por país, uvas (incluindo blends), tipo e produtor, faixa de preço e disponibilidade, além de ordenação, chips removíveis, histórico e recuperação de resultado vazio. O índice percorre todas as páginas antes de apresentar um resultado completo; erros permitem tentar novamente. URLs antigas de filtros nativos são convertidas e reconsultadas sem limitar o resultado aos metacampos de taxonomia incompletos. A busca inclui nome, produtor, país, uvas, estilo, harmonização e paladar; consultas antigas de fornecedor não expõem a sintaxe técnica na barra.
+
+A vitrine de vinhos vem antes dos atalhos na home. Boas Compras usa cards completos com preço e botão, ordenados por preço entre os produtos disponíveis. Vitrines sem produtos não são renderizadas, e coleções vazias não aparecem na listagem. Promoções de variantes usam preço e comparação da variante disponível correspondente.
+
+O frete do produto usa uma cotação isolada na Storefront API 2026-10, sem token privado. O produto, a quantidade e o CEP são enviados a um carrinho de cotação próprio, sem alterar o Ajax cart do cliente. O CEP é consultado no ViaCEP, e os preços retornados pelas transportadoras são apresentados pela Shopify, incluindo respostas multipart/defer. Prazos só aparecem se vierem na descrição retornada; caso contrário a página informa confirmação no checkout. Não são inventados dias de entrega. Envios divididos não apresentam cotações parciais como se fossem o total. Erros de CEP, rede, indisponibilidade e mudança de quantidade têm tratamento específico.
+
+O perfil do produto reúne estilo, corpo/intensidade quando cadastrado, paladar e harmonização dos campos existentes. Não se atribuem escalas sensoriais ou origens por suposição. Campos vazios não geram informações falsas. A grafia de Carménère e a apresentação dos blends são normalizadas na exibição; o cadastro original continua na Shopify.
+
+A página /collections/all?view=informacoes apresenta operação online, CNPJ informado pelo lojista, contato público e orientação de atendimento para avarias e suspeitas de alteração. Não há alegações de seguro, embalagens, prazos, avaliações ou garantias não confirmadas. Textos e auditoria em docs/revisao-ux: as políticas nativas de checkout e os metacampos exigem edição no admin da Shopify, que não está conectado com permissão de escrita neste ambiente. O tema não sobrepõe documentos legais oficiais por páginas divergentes.
+
+Testes adicionais: tests/ux-commerce.mjs cobre filtros combinados e paginação, busca por atributos, URLs antigas, preços, histórico, resultado vazio, cotação em stream, CEP inválido, falha de rede, envios divididos, quantidade e preservação do carrinho. A cotação real foi verificada em sessão anônima, e o fluxo publicado é validado até o checkout, sem concluir pedidos.

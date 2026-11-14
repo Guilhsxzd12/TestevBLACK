@@ -126,3 +126,8 @@ matchMedia('(min-width:1024px)').addEventListener('change',event=>{if(!event.mat
  document.addEventListener('shopify:block:deselect',event=>event.target.closest?.('[data-banner-slider]')?.dispatchEvent(new Event('videira:resume-banner')));
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',()=>initialize());else initialize();document.addEventListener('shopify:section:load',event=>initialize(event.target));
 })();
+// A direct link to the technical sheet opens the native disclosure.
+document.addEventListener('click',event=>{const link=event.target.closest('a[href="#ficha-tecnica"]');if(link){const sheet=document.getElementById('ficha-tecnica');if(sheet)sheet.open=true;}});
+
+// Opening a case from its card keeps the requested bottle count on the product page.
+(()=>{const apply=()=>{const qty=document.querySelector('#videira-product-form [name=quantity]');if(!qty)return;const requested=Number(new URLSearchParams(location.search).get('quantity')),min=Number(qty.min)||1,step=Number(qty.step)||1,max=qty.max?Number(qty.max):Infinity;if(Number.isSafeInteger(requested)&&requested>=min&&requested<=max&&(requested-min)%step===0)qty.value=String(requested);};if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',apply);else apply();})();
