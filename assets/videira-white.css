@@ -249,3 +249,11 @@ html:has(body.storefront.vm-store){background:#fff!important}.storefront.vm-stor
 .storefront.vm-store .vm-selected-filters>button{min-height:36px}
 .storefront.vm-store .vm-information-issues{border-top:1px solid #e7dce3;margin-top:32px;padding-top:25px}
 @media(max-width:760px){.storefront.vm-store .mi-hero-stage{height:360px}.storefront.vm-store .mi-hero-stage .vm-case-banner{grid-template-rows:55% 45%}.storefront.vm-store .vm-selected-filters>button{min-height:40px}}
+
+/* Bordô footer with white text and gold interactive states. */
+.storefront.vm-store .vm-footer{--mi-text:#fff;--mi-muted:#fff;--mi-line:#ffffff30;--vm-border:#ffffff30;background:#651242;color:#fff}
+.storefront.vm-store .vm-footer :is(.vm-footer-signature,.vm-footer-description,.vm-footer-social),.storefront.vm-store .vm-footer .vm-footer-bottom p,.storefront.vm-store .vm-footer .vm-footer-links :is(summary,a,p,span),.storefront.vm-store .vm-footer .vm-footer-links details p>svg{color:#fff}
+.storefront.vm-store .vm-footer .vm-logo>img{filter:brightness(0) invert(1)!important}
+.storefront.vm-store .vm-footer :is(a,summary){transition:color .18s ease}
+.storefront.vm-store .vm-footer a:is(:hover,:focus-visible),.storefront.vm-store .vm-footer .vm-footer-links :is(a,summary):is(:hover,:focus-visible),.storefront.vm-store .vm-footer .vm-footer-links summary:is(:hover,:focus-visible)::after{color:#b59758}
+.storefront.vm-store .vm-footer :is(a,summary):focus-visible{outline:2px solid #b59758;outline-offset:4px}
