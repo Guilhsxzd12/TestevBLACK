@@ -9,9 +9,11 @@
             "title": "Monte sua caixa — 5% OFF a partir de 6 garrafas",
             "style": "boxes",
             "link": "",
-            "payment": "no Pix ou 1x no cartão",
-            "conditions": "5% OFF em caixas a partir de 6 garrafas.",
-            "note": "Confira os valores e as condições no checkout."
+            "payment": "pagando no Pix ou crédito à vista",
+            "conditions": "Escolha 6 garrafas ou mais.",
+            "note": "Confira as condições no checkout.",
+            "headline": "Monte sua caixa",
+            "button_label": "Montar minha caixa"
           }
         },
         "arrivals": {
@@ -19,19 +21,37 @@
           "settings": {
             "title": "Acabou de chegar — Novidades no catálogo Videira",
             "style": "arrivals",
-            "link": ""
+            "link": "",
+            "headline": "Acabou de chegar",
+            "eyebrow": "NOVIDADES NA VIDEIRA",
+            "description": "Novos rótulos para descobrir.",
+            "button_label": "Conhecer novidades"
+          }
+        },
+        "festive": {
+          "type": "banner",
+          "settings": {
+            "style": "festive",
+            "title": "Final de ano — Espumantes e frisantes para celebrar",
+            "headline": "Um brinde ao final de ano",
+            "eyebrow": "BRINDE AOS BONS MOMENTOS",
+            "description": "Espumantes e frisantes para celebrar.",
+            "button_label": "Escolher meu brinde"
           }
         }
       },
       "block_order": [
         "black",
-        "arrivals"
+        "arrivals",
+        "festive"
       ],
       "settings": {
         "page_heading": "Videira Vinhoteca — a sua seleção de vinhos",
         "anchor": "monte-sua-caixa",
         "autoplay": true,
-        "interval": 5
+        "interval": 6,
+        "desktop_height": 360,
+        "mobile_height": 280
       }
     },
     "categories": {
@@ -53,14 +73,6 @@
             "style": "new"
           }
         },
-        "category2": {
-          "type": "category",
-          "settings": {
-            "title": "SELEÇÃO VIDEIRA",
-            "link": "",
-            "style": "selection"
-          }
-        },
         "category3": {
           "type": "category",
           "settings": {
@@ -72,16 +84,15 @@
         "category4": {
           "type": "category",
           "settings": {
-            "title": "PARA COMPARTILHAR",
+            "title": "CAIXAS E KITS",
             "link": "",
-            "style": "sharing"
+            "style": "kits"
           }
         }
       },
       "block_order": [
         "category0",
         "category1",
-        "category2",
         "category3",
         "category4"
       ],
