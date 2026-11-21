@@ -1,0 +1,18 @@
+{%- comment -%}Tracked zero stock is unavailable, including variants that permit overselling. Untracked stock follows Shopify availability.{%- endcomment -%}
+{%- assign stock_available = false -%}
+{%- if mode == 'product' -%}
+  {%- if product.available -%}
+    {%- for stock_option in product.variants -%}
+      {%- if stock_option.available -%}
+        {%- if stock_option.inventory_management == blank or stock_option.inventory_quantity > 0 -%}
+          {%- assign stock_available = true -%}{%- break -%}
+        {%- endif -%}
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endif -%}
+{%- elsif variant.available -%}
+  {%- if variant.inventory_management == blank or variant.inventory_quantity > 0 -%}
+    {%- assign stock_available = true -%}
+  {%- endif -%}
+{%- endif -%}
+{{- stock_available -}}

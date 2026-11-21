@@ -11,7 +11,8 @@
    let count=Math.max(Number(boxes.min),Number(boxes.value)||Number(boxes.min));count=Math.ceil(count/boxStep)*boxStep;if(Number.isFinite(maximum))count=Math.min(count,Math.max(Number(boxes.min),Math.floor(maximum/perBox)));boxes.value=String(Math.max(0,count));
    const native=count*perBox;quantity.value=String(native);const gross=price*native,rate=Number(purchase.dataset.caseSize)>=Number(purchase.dataset.threshold)&&perBox>=Number(purchase.dataset.threshold)?Number(purchase.dataset.discount)||0:0,total=(price-Math.floor(price*rate/100))*native;
    form.querySelector('[data-kit-total]').textContent=money(total);const compare=form.querySelector('[data-kit-compare]');compare.textContent=money(gross);compare.hidden=rate<=0;form.querySelector('[data-kit-saving]').textContent=rate?`${rate}% OFF · desconto automático`:'Valor total';
-   const valid=native>=min&&native>0&&native%increment===0&&native<=maximum;submit.disabled=!available||!valid;form.querySelector('[data-kit-buy-label]').textContent=!available?'Esgotado':!valid?'Quantidade indisponível':`Adicionar · ${money(total)}`;
+   const stockRibbon=form.closest('[data-kit-card]')?.querySelector('[data-kit-stock-ribbon]');if(stockRibbon)stockRibbon.hidden=available;
+   const valid=native>=min&&native>0&&native%increment===0&&native<=maximum;form.dataset.stockAvailable=String(available);form.dataset.quantityValid=String(valid);submit.disabled=!available||!valid;form.querySelector('[data-kit-buy-label]').textContent=!available?'Esgotado':!valid?'Quantidade indisponível':`Adicionar · ${money(total)}`;
   };
   boxes.addEventListener('input',sync);boxes.addEventListener('change',sync);select?.addEventListener('change',sync);sync();
  });

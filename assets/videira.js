@@ -94,7 +94,7 @@
         report(message);
         if (localStatus) localStatus.textContent = message;
         if (added&&!stay) window.location.assign(config.cart);
-      } finally { button.disabled = false; button.removeAttribute('aria-busy'); }
+      } finally { button.disabled = form.dataset.stockAvailable === 'false' || form.dataset.quantityValid === 'false'; button.removeAttribute('aria-busy'); }
     });
     let menu, mobile;
     const initializeMenu = () => {
@@ -147,7 +147,9 @@
         if (!variant) return;
         document.querySelector('[data-product-price]').textContent = variant.price;
         const compare = document.querySelector('[data-product-compare]'); compare.textContent = variant.compare; compare.hidden = !variant.on_sale;
+        select.form.dataset.stockAvailable = String(variant.available);
         document.querySelector('[data-product-submit]').disabled = !variant.available;
+        const stockRibbon = document.querySelector('[data-product-stock-ribbon]'); if (stockRibbon) stockRibbon.hidden = variant.available;
         document.querySelector('[data-product-button-label]').textContent = variant.available ? (document.querySelector('[data-product-submit]')?.dataset.productBuyLabel || config.add) : config.soldOut;
         const qty = document.getElementById('product-quantity'); qty.min = variant.min; qty.step = variant.step; qty.value = variant.min;
         if (variant.max) qty.max = variant.max; else qty.removeAttribute('max');
