@@ -375,7 +375,9 @@ html:has(body.storefront.vm-store){background:#fff!important}.storefront.vm-stor
 
 /* Keep exhausted wines visible and identify them without hiding their photos. */
 .storefront.vm-store .vm-product-card .sf-wine-visual{position:relative}
-.storefront.vm-store .vm-stock-ribbon{position:absolute;z-index:2;left:0;right:0;bottom:36px;display:block;padding:8px 12px;background:#651242;color:#fff;font:600 12px/1.3 Lexend,Arial,sans-serif!important;letter-spacing:1.6px;text-align:center;text-transform:uppercase;pointer-events:none}
+.storefront.vm-store .vm-stock-ribbon{position:absolute;z-index:2;left:10px;right:auto;top:10px;bottom:auto;display:block;padding:7px 10px;border-radius:6px;background:#651242;color:#fff;font:600 11px/1.3 Lexend,Arial,sans-serif!important;letter-spacing:1px;text-align:center;text-transform:uppercase;pointer-events:none}
 .storefront.vm-store .vm-stock-ribbon[hidden]{display:none!important}
-.storefront.vm-store .pd-gallery>.vm-stock-ribbon{top:18px;bottom:auto}
-@media(max-width:760px){.storefront.vm-store .vm-product-card .vm-stock-ribbon{padding:7px 8px;font-size:10px!important;bottom:30px}}
+.storefront.vm-store .pd-gallery>.vm-stock-ribbon{top:18px;left:18px;bottom:auto}
+@media(max-width:760px){.storefront.vm-store .vm-product-card .vm-stock-ribbon{padding:6px 9px;font-size:10px!important;top:8px;left:8px;bottom:auto}}
+
+.storefront.vm-store .vm-kit-card .sf-wine-visual:has(>[data-kit-stock-ribbon]:not([hidden])) .vm-kit-badge{top:45px}
